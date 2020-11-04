@@ -9,7 +9,7 @@ html {
 }
 
 
-@import  url(https://fonts.googleapis.com/css?family=Montserrat);
+@import  url('https://fonts.googleapis.com/css?family=Montserrat');
 *{
 margin: 0;
 padding: 0;
@@ -218,7 +218,7 @@ height: 500px;
 width: 1000px;
 border: none;
 position: absolute;
-top: 265px;
+top: 337px;
 left: 50%;
 margin-top: 50px;
 margin-bottom: 50px;
@@ -284,6 +284,11 @@ margin-left: auto;
 margin-right: auto;
 line-height: 1.8rem;
 color: #00A6A6;
+}
+
+.section_parapqr a{
+text-decoration: none;
+color: #467878;
 }
 
 .full-page{
@@ -509,7 +514,7 @@ Transform and style the two planes
 	-moz-transform: rotateY(90deg) translateZ(300px);
 	transform: rotateY(90deg) translateZ(300px);
 	border: 1px solid #B8B5B5;
-       background-color: #EAFFDA;
+       background-color: white;
 }
 
 /*************************************
@@ -546,8 +551,11 @@ Movie information
 .dl_info  h1 {
         text-align:center;
 	font-size: 2rem;
-        color: #DA3E52;
-        text-shadow: 0px 1px 1px rgba(0,0,0,1);
+        color: #DD7230;
+        font-weight: normal;
+margin-top: 10px;
+        font-family: 'Libre Baskerville', serif;
+        
 }
 
 .dl_info .subtitle {
@@ -555,14 +563,15 @@ Movie information
     font-weight: normal;
         font-size: 1.3rem;
         text-align: center;
-        color: #718F94;
+        color: #F4C95D;
 
 }
 
 .dl_info p {
-	padding: 0.5em 0.5em;
-	color: #363457;
+	padding: 1em 1em;
+	color: #2E1F27;
 	line-height: 1.4em;
+        font-family: 'Open Sans Condensed';
 }
 
 /*************************************

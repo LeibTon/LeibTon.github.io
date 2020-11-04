@@ -95,7 +95,7 @@ function writeHeading() {
     ctx.fillStyle = "#424874"
     ctx.font = '30px Raleway';
     ctx.textAlign = "center"
-    ctx.fillText("Personal site of Aditya Prakash", window.innerWidth / 2, window.innerHeight / 2 + vGap)
+    ctx.fillText("Personal Website of Aditya Prakash", window.innerWidth / 2, window.innerHeight / 2 + vGap)
 }
 
 //Function to write instruction to unjumble.
@@ -103,7 +103,7 @@ function writeJumble() {
     ctx.fillStyle = "#424874"
     ctx.font = '15px Raleway';
     ctx.textAlign = "center"
-    ctx.fillText("Damn it! LeibTon got jumbled, Press Space to Unjumble", window.innerWidth / 2, window.innerHeight / 2 + vGap + 40)
+    ctx.fillText("Damn it! LeibTon got Jumbled, Press Space to Unjumble", window.innerWidth / 2, window.innerHeight / 2 + vGap + 40)
 }
 
 
