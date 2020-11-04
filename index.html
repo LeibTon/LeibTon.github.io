@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TimelineLite.min.js" integrity="sha512-tSIDeirKC6suYILHqqPuZH3s0MvD4a5vCHXhBIcdmq4gQXZ2IB3fEYA5x2f3D2p/CbSqzKEvuTEVbS5VZ2u+ew==" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenLite.min.js" integrity="sha512-pvDW4tehKKsohH97164HwKwRGFpzayEFWTVbk8HuUoLIQ7Jp+WLN5XYokVuoCj2aT6dy8ihbW8SRTG1k0W4mSQ==" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/plugins/CSSPlugin.min.js" integrity="sha512-ocsFo48WU8Xq6Y1Lwi7psXRAujG9E4TKNR4q1DbrKzaaxOMTEoao/a+mDoB+cYzY4lwbyxvqjkp/ZA1/MNlfsg==" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="css/preloader.css" />  
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Raleway:wght@200&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@300&family=Lora:ital@1&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital@1&family=Tenor+Sans&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&family=Montserrat:wght@300&family=Nanum+Myeongjo&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather&family=Montserrat:wght@300&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Italianno&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, intial-scale=1.0" />
+  <link rel="stylesheet" href="css/home.css" />
+  <link rel="stylesheet" href="css/navigation.css" />
+  <title>LeibTon</title>
+</head>
+
+<body>
+ <div class="preloader_preloader_main">
+<div class="preloader_wrap">
+  <div class="preloader_loading">
+    <div class="preloader_bounceball"></div>
+    <div class="preloader_text">PLEASE WAIT TILL THIS LOADS MY THOUGHTS.</div>
+  </div>
+</div>
+<div class = "preloader_preloader">
+</div>
+</div>
+<script src = "js/preloader.js"></script>
+  <!--Navigation Bar -->
+  <header>
+    <nav>
+      <div class="menu_part">
+        <span></span>
+      </div>
+      <div class="menu_item" id="menu_item_home"><a href="https://prakashaditya369.github.io/index.html"><img src="img/home.png" /></a></div>
+      <div class="menu_item" id="menu_item_about"><a href="https://prakashaditya369.github.io/about.html"><img src="img/about.png" /></a></div>
+      <div class="menu_item" id="menu_item_night_mode"><a href="https://prakashaditya369.github.io/index.html/#projects"><img src="img/project.png" /></a></div>
+      <div class="menu_item" id="menu_item_contact_me"><a href="https://prakashaditya369.github.io/contact.html"><img src="img/contact.png" /></a></div>
+      <svg>
+        <defs>
+          <filter id="goo">
+            <feGaussianBlur in="SourceGraphic" stdDeviation="10" />
+            <feColorMatrix in="name" mode="matrix" values="1 0 0 0 0
+           0 1 0 0 0
+           0 0 1 0 0
+           0 0 0 30 -15" />
+            <feBlend in="SourceGraphic" />
+          </filter>
+        </defs>
+      </svg>
+    </nav>
+  </header>
+  <!--End of Navigation bat -->
+  <canvas id="canvas">Canvas Not Supported</canvas>
+
+  <!--About Me Part -->
+  <div class="about_me" id="about_me">
+    <h1> About Me</h1>
+    <p> I learn. </p>
+    <span id="about_me_instruction"> Want to Know More </span>
+    <span class="instruction_display"> Focus the Moonlight on the person. <br /> Drag the Moon.</span>
+    <span class="about_me_quote"></span>
+    <?xml version="1.0" encoding="UTF-8" standalone="no"?>
+    <svg xmlns="http://www.w3.org/2000/svg" data-name="Layer 1" width="1200" height="640" class="image_background" viewBox="0 0 1200 640" version="1.1">
+
+      <defs id="defs121" />
+      <title id="title2">moonlight</title>
+      <g id="moon_drag" cx="334.78757" cy="92.543953" transform="matrix(1.2936799,0,0,1.2936799,-53.174473,-20.129481)" draggable="true">
+        <polygon style="opacity:0.1;fill:#f2f2f2"
+          points="311.888,106.844 366.685,189.544 574.068,502.544 818.988,502.544 574.728,277.957 574.727,277.956 552.908,257.894 552.712,257.943 543.975,250 543.553,249.877 544.008,249.704 451.089,164.271 361.353,81.762 315.628,106.016 "
+          id="polygon114" />
+        <circle style="fill:#f2f2f2" cx="334.78757" cy="92.543953" r="27" id="circle116" />
+      </g>
+      <g id="trees_man" transform="matrix(1.2936799,0,0,1.2936799,-49.096602,-13.743837)">
+        <g id="g391">
+          <circle style="fill:#f2f2f2" cx="480.78757" cy="52.543949" r="5" id="circle6" />
+          <circle style="fill:#f2f2f2" cx="629.78754" cy="52.543949" r="2" id="circle20" />
+        </g>
+        <g id="g387">
+          <circle style="fill:#f2f2f2" cx="618.78754" cy="311.54395" r="2" id="circle10" />
+          <circle style="fill:#f2f2f2" cx="877.78754" cy="215.54395" r="2" id="circle14" />
+          <circle style="fill:#f2f2f2" cx="563.78754" cy="196.54395" r="2" id="circle18" />
+          <rect style="fill:#f2f2f2" x="270.78757" y="135.54395" width="2" height="1" id="rect24" />
+          <rect style="fill:#f2f2f2" x="796.78754" y="293.54395" width="2" height="1" id="rect28" />
+          <rect style="fill:#f2f2f2" x="677.78754" y="140.54395" width="2" height="1" id="rect30" />
+          <rect style="fill:#6c63ff" x="712.08929" y="363.68008" width="3.5190699" height="139.0033" id="rect40" />
+          <path style="fill:#3f3d56" inkscape:connector-curvature="0"
+            d="m 841.11075,579.89444 c 0.224,48.606 -33.97287,88.16737 -33.97287,88.16737 0,0 -34.56009,-39.24449 -34.78411,-87.85048 -0.22402,-48.60599 33.97287,-88.16733 33.97287,-88.16733 0,0 34.56009,39.24445 34.78411,87.85044 z"
+            transform="translate(-93.02536,-198.5)" id="path42" />
+          <path style="fill:#6c63ff" inkscape:connector-curvature="0"
+            d="m 831.38738,626.91334 -58.80359,-54.06855 c -0.15881,2.42975 -0.24146,4.88556 -0.2301,7.36652 0.22412,48.60608 34.78418,87.85046 34.78418,87.85046 a 162.81545,162.81545 0 0 0 24.24951,-41.14843 z"
+            transform="translate(-93.02536,-198.5)" id="path60" />
+          <path style="fill:#6c63ff" inkscape:connector-curvature="0"
+            d="m 677.6691,688.7839 c 2.01475,7.44773 8.91572,12.0603 8.91572,12.0603 0,0 3.63442,-7.46259 1.61967,-14.91032 -2.01475,-7.44773 -8.91572,-12.06029 -8.91572,-12.06029 0,0 -3.63442,7.46258 -1.61967,14.91031 z"
+            transform="translate(-93.02536,-198.5)" id="path66" />
+          <path style="fill:#6c63ff" inkscape:connector-curvature="0"
+            d="m 680.62963,687.18331 c 5.5285,5.38177 6.20377,13.65481 6.20377,13.65481 0,0 -8.28821,-0.45254 -13.81671,-5.83431 -5.5285,-5.38177 -6.20377,-13.65482 -6.20377,-13.65482 0,0 8.28821,0.45254 13.81671,5.83432 z"
+            transform="translate(-93.02536,-198.5)" id="path68" />
+          <g id="g327">
+            <circle style="fill:#f2f2f2" cx="323.78757" cy="217.54395" r="2" id="circle8" />
+            <circle style="fill:#f2f2f2" cx="97.78756" cy="286.54395" r="2" id="circle12" />
+            <circle style="fill:#f2f2f2" cx="235.78757" cy="236.54395" r="2" id="circle16" />
+            <rect style="fill:#f2f2f2" x="211.78757" y="288.54395" width="2" height="1" id="rect22" />
+            <rect style="fill:#f2f2f2" x="414.78757" y="249.54395" width="2" height="1" id="rect26" />
+            <rect style="fill:#3f3d56" x="225.08928" y="363.68008" width="3.5190699" height="139.0033" id="rect32" />
+            <path style="fill:#3f3d56" inkscape:connector-curvature="0"
+              d="m 354.11075,537.89444 c 0.224,48.606 -33.97287,88.16737 -33.97287,88.16737 0,0 -34.56009,-39.24449 -34.78411,-87.85048 -0.22402,-48.60599 33.97287,-88.16733 33.97287,-88.16733 0,0 34.56009,39.24445 34.78411,87.85044 z"
+              transform="translate(-93.02536,-198.5)" id="path34" />
+            <rect style="fill:#3f3d56" x="180.60974" y="322.47214" width="4.5623102" height="180.21124" id="rect36" />
+            <path style="fill:#3f3d56" inkscape:connector-curvature="0"
+              d="m 320.30235,501.938 c 0.29043,63.01538 -44.04422,114.30486 -44.04422,114.30486 0,0 -44.80554,-50.87864 -45.096,-113.894 -0.29046,-63.01536 44.04426,-114.30486 44.04426,-114.30486 0,0 44.80553,50.87859 45.09596,113.894 z"
+              transform="translate(-93.02536,-198.5)" id="path38" />
+            <rect style="fill:#3f3d56" x="141.08928" y="363.68008" width="3.5190699" height="139.0033" id="rect44" />
+            <path style="fill:#3f3d56" inkscape:connector-curvature="0"
+              d="m 270.11075,537.89444 c 0.224,48.606 -33.97287,88.16737 -33.97287,88.16737 0,0 -34.56009,-39.24449 -34.78411,-87.85048 -0.22402,-48.60599 33.97287,-88.16733 33.97287,-88.16733 0,0 34.56009,39.24445 34.78411,87.85044 z"
+              transform="translate(-93.02536,-198.5)" id="path46" />
+            <rect style="fill:#3f3d56" x="451.08929" y="363.68008" width="3.5190699" height="139.0033" id="rect48" />
+            <path style="fill:#3f3d56" inkscape:connector-curvature="0"
+              d="m 580.11075,537.89444 c 0.224,48.606 -33.97287,88.16737 -33.97287,88.16737 0,0 -34.56009,-39.24449 -34.78411,-87.85048 -0.22402,-48.60599 33.97287,-88.16733 33.97287,-88.16733 0,0 34.56009,39.24445 34.78411,87.85044 z"
+              transform="translate(-93.02536,-198.5)" id="path50" />
+            <rect style="fill:#3f3d56" x="406.60974" y="322.47214" width="4.5623102" height="180.21124" id="rect52" />
+            <path style="fill:#3f3d56" inkscape:connector-curvature="0"
+              d="m 546.30235,501.938 c 0.29043,63.01538 -44.04422,114.30486 -44.04422,114.30486 0,0 -44.80554,-50.87864 -45.096,-113.894 -0.29046,-63.01536 44.04426,-114.30486 44.04426,-114.30486 0,0 44.80553,50.87859 45.09596,113.894 z"
+              transform="translate(-93.02536,-198.5)" id="path54" />
+            <rect style="fill:#3f3d56" x="367.08929" y="363.68008" width="3.5190699" height="139.0033" id="rect56" />
+            <path style="fill:#3f3d56" inkscape:connector-curvature="0"
+              d="m 496.11075,537.89444 c 0.224,48.606 -33.97287,88.16737 -33.97287,88.16737 0,0 -34.56009,-39.24449 -34.78411,-87.85048 -0.22402,-48.60599 33.97287,-88.16733 33.97287,-88.16733 0,0 34.56009,39.24445 34.78411,87.85044 z"
+              transform="translate(-93.02536,-198.5)" id="path58" />
+            <path style="fill:#3f3d56" inkscape:connector-curvature="0"
+              d="m 393.6691,688.7839 c 2.01475,7.44773 8.91572,12.0603 8.91572,12.0603 0,0 3.63442,-7.46259 1.61967,-14.91032 -2.01475,-7.44773 -8.91572,-12.06029 -8.91572,-12.06029 0,0 -3.63442,7.46258 -1.61967,14.91031 z"
+              transform="translate(-93.02536,-198.5)" id="path62" />
+            <path style="fill:#3f3d56" inkscape:connector-curvature="0"
+              d="m 396.62963,687.18331 c 5.5285,5.38177 6.20377,13.65481 6.20377,13.65481 0,0 -8.28821,-0.45254 -13.81671,-5.83431 -5.5285,-5.38177 -6.20377,-13.65482 -6.20377,-13.65482 0,0 8.28821,0.45254 13.81671,5.83432 z"
+              transform="translate(-93.02536,-198.5)" id="path64" />
+            <path style="fill:#3f3d56" inkscape:connector-curvature="0"
+              d="m 169.6691,688.7839 c 2.01475,7.44773 8.91572,12.0603 8.91572,12.0603 0,0 3.63442,-7.46259 1.61967,-14.91032 -2.01475,-7.44773 -8.91572,-12.06029 -8.91572,-12.06029 0,0 -3.63442,7.46258 -1.61967,14.91031 z"
+              transform="translate(-93.02536,-198.5)" id="path70" />
+            <path style="fill:#3f3d56" inkscape:connector-curvature="0"
+              d="m 172.62963,687.18331 c 5.5285,5.38177 6.20377,13.65481 6.20377,13.65481 0,0 -8.28821,-0.45254 -13.81671,-5.83431 -5.5285,-5.38177 -6.20377,-13.65482 -6.20377,-13.65482 0,0 8.28821,0.45254 13.81671,5.83432 z"
+              transform="translate(-93.02536,-198.5)" id="path72" />
+            <path style="fill:#6c63ff" inkscape:connector-curvature="0"
+              d="m 480.35814,419.20747 96.51026,145.66168 a 113.62605,113.62605 0 0 0 3.24237,-26.97473 c -0.10926,-23.702 -8.3833,-45.17511 -16.83319,-60.96 l -4.46466,1.1095 4.19915,-1.60193 A 155.07209,155.07209 0 0 0 545.32665,450.044 c 0,0 -2.4624,2.85 -6.05945,7.95465 C 526.58763,416.87042 501.20641,388.044 501.20641,388.044 a 197.509,197.509 0 0 0 -20.84827,31.16347 z"
+              transform="translate(-93.02536,-198.5)" id="path74" />
+          </g>
+          <g id="g268" transform="matrix(0.43226783,0,0,0.43226783,434.9229,230.27649)">
+            <path style="fill:#6c63ff" inkscape:connector-curvature="0" d="m 958.70262,385.76681 1.10836,0.53242 q -8.39593,-8.10693 -17.24063,-15.46657 l 6.60989,100.97392 -0.516,-0.22321 q 4.56535,5.302 8.85163,10.6023 z" id="path68-3" />
+            <path style="fill:#6c63ff" inkscape:connector-curvature="0"
+              d="m 959.71092,484.9335 c 0.87775,1.10235 1.76465,2.205 2.62431,3.30693 a 369.22021,369.22021 0 0 1 23.00992,32.93531 l 6.12819,-93.923 1.0737,0.549 a 146.38026,146.38026 0 0 0 -21.47326,-30.06367 q -4.97415,-5.32573 -10.16136,-10.37277 z"
+              id="path84" />
+            <path style="fill:#3f3d56" inkscape:connector-curvature="0"
+              d="m 1180.091,530.33013 c 0,48.73748 -67.9342,33.66253 -151.1128,33.66253 -83.17868,0 -150.10364,15.07495 -150.10364,-33.66253 0,-48.73748 67.925,-59.33747 151.10364,-59.33747 83.1785,0 150.1128,10.59999 150.1128,59.33747 z"
+              id="path100" />
+            <path style="fill:#2f2e41" inkscape:connector-curvature="0"
+              d="m 912.50822,396.22433 a 21.86993,21.86993 0 0 1 5.98677,-3.00229 152.65523,152.65523 0 0 1 42.18185,-9.18232 c 12.54265,-0.88942 26.13665,0.167 35.93311,8.04977 a 12.35544,12.35544 0 0 1 3.64495,4.24652 c 1.2324,2.65959 0.859,5.75109 0.46,8.65509 a 9.78,9.78 0 0 1 -0.83934,3.25829 c -1.31827,2.51 -4.56392,3.38927 -7.383,3.0883 -2.81908,-0.30097 -5.46439,-1.49376 -8.245,-2.04679 a 36.85589,36.85589 0 0 0 -5.20754,-0.53034 l -17.43968,-0.94414 c -10.84462,-0.58711 -21.83214,-1.16444 -32.46982,1.02423 a 32.343,32.343 0 0 0 -9.38119,3.23271 c -2.42968,1.36413 -4.06577,3.32156 -6.32025,0.802 -3.96086,-4.42662 -6.15324,-12.56237 -0.92086,-16.65103 z"
+              id="path102" />
+            <path style="fill:#f2f2f2" inkscape:connector-curvature="0" d="m 939.53275,403.93645 c 0,0 23.457,-10.51523 32.35455,1.61772 8.89755,12.13295 -4.85315,7.27982 -4.85315,7.27982 l -15.36841,4.85318 -16.98614,-3.23545 z" id="path104" />
+            <path style="fill:#ffb9b9" inkscape:connector-curvature="0" d="m 940.74604,396.25224 c 0,0 3.23546,15.36841 0.80887,19.41273 -2.42659,4.04432 13.75068,9.70637 13.75068,9.70637 l 15.36842,-6.47091 c 0,0 -4.04432,-25.07478 0,-29.928 z"
+              id="path106" />
+            <path style="opacity:0.1" inkscape:connector-curvature="0" d="m 940.74604,396.25224 c 0,0 3.23546,15.36841 0.80887,19.41273 -2.42659,4.04432 13.75068,9.70637 13.75068,9.70637 l 15.36842,-6.47091 c 0,0 -4.04432,-25.07478 0,-29.928 z"
+              id="path108" />
+            <path style="fill:#575a89" inkscape:connector-curvature="0"
+              d="m 925.58929,581.04699 a 88.47424,88.47424 0 0 1 5.34515,14.00761 1.13958,1.13958 0 0 0 1.41573,0.94168 l 14.38749,-0.016 c 1.77552,-0.002 4.15772,-0.5724 4.13926,-2.34783 -0.013,-1.24744 -1.28812,-2.02527 -2.23712,-2.835 -2.63375,-2.24729 -3.31943,-5.95275 -4.41024,-9.23864 a 31.343,31.343 0 0 0 -11.66228,-15.66368 6.8256,6.8256 0 0 0 -2.49321,-1.23227 6.95106,6.95106 0 0 0 -2.7334,0.1483 c -2.52558,0.50955 -11.957,2.253 -10.17536,5.92661 0.76713,1.58175 3.61015,3.22829 4.8021,4.70595 a 33.797,33.797 0 0 1 3.62188,5.60327 z"
+              id="path110" />
+            <path style="fill:#575a89" inkscape:connector-curvature="0"
+              d="m 975.62021,564.36026 a 32.69011,32.69011 0 0 1 -1.69144,3.10941 c -2.08436,3.43771 -4.5441,6.64447 -6.48513,10.1651 a 16.77837,16.77837 0 0 0 -2.36367,7.07364 7.85727,7.85727 0 0 0 2.74578,6.68522 c 2.08857,1.58487 4.952,1.65821 7.54773,1.289 2.59573,-0.36921 5.17635,-1.11321 7.79085,-0.91732 -0.88147,-4.98817 3.32536,-9.37828 4.37749,-14.33326 0.29553,-1.39177 0.33944,-2.83476 0.73555,-4.2013 a 20.59077,20.59077 0 0 1 1.62837,-3.60077 46.5558,46.5558 0 0 0 4.39382,-12.959 c 0.0991,-0.54715 -12.78919,-0.63687 -13.99816,-0.37542 -3.7728,0.81592 -3.22099,4.93622 -4.68119,8.0647 z"
+              id="path112" />
+            <path style="fill:#2f2e41" inkscape:connector-curvature="0"
+              d="m 876.28315,485.99441 c -3.67926,5.75777 -2.83151,13.388 -0.24741,19.71345 2.5841,6.32545 6.697,11.91723 9.51192,18.14337 1.79459,3.96928 3.053,8.178 5.07387,12.037 2.50239,4.77857 6.156,8.99059 7.83521,14.11671 1.07041,3.26765 1.316,6.849 3.04991,9.81831 a 30.09159,30.09159 0 0 0 3.57244,4.43205 40.95646,40.95646 0 0 1 8.234,14.7077 c 1.58472,-4.72089 6.33022,-7.8162 11.2042,-8.83717 4.87398,-1.02097 9.92419,-0.32742 14.855,0.36909 -2.75058,-4.261 -5.52777,-8.57617 -7.16736,-13.37552 -1.58573,-4.64172 -2.05359,-9.58 -3.12174,-14.36736 -2.19045,-9.81738 -6.86973,-18.87236 -11.50213,-27.801 l 23.81029,-1.8886 a 92.82879,92.82879 0 0 1 11.69831,-0.43389 c 6.14573,0.28968 12.16647,1.79623 18.2795,2.49255 6.11303,0.69632 12.57982,0.514 18.02759,-2.34536 a 86.39039,86.39039 0 0 0 -15.5,51.01943 19.75315,19.75315 0 0 1 29.90155,7.0566 c 9.3311,-12.75121 8.2218,-30.50282 15.6157,-44.46683 1.5204,-2.87139 3.3837,-5.54593 5.0247,-8.35017 a 123.08909,123.08909 0 0 0 7.9391,-17.54444 c 2.0683,-5.29 4.1518,-11.17615 2.1681,-16.49844 a 17.22617,17.22617 0 0 0 -3.5348,-5.43568 c -4.2661,-4.70334 -10.204,-8.18256 -16.5523,-8.32746 -9.7453,-0.22243 -17.79569,7.00122 -26.34429,11.68531 a 60.62321,60.62321 0 0 1 -33.26911,6.89937 c -11.74242,-0.83143 -22.957,-4.67515 -34.14438,-8.06023 a 162.45373,162.45373 0 0 0 -17.04035,-4.39578 c -4.7975,-0.89991 -9.36657,0.0969 -14.09435,1.32377 -5.14739,1.3358 -10.32069,3.67719 -13.28317,8.31322 z"
+              id="path114" />
+            <path style="fill:#ffb9b9" inkscape:connector-curvature="0" d="m 977.95378,380.88383 a 24.28582,24.28582 0 0 1 -24.26591,24.26591 23.68115,23.68115 0 0 1 -4.31126,-0.38824 24.26492,24.26492 0 1 1 28.57717,-23.87767 z" id="path116" />
+            <path style="fill:#f2f2f2" inkscape:connector-curvature="0"
+              d="m 939.53275,403.93645 c 0,0 4.44875,2.02215 6.06648,3.63988 1.61773,1.61773 6.47091,10.51523 14.55955,4.85319 8.08864,-5.66204 8.8975,-8.89751 11.32409,-8.89751 2.42659,0 5.66205,4.85319 5.66205,4.85319 l 22.24375,66.73126 a 93.15972,93.15972 0 0 1 -20.626,17.39058 c -12.94182,8.08863 -28.31023,12.133 -35.59,8.8975 -7.27977,-3.2355 -21.03046,-5.66205 -23.45706,-12.133 -2.4266,-6.47095 -6.47091,-25.88364 -6.47091,-25.88364 l 11.3241,-49.3407 z"
+              id="path118" />
+            <path style="fill:#2f2e41" inkscape:connector-curvature="0"
+              d="m 936.40964,471.42648 c 1.76345,-3.80907 2.0199,-8.12059 2.16907,-12.31541 a 74.65427,74.65427 0 0 0 -0.3292,-12.4584 c -0.71682,-5.41064 -2.47876,-10.62327 -3.5915,-15.96655 a 67.49957,67.49957 0 0 1 -1.41454,-14.24991 c 0.0162,-2.18418 0.17435,-4.48353 1.36455,-6.315 0.83032,-1.27771 2.12909,-2.26727 2.64794,-3.7 1.01735,-2.80929 -1.49634,-5.75081 -4.25111,-6.90768 a 16.72649,16.72649 0 0 0 -10.4707,-0.42034 49.8177,49.8177 0 0 0 -9.84918,4.02919 22.5485,22.5485 0 0 0 -6.43519,4.16 c -2.51083,2.59819 -3.61487,6.21693 -4.50635,9.71837 -0.71352,2.80246 -1.34765,5.72477 -0.80478,8.56522 0.88158,4.6126 4.64178,8.08175 6.64629,12.32852 2.32768,4.93144 2.17091,10.67825 1.24509,16.05226 -0.92582,5.37401 -2.56937,10.62847 -3.07618,16.058 -0.50681,5.42953 0.27118,11.266 3.67287,15.52814 1.38621,1.73684 5.14669,5.85307 7.68439,5.38734 1.99364,-0.36588 4.884,-4.75455 6.49,-6.14569 4.63951,-4.01876 10.14434,-7.59336 12.80853,-13.34806 z"
+              id="path120" />
+            <path style="fill:#2f2e41" inkscape:connector-curvature="0"
+              d="m 978.78824,401.29856 c 0.0708,4.51128 -1.9177,8.79938 -4.25634,12.6578 -2.33864,3.85842 -5.08573,7.50758 -6.80909,11.67731 a 26.76428,26.76428 0 0 0 -1.24921,16.46561 53.11985,53.11985 0 0 0 1.7845,5.50966 l 4.43175,12.15623 a 21.09914,21.09914 0 0 0 2.5699,5.39558 17.42378,17.42378 0 0 0 3.49265,3.35986 32.59666,32.59666 0 0 0 11.39554,5.94495 19.27232,19.27232 0 0 0 12.67166,-0.72289 183.36486,183.36486 0 0 1 7.8712,-48.59781 c 0.8861,-2.91154 1.8544,-5.97675 1.1709,-8.94238 -0.7656,-3.32183 -3.4338,-5.81583 -5.9702,-8.09347 -7.75671,-6.96557 -16.28662,-14.28224 -26.66949,-15.22128 -6.0092,-0.54347 -0.48498,5.14932 -0.43377,8.41083 z"
+              id="path122" />
+            <path style="fill:#ffb9b9" inkscape:connector-curvature="0"
+              d="m 925.70692,495.34067 c 0.61521,1.20421 0.99811,2.51575 1.60646,3.72345 a 20.80315,20.80315 0 0 0 3.30045,4.438 c 5.40825,5.99688 12.01918,11.97087 20.08645,12.33261 a 5.50819,5.50819 0 0 0 2.36752,-0.298 4.69354,4.69354 0 0 0 2.51958,-3.60239 c 0.572,-3.13245 -0.81074,-6.25805 -2.1952,-9.12557 -3.00061,-6.21491 -6.37689,-12.58746 -11.995,-16.59572 a 22.50579,22.50579 0 0 0 -19.417,-2.92118 c -2.92646,0.9015 -7.77906,2.47573 -3.90448,5.14569 2.93945,2.02553 5.9271,3.56743 7.63122,6.90311 z"
+              id="path124" />
+            <path style="fill:#ffb9b9" inkscape:connector-curvature="0"
+              d="m 960.58015,416.21646 a 18.078,18.078 0 0 0 -3.796,-6.12052 14.08278,14.08278 0 0 0 -5.7985,-2.93766 31.71,31.71 0 0 0 -8.50622,-1.21914 c -3.42562,-0.0213 -7.39764,0.89755 -8.85234,3.999 -1.15518,2.46287 -0.25964,5.37929 0.90344,7.83844 a 7.68532,7.68532 0 0 0 2.39795,3.2393 c 1.47726,0.99811 3.38784,0.96648 5.13906,1.3008 a 23.70319,23.70319 0 0 1 7.59548,3.44186 l 6,3.62674 10.30578,6.22945 c -0.27157,-0.16415 -0.175,-7.23144 -0.49156,-8.38969 -1.01971,-3.73112 -3.31518,-7.47525 -4.89709,-11.00858 z"
+              id="path126" />
+            <path style="fill:#2f2e41" inkscape:connector-curvature="0"
+              d="m 930.55961,593.22324 c -2.41147,3.277 -1.928,7.96134 -4.06406,11.42415 -1.8516,3.00161 -5.34113,4.57544 -7.65712,7.23519 a 19.3957,19.3957 0 0 0 -1.96864,2.83187 c -2.14841,3.59866 -3.89467,8.2108 -1.77877,11.82867 1.70211,2.91036 5.27988,4.04783 8.5611,4.82308 4.14726,0.97987 8.4563,1.7641 12.65145,1.01532 4.19515,-0.74878 8.29512,-3.3176 9.79091,-7.30791 a 28.22932,28.22932 0 0 1 1.04688,-2.9542 c 2.27381,-4.4764 9.40591,-4.52479 11.733,-8.97373 1.62853,-3.11345 0.13151,-6.87688 -1.36489,-10.056 l -4.57032,-9.70959 c -1.5167,-3.22219 -7.66515,-1.36915 -10.87048,-2.14129 -4.18044,-1.00704 -8.50168,-2.11654 -11.50906,1.98444 z"
+              id="path128" />
+            <path style="fill:#2f2e41" inkscape:connector-curvature="0"
+              d="m 965.91004,584.88199 a 12.99582,12.99582 0 0 0 -4.13516,5.665 c -2.26188,5.21831 -3.0387,10.939 -3.79292,16.57619 a 20.07506,20.07506 0 0 0 -0.13081,6.79883 c 0.97469,4.60379 5.14648,7.99395 9.63686,9.40159 4.49038,1.40764 9.3065,1.19092 14.00669,0.96034 a 10.02775,10.02775 0 0 0 4.40285,-0.89413 c 2.36222,-1.30228 3.285,-4.36432 2.88,-7.03113 -0.405,-2.66681 -1.862,-5.03965 -3.2881,-7.32923 -1.4261,-2.28958 -2.8844,-4.66116 -3.29284,-7.32746 -0.68707,-4.48508 1.25176,-11.06873 -1.50366,-15.12644 -2.76141,-4.06645 -11.09763,-4.27634 -14.78291,-1.69356 z"
+              id="path130" />
+            <path style="fill:#2f2e41" inkscape:connector-curvature="0"
+              d="m 977.34338,368.23773 a 6.15933,6.15933 0 0 0 -2.67141,-3.487 14.1362,14.1362 0 0 0 -0.564,-4.60169 c -1.46953,-4.34444 -4.95079,-4.09542 -8.23547,-6.01617 -1.42509,-0.83336 -1.33706,-1.56989 -2.07893,-2.93865 a 10.90656,10.90656 0 0 0 -4.20255,-4.28786 c -2.10732,-1.34264 -4.33179,-2.72537 -6.82474,-2.8953 -5.23895,-0.35709 -9.25572,4.57054 -14.263,6.152 -2.20709,0.697 -4.57869,0.72578 -6.79743,1.38476 -2.21874,0.65898 -4.43236,2.23247 -4.763,4.52325 -0.15265,1.05758 0.11666,2.14252 -0.0382,3.19981 -0.30782,2.1014 -2.15146,3.57314 -3.38564,5.30155 -2.72922,3.82216 -2.41706,9.22181 -0.2345,13.38047 a 18.80749,18.80749 0 0 0 1.57379,2.46278 15.14972,15.14972 0 0 0 1.66166,5.62586 c 2.18256,4.15865 5.93822,7.26624 9.86149,9.84805 a 23.2761,23.2761 0 0 1 -0.58192,-4.19944 2.89689,2.89689 0 0 1 0.17857,-1.39141 c 0.43692,-0.91333 1.59142,-1.15623 2.47167,-1.65644 1.8232,-1.03606 2.53816,-3.32891 2.59089,-5.42527 0.0527,-2.09636 -0.39155,-4.19618 -0.1719,-6.28163 a 3.43232,3.43232 0 0 1 1.175,-2.52484 4.05857,4.05857 0 0 1 2.21524,-0.52815 c 3.73557,-0.1524 7.63864,-0.221 10.93364,-1.98755 a 16.20315,16.20315 0 0 1 3.40311,-1.7215 c 2.80022,-0.73022 5.6622,1.23245 7.276,3.63456 1.6138,2.40211 2.41845,5.26062 3.90742,7.74206 1.48897,2.48144 4.0613,4.69432 6.94017,4.40032 a 1.15207,1.15207 0 0 0 0.85976,-0.38231 1.28885,1.28885 0 0 0 0.15838,-0.73249 l 0.16084,-11.00458 a 16.63311,16.63311 0 0 0 -0.55498,-5.59319 z"
+              id="path132" />
+            <path style="fill:#2f2e41" inkscape:connector-curvature="0"
+              d="m 900.54915,425.8008 c -2.31524,3.41564 -4.98477,6.69979 -6.25737,10.625 -0.748,2.30712 -0.98029,4.746 -1.52183,7.11012 -1.80374,7.87435 -7.01474,14.86833 -7.53852,22.92962 a 10.90193,10.90193 0 0 0 0.76562,5.26486 c 1.49482,3.2516 5.07236,4.96527 8.48491,6.04319 3.41255,1.07792 7.07732,1.85456 9.80117,4.17578 a 30.03568,30.03568 0 0 1 3.714,4.30558 35.97558,35.97558 0 0 0 17.18419,11.75745 c -0.53415,-3.68051 -0.78481,-8.11672 2.15728,-10.3917 1.5926,-1.23147 3.72064,-1.45065 5.72635,-1.624 l 9.47737,-0.819 a 121.78575,121.78575 0 0 0 -20.77548,-16.18434 c -2.62062,-1.6189 -5.47294,-3.32657 -6.66954,-6.165 a 14.89059,14.89059 0 0 1 -0.75557,-5.68764 140.15519,140.15519 0 0 0 -1.78537,-21.04066 c -0.78019,-4.83176 -1.81329,-9.62039 -2.99483,-14.37 -0.33169,-1.33338 -2.29216,-7.31424 -4.70528,-5.91478 -0.56839,0.32964 -1.10021,4.1236 -1.43209,4.91084 a 29.78478,29.78478 0 0 1 -2.87501,5.07468 z"
+              id="path134" />
+            <path style="fill:#2f2e41" inkscape:connector-curvature="0"
+              d="m 1009.7057,412.89311 3.8703,8.04913 a 19.34076,19.34076 0 0 1 2.4401,10.884 l 0.2297,24.14489 a 35.16181,35.16181 0 0 1 -0.794,9.61452 7.69953,7.69953 0 0 1 -1.3348,2.87088 8.97338,8.97338 0 0 1 -2.289,1.84392 c -7.3248,4.57668 -16.82296,7.17792 -24.56186,3.34276 a 33.99033,33.99033 0 0 1 -5.03566,-3.28722 c -3.08431,-2.28408 -6.21414,-4.61273 -8.52151,-7.67965 -2.41491,-3.20986 -3.79885,-7.0528 -5.42349,-10.72643 a 82.43023,82.43023 0 0 0 -11.20567,-18.37924 4.84641,4.84641 0 0 1 -1.38758,-2.75066 c -0.048,-2.11635 2.463,-3.15821 4.42079,-3.9634 3.34473,-1.3756 6.49875,-4.03 7.05864,-7.603 7.11253,9.32716 14.96123,19.18207 26.18477,22.59034 a 1.15808,1.15808 0 0 0 1.78133,-0.98986 c 0.63692,-2.66569 0.86225,-5.41059 1.32832,-8.1114 a 46.2023,46.2023 0 0 1 4.87412,-14.05655 c 1.3291,-2.46215 5.6336,-11.47464 8.3655,-5.79303 z"
+              id="path136" />
+            <path style="opacity:0.1" inkscape:connector-curvature="0"
+              d="m 913.66436,436.16971 a 37.12338,37.12338 0 0 1 -3.54677,16.543 13.67005,13.67005 0 0 0 -1.38883,3.64424 c -0.42455,2.71937 1.123,5.352 2.89185,7.46072 a 30.6782,30.6782 0 0 0 13.11679,9.12533" id="path138" />
+            <path style="opacity:0.1" inkscape:connector-curvature="0"
+              d="m 997.70681,431.35399 c -0.57024,1.5335 -0.0524,3.22943 0.38712,4.80539 a 48.418,48.418 0 0 1 1.76459,14.04911 0.51134,0.51134 0 0 1 -0.598,0.6129 c -1.867,0.11438 -4.00444,0.12647 -5.27113,-1.24987" id="path140" />
+          </g>
+        </g>
+      </g>
+    </svg>
+  </div>
+
+  <!--About Me Part Ends Here -->
+  <!--Projects Part -->
+
+  <!--Web Developmet -->
+  <div id="projects">
+    <h1 class="main_section_headingabc"> My Projects </h1>
+    <div id="web-development">
+      <h2 class="sub_section_headingxyz"> Web Development </h2>
+      <p class="section_parapqr"> Well I am not a professional web developer but I love to work on web development during my free time. It is short of hobby for me. Web Development gives me the feel of "Nothing is Impossible". Like you can design any
+        thing in any way, you just need to find the way. Web development provides all required tool to sketch your imagination into something you can show others. So Yeah Here are some of my projects which are based on some of my ideas.I hope you
+        enjoy it. </p>
+      <!--Web Development Part-->
+      <div class = "split_container_effect" id="split_clip1">
+      </div>
+      <div class = "split_container_effect" id = "split_clip2">
+      </div>
+      <div class="main_main_conatiner">
+        <a class="project_titlexyz" href=""></a>
+        <div class="full-page" id="webimages">
+          <!--1sst slide-->
+          <div class="s1" style="z-index: 8;">
+            <div class="nav" style="z-index: 9;">
+              <div class="nav-closed">
+                <h1 class="click_check">&#9432;</h1>
+                <h1 class="name_project">LeibTon</h1>
+                <h1></h1>
+              </div>
+              <div class="nav-open">
+                <div class="for-opacity">
+                  <div>This is my Personal WebSite. In this project, I have used plain HTML, CSS, JavaScript. However I have used some animation frameworks. Another important part of this website being use of Canvas to add interaction in the site.
+                  </div>
+                  <div>
+                    <p><span>Frontend: </span>Just Plain HTML, CSS and Vanilla Javascript</p>
+                    <p><span>Javacript Libraries: </span>Animes.JS, GSAP</p>
+                    <p><span>Creative Coding: </span>Canvas, Physics, Motion, 2D</p>
+                    <p style="text-align:center;"><a href="https://github.com/prakashaditya369/prakashaditya369.github.io">GitHub</a><a href="https://prakashaditya369.github.io/">Visit Site</a></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <img class="cover" src="img/leibton.png" alt="">
+          </div>
+          <!--Slide Part Ends-->
+          <!--2nd slide-->
+          <div class="s1" style="z-index: 6;">
+            <div class="nav" style="z-index: 7;">
+              <div class="nav-closed">
+                <h1 class="click_check">&#9432;</h1>
+                <h1 class="name_project">Being IITian</h1>
+                <h1></h1>
+              </div>
+              <div class="nav-open">
+                <div class="for-opacity">
+
+                  <div>The idea behind this project is to create a platform where one can share their experiences. Current version of this website just provides a way to share your experiences and a platform to view it. However the idea extends to
+                    making it a fully functional experience sharing site to be used for learning mistakes and improving human performance.</div>
+                  <div>
+                    <p><span>Backend: </span>NodeJS</p>
+                    <p><span>Frontend: </span>Uses EJS as template engine, Animation using Vanilla JQuery</p>
+                    <p><span>
+                        <p><span>Highlights: </span>No Backend, Use of Canvas(HTML5) for Interaction.</p>
+                        <p style="text-align:center;"><a href="https://github.com/prakashaditya369/being-iitian-code">GitHub</a><a href="https://beingiitian.herokuapp.com">Visit Site</a></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <img class="cover" src="img/iitian.png" alt="">
+          </div>
+          <!--Slide Part Ends-->
+          <!--3rd slide-->
+          <div class="s1" style="z-index: 4;">
+            <div class="nav" style="z-index: 5;">
+              <div class="nav-closed">
+                <h1 class="click_check">&#9432;</h1>
+                <h1 class="name_project">Project Ekatra</h1>
+                <h1></h1>
+              </div>
+              <div class="nav-open">
+                <div class="for-opacity">
+                  <div>A website where one can share free online educational resources available on internet. The intuition behind this website was to store all free resources on internet that are hard to find or are very important at one place. "If
+                    something is free but not accessible, then it is actually not free."</div>
+                  <div>
+                    <p><span>Backend: </span>NodeJS</p>
+                    <p><span>Frontend: </span>ReactJS</p>
+                    <p style="text-align:center;"><a href="https://github.com/prakashaditya369/ekatra-frontend">GitHub</a><a href="https://projectekatra.github.io/">Visit Site</a></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <img class="cover" src="img/ekatra.png" alt="">
+          </div>
+          <!--Slide Part Ends-->
+          <!--4th slide-->
+          <div class="s1" style="z-index: 2;">
+            <div class="nav" style="z-index: 3;">
+              <div class="nav-closed">
+                <h1 class="click_check">&#9432;</h1>
+                <h1 class="name_project">Randomness</h1>
+                <h1></h1>
+              </div>
+              <div class="nav-open">
+                <div class="for-opacity">
+                  <div>Well this is just a fun website. Here I have tried to explain Autoregressive Models based using one of the crucial thing in this universe: Randomness. This is very interesting site, do give it a try.</div>
+                  <div>
+                    <p><span>Backend: </span>Flask (Python)</p>
+                    <p><span>Frontend: </span>NodeJS</p>
+                    <p><span>Javacript Libraries: </span>chartJS</p>
+                    <p><span>Main Points: </span>Visualisation using ChartJS library</p>
+                    <p style="text-align:center;"><a href="https://github.com/prakashaditya369/random_experiment_react_code">GitHub</a><a href="https://prakashaditya369.github.io/randomness">Visit Site</a></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <img class="cover" src="img/random.png" alt="">
+          </div>
+          <!--Slide Part Ends-->
+        </div>
+        <!--Web Development Part ends-->
+        <h1 id="index_area"></h1>
+        <div style="clear: both;"></div>
+      </div>
+    </div>
+      <!-- Web Development Part Ends Here -->
+      <!--Deep Learning Project starts here-->
+      <div id="deep-learning">
+        <h2 class="sub_section_headingxyz"> Deep Learning </h2>
+        <p class="section_parapqr"> Deep Learning is a kind of research interest field and so it attracts all research oriented minds. I got interested it during summer break of my first year. It kind of fills cool when you design something that do
+          your work. Is'nt it? So yeah I have worked upon some projects based on Deep Learning. Hope you get something you learn.</p>
+
+    <!--Deep Learning First Project -->
+  <div class="deep_learning_project">
+    <!--only project-->
+    <div class="deep_learning_single_project" style="margin-left: 60px;">
+      <div class="dl_sp_main">
+        <div class="dl_cover" style="background-image: url('img/fer.jpg');"></div>
+        <div class="dl_info">
+            <h1>Facial Emotion Recognition</h1>
+            <h3 class="subtitle">How you gonna React?</h3>
+          <p>
+            In Bedford Falls, New York on Christmas Eve, George Bailey is deeply troubled. Prayers for his well-being from friends and family reach Heaven. Clarence Odbody, Angel Second Class, is assigned to visit Earth to save George, thereby
+            earning his wings. Franklin and Joseph, the head angels, review George's life with Clarence.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--Only project ends here-->
+<div class = "additional_photo">
+  <img src="img/emotion_add.jpg" alt="" style="width: 80%;">
+</div>
+</div>
+<!--Deep Learning First Project Ends Here -->
+<!--Deep Learning Second Project -->
+<div class="deep_learning_project">
+  <div class = "additional_photo">
+  <img src="img/nlp_add.jpg" alt="" style="width: 80%;">
+  </div>
+<!--only project-->
+<div class="deep_learning_single_project" style="margin-right: 60px;">
+  <div class="dl_sp_main">
+    <div class="dl_cover" style="background-image: url('img/phoenix.jpg');"></div>
+    <div class="dl_info">
+        <h1>Phoenix</h1>
+        <h3 class="subtitle">Wanna Talk?</h3>
+      <p>
+        In Bedford Falls, New York on Christmas Eve, George Bailey is deeply troubled. Prayers for his well-being from friends and family reach Heaven. Clarence Odbody, Angel Second Class, is assigned to visit Earth to save George, thereby
+        earning his wings. Franklin and Joseph, the head angels, review George's life with Clarence.
+      </p>
+    </div>
+  </div>
+</div>
+<!--Only project ends here-->
+</div>
+<!--Deep Learning Second Project Ends Here -->
+</div>
+  <!--Deep Learning projects ends here -->
+  </div>
+  <!-- Project Part Ends here -->
+  <!--HomePage Ends Here-->
+  <div class="thank_message">
+   <!--SVG Part-->
+<svg
+   xmlns="http://www.w3.org/2000/svg"
+   height=97%
+   viewBox="0 0 871 481"
+   version="1.1">
+  <defs
+     id="defs85" />
+  <g
+     id="face_smiley">
+    <path
+       id="path24"
+       d="m 670.92682,206.81822 a 235.26241,235.26241 0 0 0 -26.38037,-78.84999 238.28591,238.28591 0 0 0 -429.06983,22.8 v 0.01 a 234.62134,234.62134 0 0 0 -12.31007,39.02 239.91472,239.91472 0 0 0 -5.68994,52.1 238,238 0 0 0 476,0 241.44779,241.44779 0 0 0 -2.54979,-35.08001 z m -235.4502,271.08 c -130.12988,0 -236,-105.87 -236,-236 a 234.59283,234.59283 0 0 1 19.58984,-94.12 C 255.48639,64.348225 338.78668,5.898225 435.47662,5.898225 c 88.9502,0 166.56006,49.47 206.77,122.339995 a 234.21618,234.21618 0 0 1 26.56984,78.16 237.51853,237.51853 0 0 1 2.66016,35.5 c 0,130.13 -105.87007,236 -236,236 z"
+       inkscape:connector-curvature="0"
+       style="fill:#c0b065;fill-opacity:1" />
+    <path
+       id="path26"
+       d="m 358.22662,217.89822 a 49.9919,49.9919 0 1 1 35.12256,-14.40869 49.71768,49.71768 0 0 1 -35.12256,14.40869 z m 0,-98 a 48.00349,48.00349 0 1 0 48,48 48.05437,48.05437 0 0 0 -48,-48 z"
+       inkscape:connector-curvature="0"
+       style="fill:#c0b065;fill-opacity:1" />
+    <path
+       id="path28"
+       d="m 512.22662,217.89822 a 50,50 0 1 1 50,-50 50.0565,50.0565 0 0 1 -50,50 z m 0,-98 a 48,48 0 1 0 48,48 48.05437,48.05437 0 0 0 -48,-48 z"
+       inkscape:connector-curvature="0"
+       style="fill:#c0b065;fill-opacity:1" />
+    <path
+       id="path30"
+       d="m 392.64655,202.77822 a 49.01223,49.01223 0 0 1 -68.83984,0 38.01338,38.01338 0 0 1 68.83984,0 z"
+       inkscape:connector-curvature="0"
+       style="fill:#c0b065;fill-opacity:1" />
+    <path
+       id="path32"
+       d="m 546.64655,202.77822 a 49.01223,49.01223 0 0 1 -68.83984,0 38.01338,38.01338 0 0 1 68.83984,0 z"
+       inkscape:connector-curvature="0"
+       style="fill:#c0b065;fill-opacity:1" />
+  </g>
+  <g
+     id="dimples_smiley"
+     transform="translate(8.9924853,23.441575)">
+    <circle
+       id="circle36"
+       r="17"
+       cy="207.95665"
+       cx="300.73413"
+       style="fill:#e3b484;fill-opacity:1" />
+    <circle
+       id="circle38"
+       r="17"
+       cy="208.45665"
+       cx="552.23413"
+       style="fill:#e3b484;fill-opacity:1" />
+  </g>
+  <g
+     id="get_in_touch"
+     transform="translate(-4.9394656,8.3144112)"
+     style="opacity:0.99702454">
+    <path
+       id="path34"
+       d="m 392.94657,251.91575 c 0,-7.10258 21.97614,-12.86036 49.08508,-12.86036 27.10895,0 49.08509,5.75778 49.08509,12.86036 0,7.10259 -21.97614,33.43697 -49.08509,33.43697 -27.10894,0 -49.08508,-26.33438 -49.08508,-33.43697 z"
+       inkscape:connector-curvature="0"
+       style="fill:#c0b065;fill-opacity:1;stroke-width:1.25624" />
+    <text
+       xml:space="preserve"
+       style="font-size:13.6234px;line-height:1.25;font-family:Playlist;-inkscape-font-specification:Playlist;letter-spacing:0px;word-spacing:0px;stroke-width:0.973102"
+       x="400.81891"
+       y="270.02713"
+       id="text875"
+       transform="scale(1.0276413,0.9731022)"><tspan
+         sodipodi:role="line"
+         id="tspan873"
+         x="400.81891"
+         y="270.02713"
+         rotate="0 0 0 0 0 0 0 0 0 0 0 0 0"
+         style="stroke-width:0.973102">Get In Touch</tspan></text>
+  </g>
+</svg>
+    <div class="contact_me">
+      <span>Get In Touch</span> <img src="img/paper_plane.png" alt="">
+    </div>
+    <span class="thanks thanks1">T<span>H</span>A<span>N</span>K<span>S</span></span> <span class="thanks thanks2">F<span>O</span>R</span> <span class="thanks thanks3">V<span>I</span>S<span>I</span>T<span>I</span>N<span>G </span></span>
+  </div>
+  <!--End ENd here-->
+  <script src="js/anime.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/plugins/BezierPlugin.min.js" integrity="sha512-H0dUDNDv/uVTWqjYbXjaHb5mILJYXUJ9g36b/Ye/Jt/wk1tVPi8M99AEPbPEBkwL/jysKfLg6sN+kvElcJuESw==" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js" integrity="sha512-HzAEuXwhLxwm/Jj+5ecdjzrRVrjuh2ZeIxyT1Ln37TO5pWNMnKBuU7cfd1wvRQ/k86w1oC174Yk1T7aRlBpIcA==" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/animation.gsap.min.js" integrity="sha512-A98SmLRZISk4eIxQBeCm8k0jAcwN3A3lBx4hr7baoMpV1VpxcxlZIhi5fJIZN50sQ5RlCzx8yV+Voy2cR6x0aA==" crossorigin="anonymous"></script>
+  <script src="js/canvas_leibton.js"></script>
+  <script src="js/scroll_effect_home.js"></script>
+  <script src="js/home_about.js"></script>
+  <script src="js/navigation.js"></script>
+  <script src="js/project_web.js"></script>
+  <script src="js/projectdeep_thank.js"></script>
+</body>
+
+</html>
