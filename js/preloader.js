@@ -1,4 +1,5 @@
 const tween_loader = new TimelineLite({paused: true,onComplete: function(){document.querySelector(".preloader_preloader_main").remove()
+document.querySelector("body").style.overflow="auto";
 }});
 
 tween_loader.add(
@@ -44,5 +45,6 @@ tween_loader.play();
 else
 {
 document.querySelector(".preloader_preloader_main").remove()
+document.querySelector("body").style.overflow="auto";
 }
 })
