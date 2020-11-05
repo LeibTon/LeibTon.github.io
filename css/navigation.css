@@ -62,10 +62,14 @@ transform: translate(-50%,-50%);
 }
 
 .menu_part span:before{
+left: 50%;
+transform: translate(-50%);
 top: -6px;
 content: '';
 }
 .menu_part span:after{
+left: 50%;
+transform: translate(-50%);
 top: 6px;
 content: '';
 }
