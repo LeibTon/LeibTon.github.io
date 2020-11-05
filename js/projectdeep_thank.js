@@ -29,7 +29,7 @@ const flightPath={
   ]
 }
 
-const tween = new TimelineLite({paused: true,onComplete: function(){open("https://prakashaditya369.github.io/about.html","_self")}});
+const tween = new TimelineLite({paused: true,onComplete: function(){open("https://prakashaditya369.github.io/contact.html","_self")}});
 
 tween.add(
 TweenLite.to("#get_in_touch",0.5,{
