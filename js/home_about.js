@@ -39,7 +39,7 @@ function dragElement(elmnt) {
   if(coord_x-offset_x>160 && coord_x-offset_x<295)
 {
 document.getElementById("about_me_instruction").innerHTML = "Opening About Me..."
-open("https://prakashaditya369.github.io/about.html","_self")
+open("/about.html","_self")
 }
   }
 

@@ -210,7 +210,7 @@ function animate() {
 canvas.addEventListener("click", function(e) {
 
     if (e.clientX - window.innerWidth / 2 > 14.5 && e.clientX - window.innerWidth / 2 < 205.5 && e.clientY - window.innerHeight / 2 - vGap > -25 && e.clientY - window.innerHeight / 2 - vGap < 10) {
-        window.open("https://prakashaditya369.github.io/about.html", "_self")
+        window.open("/about.html", "_self")
     }
 })
 
