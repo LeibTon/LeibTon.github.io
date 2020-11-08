@@ -121,7 +121,7 @@ z-index: 3;
 background: white;
 padding-top: 20px;
 padding-bottom: 30px;
-overflow-x: hidden;
+overflow: hidden;
 }
 /*Project Web Development Part */
 .split_container_effect{

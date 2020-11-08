@@ -90,11 +90,11 @@ document.querySelector(".thank_message").addEventListener("wheel",function(e){
     else
       {
 if(skew_para<=90)
-{scale+=0.05;}
+{scale+=0.02;}
 else
-{scale-=0.05;}
+{scale-=0.02;}
 if(skew_para<=180)
-{skew_para+=5;}
+{skew_para+=2;}
 else
 {skew_para = 0;}
 
