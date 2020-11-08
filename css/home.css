@@ -369,7 +369,7 @@ height: 500px;
 -webkit-perspective: 2800px;
 -moz-perspective: 2800px;
 perspective: 2800px;
-transform: translateY(-100px);
+transform: translateY(100px);
 opacity: 0;
 }
 

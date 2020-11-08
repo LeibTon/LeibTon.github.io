@@ -1,0 +1,167 @@
+*{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+/* Canvas Div*/
+.canvas_class{
+overflow: hidden;
+position: relative;
+top: 0;
+left: 0;
+height: 100vh;
+background:#ff8a80;
+}
+.canvas_class_info{
+position: absolute;
+top: 80px;
+left: 60px;
+pointer-events: none;
+}
+
+.canvas_class_info h1, .informal_one h1{
+font-size: 1.8rem;
+font-family: 'PT Serif', serif;
+}
+
+.canvas_class_info p{
+font-size:1.1rem;
+font-family: 'Open Sans', sans-serif;
+color: #472836;
+margin-top: 5px;
+margin-bottom: 5px;
+max-width: 800px;
+}
+
+.canvas_class_info p a{
+text-decoration: none;
+color: red;
+pointer-events: auto;
+}
+/*Canvas Div Ends*/
+/*Informal One Begines Here*/
+
+.informal_one
+{
+position: relative;
+top: 0;
+left: 0;
+margin-bottom: 70px;
+}
+
+.informal_one_info ul{
+list-style-type: none;
+font-size:1.2rem;
+font-family: 'Open Sans', sans-serif;
+color: #472836;
+}
+
+.informal_one_info li:before{
+content: "➤";
+margin-right: 15px;
+background: #4b6cb7;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #182848, #4b6cb7);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #182848, #4b6cb7); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.informal_one_info li a{
+text-decoration: none;
+color: #C57B57;
+}
+
+.informal_one_info{
+margin-top: 80px;
+margin-left: 70px;
+}
+
+.informal_one_info h3{
+font-size: 1.4rem;
+font-weight: 300;
+margin-top: 20px;
+margin-bottom: 5px;
+font-family: 'PT Serif', serif;
+} 
+
+.informal_one_info li{
+max-width: 600px;
+margin-top: 1px;
+margin-bottom: 1px;
+}
+
+/*Blending Image*/
+.image_blend_main{
+position: absolute;
+z-index: -1;
+top: 50%;
+right: 20px;
+height: 400px;
+width: 600px;
+transform: translateY(-50%);
+}
+
+.image_blend {
+position: absolute;
+top: 0;
+left: 0;
+height: 400px;
+width: 600px;
+mix-blend-mode: lighten;
+}
+
+.image_blend_1{
+background-image: url('../img/boy2.png');
+background-size: cover;
+}
+
+.image_blend_2{
+background-image: url('../img/background2.png');
+background-repeat: repeat-x;
+background-size: 1778px;
+pointer-events: none;
+animation: animate 20s linear infinite;
+}
+
+@keyframes animate{
+0%{background-position: 0px;}
+100%{background-position: 1778px}
+}
+
+/*Blending Image Ends*/
+/*Informal One Ends Here*/
+.informal_one_2 {
+font-size:1.1rem;
+font-family: 'Open Sans', sans-serif;
+color: #472836;
+}
+.informal_one_2 .quote_para{
+margin-left: 60px;
+margin-top: 20px;
+border-left: 10px solid lightgreen;
+padding-left: 15px;
+text-align: left;
+}
+
+.informal_one_2 .quote_para blockquote{
+max-width: 600px;
+font-weight: bold;
+}
+
+.informal_one_2 p{
+font-size:1.1rem;
+font-family: 'Open Sans', sans-serif;
+color: #472836;
+margin-top: 5px;
+margin-bottom: 5px;
+}
+
+.informal_one_2 p a{
+text-decoration: none;
+color: #C57B57;
+}
+
+/*INformal one2 starts here*/
+/*Informal one 2 ends here*/

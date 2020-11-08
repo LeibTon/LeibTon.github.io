@@ -62,9 +62,12 @@ var opacity = 0;
 var tFactor = 1;
 var flag = 0;
 var fontSize = 0;
+var skew_para = 0;
+var scale = 1;
 var maxFontSize = 5
 var niceSpeed = maxFontSize*tFactor*5/textTop;
 var oFactor = tFactor/textTop;
+var circle_smiley = document.querySelector(".thank_message svg")
 document.querySelector(".thank_message").addEventListener("wheel",function(e){
   if(e.deltaY> 0)
   {
@@ -84,6 +87,19 @@ document.querySelector(".thank_message").addEventListener("wheel",function(e){
       text[i].style.top = 0;
       text[i].style.opacity = 1;}
     }
+    else
+      {
+if(skew_para<=90)
+{scale+=0.05;}
+else
+{scale-=0.05;}
+if(skew_para<=180)
+{skew_para+=5;}
+else
+{skew_para = 0;}
+
+circle_smiley.style.transform = "translateX(-50%) rotateZ(0deg) scale("+scale+") skew("+skew_para+"deg)"
+}
   }
   else {
       if(textTop<50)
