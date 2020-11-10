@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, intial-scale=1.0" />
+  <link rel="stylesheet" href="css/bucket.css" />
+<link rel="icon" href="img/favicon.ico" />
+<link rel="stylesheet" href="css/about_navigation.css" />
+<link rel="stylesheet" href="css/navigation.css" />
+  <title>Bucket List</title>
+</head>
+<body>
+<!--Navigation Bar -->
+  <header>
+    <nav>
+      <div class="menu_part">
+        <span></span>
+      </div>
+      <div class="menu_item" id="menu_item_home"><a href="/"><img src="img/home.png" /></a></div>
+      <div class="menu_item" id="menu_item_about"><a href="/about.html"><img src="img/about.png" /></a></div>
+      <div class="menu_item" id="menu_item_night_mode"><a href="/#projects"><img src="img/project.png" /></a></div>
+      <div class="menu_item" id="menu_item_contact_me"><a href="/contact.html"><img src="img/contact.png" /></a></div>
+      <svg>
+        <defs>
+          <filter id="goo">
+            <feGaussianBlur in="SourceGraphic" stdDeviation="10" />
+            <feColorMatrix in="name" mode="matrix" values="1 0 0 0 0
+           0 1 0 0 0
+           0 0 1 0 0
+           0 0 0 30 -15" />
+            <feBlend in="SourceGraphic" />
+          </filter>
+        </defs>
+      </svg>
+    </nav>
+  </header>
+  <!--End of Navigation bat -->
+<!--About Home Navigation Thing-->
+<div class="about_nav">
+<div class = "links">
+<a class="btn-slice" href="/bucket.html">
+  <div class="top"><span>Bucket List</span></div>
+	<div class="bottom"><span>Bucket List</span></div>
+</a>
+
+<a class="btn-slice" href="/circle.html">
+  <div class="top"><span>Circle</span></div>
+	<div class="bottom"><span>Circle</span></div>
+</a>
+
+<a class="btn-slice" href="/now.html">
+  <div class="top"><span>Now</span></div>
+	<div class="bottom"><span>Now</span></div>
+</a>
+</div>
+<div class="about_nav_button">
+<span class = "top"> </span>
+<span class= "middle"></span>
+<span class = "bottom"> </span>
+</div>
+</div>
+<!--About Home Navigation Thing Ends-->
+<div class="bucket_list">
+<h1> Bucket List </h1>
+<p> Things I wish to do before I die.
+</div>
+<div class = "progress_bar">
+<article>
+<div class="show_percentage"></div>
+<div class="progress_main">
+<div class="bar">
+<div class="face top">
+<div class="growing-bar"></div>
+</div>
+<div class="face side-0">
+<div class="growing-bar"></div>
+</div>
+<div class="face floor">
+<div class="growing-bar"></div>
+</div>
+<div class="face side-a"></div>
+<div class="face side-b"></div>
+<div class="face side-1">
+<div class="growing-bar"></div>
+</div>
+</div>
+</div>
+</article>
+</div>
+<div class="list_div">
+<h3>Hurray! I completed these.</h3>
+<ul class="completed_items">
+<li>Meet HC Verma Sir.</li>
+<li>Ride Bicycle at 2-3 AM.</li>
+<li>Propose my first crush.</li>
+<li>A long bicycle Trip.</li>
+<li>Teach at an NGO.</li>
+</ul>
+<h3 style="margin-top: 30px;">Still Remaining! </h3>
+<ul class="remaining_items">
+<li>Spend a night in my village forest.</li>
+<li>Solo Trip to Himalayas</li>
+<li>Open a school.</li>
+<li>Go to my village on my bicycle</li>
+<li>Live in Norway.</li>
+<li>Read all 4 Vedas.</li>
+<li>Paddy Farming.</li>
+</ul>
+</div>
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TimelineLite.min.js" integrity="sha512-tSIDeirKC6suYILHqqPuZH3s0MvD4a5vCHXhBIcdmq4gQXZ2IB3fEYA5x2f3D2p/CbSqzKEvuTEVbS5VZ2u+ew==" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenLite.min.js" integrity="sha512-pvDW4tehKKsohH97164HwKwRGFpzayEFWTVbk8HuUoLIQ7Jp+WLN5XYokVuoCj2aT6dy8ihbW8SRTG1k0W4mSQ==" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/plugins/CSSPlugin.min.js" integrity="sha512-ocsFo48WU8Xq6Y1Lwi7psXRAujG9E4TKNR4q1DbrKzaaxOMTEoao/a+mDoB+cYzY4lwbyxvqjkp/ZA1/MNlfsg==" crossorigin="anonymous"></script>
+<script src="js/anime.min.js"></script>
+<script src="js/bucket.js"></script>
+<script src="js/about_navigation.js"></script>
+<script src="js/navigation.js"></script>
+
+</body>
+
+</html>
