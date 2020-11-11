@@ -1,7 +1,26 @@
-var remaining = document.querySelectorAll(".remaining_items li")
-var completed = document.querySelectorAll(".completed_items li")
+var completed_items = ["Meet HC Verma Sir.","Ride Bicycle at 2-3 AM.","Propose my first crush.","A long bicycle Trip.","Teach at an NGO."]
 
-var percentage = parseInt((completed.length)/(completed.length+remaining.length)*100);
+var remaining_items = ["Spend a night in my village forest.","Solo Trip to Himalayas","Open a school.","Go to my village on my bicycle","Live in Norway.","Read all 4 Vedas.","Paddy Farming.","Visit SpaceX"]
+/* Function to add element*/
+function add_element(array, element){
+for(var i = 0;i< array.length;i++)
+{
+var list = document.createElement("li")
+var node = document.createTextNode(array[i])
+list.appendChild(node);
+element.appendChild(list)
+}
+}
+
+var remaining_ul = document.querySelector(".remaining_items")
+var completed_ul = document.querySelector(".completed_items")
+
+add_element(remaining_items, remaining_ul)
+add_element(completed_items, completed_ul)
+
+
+
+var percentage = parseInt((completed_items.length)/(completed_items.length+remaining_items.length)*100);
 console.log(percentage)
 var obj = {val: 0};
 var i = obj.val;
