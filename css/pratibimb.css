@@ -7,7 +7,7 @@ box-sizing: border-box;
 }
 
 body{
-background-color: #14274e;
+background-color: #eee;
 overflow-x: hidden;
 }
 @font-face{
@@ -21,6 +21,8 @@ src: url(Autography.otf);
 }
 
 #line{
+height: 100vh;
+width: 100vw;
 background-color: #14274e;
 overflow: hidden; 
 }
@@ -77,14 +79,11 @@ text-align: center;
 }
 
 
-#notes{
-
-position: fixed;
-top: 100vh;
-}
-
 #canvas {
 background: #eee;
+position: -webkit-sticky; /* Safari */
+position: sticky;
+top: 0;
 }
 .main_container {
 position: absolute;
