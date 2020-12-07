@@ -1,6 +1,6 @@
 window.onload = function() {
-const web_project_names = ["LeibTon","Being IITian","Project Ekatra","Randomness"]
-const web_project_link = ["https://prakashaditya369.github.io","https://beingiitian.herokuapp.com","https://projectekatra.github.io","https://prakashaditya369.github.io/randomness/"]
+const web_project_names = ["LeibTon","Being IITian","Project Ekatra","Randomness","Visualizer"]
+const web_project_link = ["https://prakashaditya369.github.io","https://beingiitian.herokuapp.com","https://projectekatra.github.io","https://prakashaditya369.github.io/randomness/","https://projectekatra.github.io/visualizer/"]
 var imageIndex = 0;
 var velocity = 10;
 var height= -500;
