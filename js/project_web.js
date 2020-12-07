@@ -22,6 +22,7 @@ projectTitleShow.innerHTML = web_project_names[imageIndex]
 projectTitleShow.href = web_project_link[imageIndex]
 var translate;
 var prevTranslate = 0;
+var heightadd = 70;
 webImages.addEventListener('scroll', function(e) {
   e.stopPropagation();
 }, false);
@@ -109,7 +110,7 @@ if(e.wheelDelta < 0) {
         translate = "translateY("+prevTranslate+"px)";
          !tls[imageIndex].reversed() ? tls[imageIndex].reverse(): null;
         images[imageIndex].style.transform = translate;
-        projectTitleHeight+=90;
+        projectTitleHeight+=heightadd;
 projectTitleAnimation(400);
         imageIndex+=1;
         indexShow.innerHTML = (imageIndex+1)+"/"+images.length;
@@ -124,7 +125,7 @@ projectTitleAnimation(400);
         !tls[imageIndex].reversed() ? tls[imageIndex].reverse(): null;
         images[imageIndex].style.transform = translate;
         imageIndex-=1;
-        projectTitleHeight-=90;
+        projectTitleHeight-=heightadd;
         projectTitleAnimation(800);
         indexShow.innerHTML = (imageIndex+1)+"/"+images.length;
 
