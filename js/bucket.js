@@ -1,4 +1,4 @@
-var completed_items = ["Meet HC Verma Sir.","Ride Bicycle at 2-3 AM.","Propose my first crush.","A long bicycle Trip.","Teach at an NGO."]
+var completed_items = ["Meet HC Verma Sir.","Ride Bicycle at 2-3 AM.","A long bicycle Trip.","Teach at an NGO."]
 
 var remaining_items = ["Spend a night in my village forest.","Solo Trip to Himalayas","Open a school.","Go to my village on my bicycle","Live in Norway.","Read all 4 Vedas.","Paddy Farming.","Visit SpaceX","Buy a telescope"]
 /* Function to add element*/
