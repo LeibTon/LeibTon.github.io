@@ -1,6 +1,6 @@
 # prakashaditya369.github.io
 
-Personal Website of Aditya Prakash: LeibTon
+Personal Website of Aditya Prakash: [LeibTon](prakashaditya369.github.io)
 
 ## Why LeibTon?
 
