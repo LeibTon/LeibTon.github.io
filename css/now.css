@@ -31,6 +31,9 @@ color: #F28482;
 font-family: 'EB Garamond', serif;
 }
 
+a{
+text-decoration: none;
+}
 .heading_part p{
 color: #F6BD60;
 font-size: 1.4rem;
@@ -76,4 +79,18 @@ padding-left: 15px;
 padding-top: 10px;
 padding-bottom: 10px;
 border-left: 10px solid #489FB5;
+}
+
+ul {
+list-style-type: "-";
+padding-left: 30px;
+color: orange;
+}
+
+li a{
+margin-left: 10px;
+text-decoration: none;
+color: orange;
+font-size: 1.3rem;
+font-family: 'Xanh Mono', monospace;
 }
