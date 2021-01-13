@@ -67,7 +67,7 @@ var scale = 1;
 var maxFontSize = 5
 var niceSpeed = maxFontSize*tFactor*5/textTop;
 var oFactor = tFactor/textTop;
-var circle_smiley = document.querySelector(".thank_message svg")
+var circle_smiley = document.querySelector(".home-smiley")
 document.querySelector(".thank_message").addEventListener("wheel",function(e){
   if(e.deltaY> 0)
   {

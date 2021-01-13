@@ -89,7 +89,11 @@ for(let x=0,x2 = data.width;x<x2;x++){
 if(data.data[(y*4*data.width)+(x*4)+3]>0){
 let positionX = x;
 let positionY = y;
-let color = "rgba("+data.data[(y*4*data.width)+(x*4)]+","+data.data[(y*4*data.width)+(x*4)+1]+"," + data.data[(y*4*data.width)+(x*4)+2]+","+data.data[(y*4*data.width)+(x*4)+3]+")";
+let r = data.data[(y*4*data.width)+(x*4)];
+let g = data.data[(y*4*data.width)+(x*4)+1];
+let b = data.data[(y*4*data.width)+(x*4)+2];
+let avg =  (r+g+b)/3;
+let color = "rgba("+(avg/174*255)+","+(avg/174*138)+"," +(avg/174*128)+","+data.data[(y*4*data.width)+(x*4)+3]+")";
 particleArray.push(new Particle(positionX*resize,positionY*resize,velocity,color));
 }
 else if(data.data[(y*4*data.width)+(x*4)+3]>50)

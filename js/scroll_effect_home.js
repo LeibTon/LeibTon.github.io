@@ -96,62 +96,6 @@ TweenLite.to(".main_section_headingabc",0.2,{
 transform: "rotate(0deg)",
 ease: Power1.easeInOut
 }));
-tw2.add(
-TweenLite.to("#web-development .sub_section_headingxyz",0.7,{
-transform: "translateX(0)",
-ease: Power1.easeInOut
-}));
-tw2.add(
-TweenLite.to("#web-development .section_parapqr",0.7,{
-opacity: 1,
-ease: Power1.easeInOut
-}),"-=0.5");
-tw2.add(
-TweenLite.to(".split_container_effect#split_clip1",1,{
-transform: "translateX(-50%)",
-ease: Power1.easeInOut
-}));
-tw2.add(
-TweenLite.to(".split_container_effect#split_clip2",1,{
-transform: "translateX(-50%)",
-ease: Power1.easeInOut
-}),"-=1");
-
-tw2.add(
-TweenLite.to(".split_container_effect#split_clip1",0.6,{
-transform: "translateX(calc(-50% - 220px))",
-ease: Power1.easeInOut
-}));
-
-tw2.add(
-TweenLite.to(".split_container_effect#split_clip2",0.6,{
-transform: "translateX(calc(-50% + 220px))",
-ease: Power1.easeInOut
-}),"-=0.6");
-
-tw2.add(
-TweenLite.to(".split_container_effect#split_clip1",0.6,{
-transform: "translateX(-50%)",
-ease: Power1.easeInOut
-}));
-tw2.add(
-TweenLite.to(".split_container_effect#split_clip2",0.6,{
-transform: "translateX(-50%)",
-ease: Power1.easeInOut
-}),"-=0.6");
-
-tw2.add(
-TweenLite.to(".main_main_conatiner",0.3,{
-opacity: 1,
-pointerEvents: "auto",
-ease: Power1.easeInOut
-}));
-
-tw2.add(
-TweenLite.to(".split_container_effect",0.3,{
-opacity: 0,
-ease: Power1.easeInOut
-}),"-=0.3");
 
 const controller2 =  new ScrollMagic.Controller();
 const scene2 =  new ScrollMagic.Scene(
@@ -224,7 +168,7 @@ ease: Power1.easeInOut
 }),"-=1");
 
 tw4.add(
-TweenLite.to(".thank_message svg",3,{
+TweenLite.to(".home-smiley",3,{
 transform: "translateX(-50%) rotateZ(0deg)",
 ease: Power1.easeInOut
 }),"-=1");

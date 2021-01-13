@@ -1,6 +1,6 @@
 window.onload = function() {
-const web_project_names = ["LeibTon","Being IITian","Project Ekatra","Randomness","Visualizer"]
-const web_project_link = ["https://prakashaditya369.github.io","https://beingiitian.herokuapp.com","https://projectekatra.github.io","https://prakashaditya369.github.io/randomness/","https://projectekatra.github.io/visualizer/"]
+const web_project_names = ["FER","Phoenix"]
+const web_project_link = ["https://github.com/spazewalker/FER_Doggomaniacs","https://colab.research.google.com/drive/1wIDjdbpJHgwK_YN_o-RSD7mDpcWT00Ez?usp=sharing"]
 var imageIndex = 0;
 var velocity = 10;
 var height= -500;
@@ -11,7 +11,6 @@ var projectTitleShow = document.querySelector(".project_titlexyz");
 var images = document.getElementsByClassName('s1');
 var navButtons = document.getElementsByClassName('nav-closed');
 var ClickButtons = document.getElementsByClassName('click_check');
-console.log(ClickButtons)
 var forOpacity = document.getElementsByClassName('for-opacity');
 var nameProjects = document.getElementsByClassName('name_project');
 var navOpen = document.getElementsByClassName('nav-open');
@@ -22,7 +21,7 @@ projectTitleShow.innerHTML = web_project_names[imageIndex]
 projectTitleShow.href = web_project_link[imageIndex]
 var translate;
 var prevTranslate = 0;
-var heightadd = 70;
+var heightadd = 300;
 webImages.addEventListener('scroll', function(e) {
   e.stopPropagation();
 }, false);
@@ -106,7 +105,7 @@ if(e.wheelDelta < 0) {
       prevTranslate-=(velocity*e.deltaY)
       if(prevTranslate<height && imageIndex<images.length-1)
       {
-        prevTranslate = height-20
+        prevTranslate = height-40
         translate = "translateY("+prevTranslate+"px)";
          !tls[imageIndex].reversed() ? tls[imageIndex].reverse(): null;
         images[imageIndex].style.transform = translate;
@@ -141,8 +140,7 @@ projectTitleAnimation(400);
     }
 }, false);
 
-webImages.addEventListener('click',function(e){
-console.log(e)
+function onBoxClick(e){
 if(e.explicitOriginalTarget.className==="click_check"){
 toggleTween(tls[imageIndex])
 }
@@ -152,19 +150,23 @@ else{
 //Animation Part
 anime({
   targets: images[imageIndex],
-  translateY: height-10,
+  translateY: height-40,
   duration: 200,
   easing: 'linear'
 });
 
-projectTitleHeight+=90;
+projectTitleHeight+=heightadd;
 //Animation Part ends.
   imageIndex+=1;
   indexShow.innerHTML = (imageIndex+1)+"/"+images.length;
 projectTitleAnimation(600);
 }
 }
-})
+}
+
+webImages.addEventListener('click',onBoxClick);
+webImages.addEventListener('touchstart',onBoxClick);
+
 
 webImages.addEventListener("mouseleave",function(e){
  anime({
