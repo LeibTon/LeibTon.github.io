@@ -11,8 +11,7 @@ SITE_BLOG_DIR = "../Main_Part/Blog"
 markDowns = os.listdir(MARKDOWN_DIR)
 blogs = os.listdir(BLOG_DIR)
 
-html_intial_doc = """
-<!DOCTYPE html>
+html_intial_doc = """<!DOCTYPE html>
 <html>
 <head>
   <meta charset="UTF-8" />
@@ -71,7 +70,7 @@ def afterMarkdownThing(string, fileName):
 				lines_temp = file1.read();
 				soup_temp = BeautifulSoup(markdown.markdown(lines_temp),'html.parser')
 				final_list.append(soup_temp.h1.string)
-	final_string+=html_final_doc.format(final_list[0],final_list[1],final_list[2],final_list[3],final_list[4],final_list[5])
+		final_string+=html_final_doc.format(final_list[0],final_list[1],final_list[2],final_list[3],final_list[4],final_list[5])
 	final_string+=html_end_game
 	with open(BLOG_DIR+"/"+fileName+".html","w") as file_temp:
 		print("Saving File:",BLOG_DIR+"/"+fileName+".html")
@@ -169,3 +168,4 @@ if flag!=0:
 
 	with open("../Main_Part/blog.html","w") as file:
 		file.write(final_string)
+print("Python Script Completed.")
