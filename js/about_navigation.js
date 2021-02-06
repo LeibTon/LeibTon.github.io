@@ -36,7 +36,7 @@ ease: Power1.easeInOut
 );
 tw1.add(
 TweenLite.to(".about_nav",2.5,{
-width: "500px",
+width: "330px",
 ease: Power1.easeInOut
 }),"-=1.9"
 )

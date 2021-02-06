@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&family=Raleway&display=swap');
+
+@font-face{
+font-family: combrida;
+src: url('font.ttf');
+}
+
+* {
+margin: 0px;
+padding: 0px;
+box-sizing: border-box;
+}
+
+body
+{
+background: #fcd1d1;
+}
+
+.blog-post-main{
+width: 100%;
+margin-top: 100px;
+padding-left: 30px;
+}
+
+.blog-post-main-title{
+font-family: combrida;
+font-size: 4.5rem;
+color: #e97878;
+}
+
+.blog-posts {
+margin-left: 200px;
+margin-right: 30px;
+display: flex;
+justify-content: center;
+}
+
+.blog-single-post{
+display: flex;
+justify-content: space-between;
+align-items: center;
+margin-top: 10px;
+margin-bottom: 10px;
+}
+
+.blog-single-post-marker{
+width: 10px;
+position: relative;
+top: 0px;
+height: 100px;
+}
+
+.blog-single-post-marker .circle{
+border: 1px solid #ee99a0;
+height: 10px;
+width: 10px;
+border-radius: 5px;
+position: absolute;
+}
+
+.blog-single-post-marker .line{
+height: calc(100% - 20px);
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+width: 1px;
+background-color: #ee99a0;
+}
+
+.blog-single-post-main{
+width: calc(100% - 40px);
+}
+
+
+.blog-single-post-main-title a{
+text-decoration: none;
+font-family: 'Playfair Display', serif;
+font-size: 1.6rem;
+color: #ef4f4f;
+}
+
+.blog-single-post-main-subtitle{
+margin-top: 5px;
+font-family: 'Raleway', sans-serif;
+font-size: 1.2rem;
+color: #ff8585;
+}
+
+.additional_info{
+margin-top: 15px;
+font-family: 'Raleway', sans-serif;
+font-size: 1rem;
+color: #ff8e71;
+}
+
+@media only screen and (max-width: 800px) {
+.blog-posts {
+margin-left: 0px;
+margin-top: 30px;
+}
+}
