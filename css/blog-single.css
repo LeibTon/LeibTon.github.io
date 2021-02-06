@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda&family=Ubuntu&family=Montserrat:wght@300&family=Roboto:wght@300&display=swap');
+
+@font-face{
+font-family: 'blog-heading';
+src: url('BLACKJAR.TTF');
+}
+*{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+.blog-single-main{
+padding-bottom: 50px;
+}
+
+.blog-single-sub-main{
+display: flex;
+justify-content: center;
+margin-top: 20px;
+}
+
+.blog-single-sub-sub-main{
+max-width: 900px;
+width: 100%;
+background: #f5f4f4;
+font-family: 'Montserrat', sans-serif;
+font-size: 1.1rem;
+line-height: 1.6rem;
+padding: 30px 30px;
+color: #00303f;
+}
+
+.blog-single-sub-sub-main p {
+text-align: left;
+}
+
+.blog-single-sub-sub-main a{
+text-decoration: none;
+color: #706897;
+font-weight:400;
+}
+.blog-single-sub-sub-main code{
+color: black;
+background: #bbbbbb;
+padding: 3px 5px;
+}
+
+.blog-single-sub-sub-main img{
+display: block;
+margin-left: auto;
+margin-right: auto;
+max-width: 600px;
+width: 90%;
+margin-bottom: 10px;
+margin-top: 10px;
+}
+
+.blog-single-sub-sub-main h1{
+text-align: center;
+font-family: 'blog-heading';
+font-size: 2.7rem;
+color: #cae4db;
+}
+
+h3, h4, h5, h6{
+margin-top: 8px;
+margin-bottom: 8px;
+font-family: 'Bodoni Moda', serif;
+color: #cdac81;
+}
+.blog-single-sub-sub-main h2{
+margin-top: 10px;
+margin-bottom: 10px;
+font-family: 'Bodoni Moda', serif;
+color: #cdac81;
+}
+
+.blog-single-sub-sub-main ol, .blog-single-sub-sub-main ul {
+margin-left: 50px;
+}
+
+.blog-single-nav-part{
+display: flex;
+padding: 20px 40px;
+justify-content: space-between;
+font-family: 'Roboto', sans-serif;
+font-size: 1.2rem;
+color: #389393;
+}
+
+.blog-single-nav-link{
+text-decoration: none;
+color: #fa7f72;
+margin-right: 40px;
+}
+
+.blog-single-horizontal{
+max-width: 1000px;
+display: flex;
+width: 100%;
+text-align: center;
+justify-content: center;
+align-items: center;
+}
+.blog-single-horizontal hr{
+height: 2px;
+width: 30%;
+}
+
+.blog-single-horizontal span{
+margin-left: 30px;
+margin-right: 30px;
+font-family: Ubuntu;
+font-size: 1.1rem;
+}
+
+
+.blog-single-other-blogs{
+
+}
+
+.blog-single-other-blogs ul{
+list-style: none;
+font-size: 1.5rem;
+font-weight: bold;
+color: black;
+}

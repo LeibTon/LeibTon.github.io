@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, intial-scale=1.0" />
+  <link rel="stylesheet" href="../css/blog-single.css" />
+  <link rel = "favicon" href="../img/favicon.ico" />
+  <title>LeibTon - My Personal Site</title>
+<link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@300&family=Lora:ital@1&display=swap" rel="stylesheet">
+ <link href="https://fonts.googleapis.com/css2?family=Italianno&display=swap" rel="stylesheet"> 
+</head>
+<body>
+<div class = "blog-single-main">
+<div class = "blog-single-nav-part">
+<span><a class="blog-single-nav-link" href="https://prakashaditya369.github.io">LeibTon</a><a class="blog-single-nav-link" href="https://prakashaditya369.github.io/about.html">Aditya Prakash</a><a class="blog-single-nav-link" href="https://prakashaditya369.github.io/blog.html">All Blogs</a></span><span>Date: January 16, 2021</span>
+</div>
+<div class = "blog-single-sub-main">
+<div class = "blog-single-sub-sub-main">
+<h1>LeibTon - My Personal Site</h1>
+<h2>Why LeibTon?</h2>
+<p>I searched for a name not particularly for my site but a nickname for my social media handles. I was thinking of something that sounds nerdy. In the process came Calculus, and the two great legends who started it: <strong>Leibniz</strong> and <strong>Newton</strong> and thus I got the idea of <strong>LeibTon</strong>. This name attracted me a lot, and when I thought of making my site, I decided to name it: <strong>LeibTon</strong>.</p>
+<h2>Color Scheme of My Picture in About Page.</h2>
+<p>In my <a href="prakashaditya369.github.io/about.html">about</a> page, I have used canvas to provide image effects using particles. The color scheme of my image matches the background.<br />
+Initially, the image is:
+<img alt="Initial Image" src="../img/leibton_initial.png" style="width: 300px;"/></p>
+<p>But on my website, it's:
+<img alt="Final Image" src="../img/leibton_final.png" style="width: 300px;"/></p>
+<p>Basically, In Canvas, Every pixel is image is rendered as a particle object and then worked upon it. If you wish to learn about it, <a href="https://www.youtube.com/watch?v=afdHgwn1XCY">this</a> is an excellent Franks Laboratory video. So during rendering, I wanted to choose each pixel's RGB value such that I get a color scheme as shown in the image just above.</p>
+<p><strong>What I did?</strong></p>
+<p>Let's say the <strong>RGB</strong> value of the background is <em>(255, 138, 128)</em>. Calculate the average of it; it comes out to be <em>174</em> (rounded).</p>
+<p>For each pixel of the image, let the RGB value be <em>(r, g, b)</em>.
+Find it's average, <em>avg</em> = (r+g+b)/3
+Then, the final RGB of pixel to be used in canvas is calculated as:
+Red component = (average of rgb of pixel)<em>(Red component of background)/(average of rgb of background).
+Similarly, Blue component = (average of RGB of the pixel)</em>(Blue component of background)/(average of RGB of background)
+And Green component = (average of RGB of the pixel)*(Green component of background)/(average of RGB of background)</p>
+<p>The RGB of the pixel is <em>(avg*255/174, avg*138/174, avg*128/174)</em>. And we get a pleasant combination of image and background, instead of contrasting one.</p>
+</div>
+</div></div>
+</body>
+</html>
