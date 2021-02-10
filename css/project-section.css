@@ -158,12 +158,16 @@ margin-bottom: 3px;
 
 .home-web-main-body{
 padding: 0;
-max-height: 371px;
+height: 375px;
+background: white;
 }
 
 .home-web-main-body img{
 width: 100%;
 }
-.home-web-main-body video{
+.home-web-main-body iframe{
 width: 100%;
+height: 100%;
+outline: none;
+border: none;
 }
