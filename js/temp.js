@@ -1,3 +1,5 @@
+// Working with random ideas.
+
 fetch('/files/movie.json')
   .then(response => response.text())
   .then(text => {

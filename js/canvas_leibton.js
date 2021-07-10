@@ -1,9 +1,10 @@
+/*Display LEIBTON in Homepage using Canvas*/
 const canvas = document.querySelector("#canvas");
 const ctx = canvas.getContext("2d");
 
 //Resizing
-canvas.height = window.innerHeight-5;
-canvas.width = window.innerWidth-5;
+canvas.height = window.innerHeight - 5;
+canvas.width = window.innerWidth - 5;
 
 //Initializing Variables.
 var gap = 60
@@ -46,6 +47,7 @@ function rotate(velocity, angle) {
 }
 
 //Function to resolve collision
+/*Code used from somewhere else.*/
 function resolveCollision(particle, otherParticle) {
     const xVelocityDiff = particle.velocity.x - otherParticle.velocity.x;
     const yVelocityDiff = particle.velocity.y - otherParticle.velocity.y;
@@ -247,7 +249,7 @@ window.addEventListener("load", () => {
 
 //When resized.
 window.addEventListener("resize", () => {
-    canvas.height = window.innerHeight-5;
-    canvas.width = window.innerWidth-5;
+    canvas.height = window.innerHeight - 5;
+    canvas.width = window.innerWidth - 5;
     init();
 })
