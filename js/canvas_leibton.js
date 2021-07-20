@@ -225,6 +225,7 @@ window.addEventListener("keypress", function(e) {
 })
 
 //Mouse movement Event Listener
+
 canvas.addEventListener("mousemove", function(e) {
     var now = Date.now()
     mouse.prevX = mouse.x;
