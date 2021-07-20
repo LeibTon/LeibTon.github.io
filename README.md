@@ -36,3 +36,5 @@ I designed every aspect of my site the way I wanted it to be. But these are some
 
 - [Now Page]: Well, I like this page, in general, because it's dynamic (keeps changing with my life).
 
+
+#### Thanks.
