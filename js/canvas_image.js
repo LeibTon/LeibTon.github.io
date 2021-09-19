@@ -53,7 +53,7 @@ function Draw() {
         this.colour = colour;
         this.draw = function() {
             ctx.beginPath();
-            ctx.arc(this.x, this.y, this.size, Math.PI * 2, false);
+            ctx.arc(this.x + Math.random()*10, this.y + Math.random()*10, this.size, Math.PI * 2, false);
             ctx.fillStyle = this.colour;
             ctx.fill();
         }

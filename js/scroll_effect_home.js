@@ -145,33 +145,3 @@ const scene3 = new ScrollMagic.Scene({
     .setTween(tw3)
     .addTo(controller3);
 
-
-const tw4 = new TimelineLite();
-tw4.add(
-    TweenLite.to(".thanks1", 01, {
-        transform: "translateX(-10%) scale(1)",
-        ease: Power1.easeInOut
-    }));
-tw4.add(
-    TweenLite.to(".thanks2", 1, {
-        transform: "translateX(10%) scale(1)",
-        ease: Power1.easeInOut
-    }), "-=1");
-tw4.add(
-    TweenLite.to(".thanks3", 1, {
-        transform: "translateX(-50%) scale(1)",
-        ease: Power1.easeInOut
-    }), "-=1");
-
-tw4.add(
-    TweenLite.to(".home-smiley", 3, {
-        transform: "translateX(-50%) rotateZ(0deg)",
-        ease: Power1.easeInOut
-    }), "-=1");
-
-const controller4 = new ScrollMagic.Controller();
-const scene4 = new ScrollMagic.Scene({
-        triggerElement: ".thank_message"
-    })
-    .setTween(tw4)
-    .addTo(controller4);
