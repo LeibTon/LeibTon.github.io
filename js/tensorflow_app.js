@@ -24,14 +24,16 @@ function enableCam(event) {
   // getUsermedia parameters to force video but not audio.
   const constraints = {
     audio: false,
-      video: { width: 600, height: 400 },
+		video: { width: 640, height: 480 },
   };
   // Activate the webcam stream.
   navigator.mediaDevices.getUserMedia(constraints).then(function(stream) {
     video.srcObject = stream;
 		instruction.style.display = "none";
 		document.getElementById("cam_chart_main").style.left = 0;
+		console.log("Hey there, I have done my work on remoing this one")
     video.addEventListener('loadeddata', predictWebcam);
+		console.log("Event Listener added")
 		cameraaccess = true;
   })
 	.catch(errorCallback)
@@ -107,9 +109,6 @@ tf.loadLayersModel('model/model.json', false).then(function (loadedModel) {
 // }
 // });
 // 	}
-
-
-
 
 function predictWebcam() {
 	cam_ctx.drawImage(video, 0, 0, width, height);
