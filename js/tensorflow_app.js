@@ -25,6 +25,7 @@ document.addEventListener('scroll', function(e){
 })
 function resetEverything(){
 	control = false;
+	window.setTimeout(function(){control = true}, 2500);
 	console.log("Stopping Everything.")
 	const stream = video.srcObject;
   const tracks = stream.getTracks();
@@ -37,7 +38,6 @@ function resetEverything(){
 		instruction.style.display = "flex";
 		document.getElementById("cam_chart_main").style.left = "-225px";
 // 		document.getElementById("cam_chart_main").style.left = "-253px";
-		window.setTimeout(function(){control = true}, 2500);
 }
 
 // Function to handle enableWebcamButton click.
