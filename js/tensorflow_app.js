@@ -1,17 +1,17 @@
  
 const video = document.getElementById('webcam');
-const image_dis = document.getElementById('display_image');
 const instruction = document.getElementById('caminstruct');
 const liveView = document.getElementById('liveView');
 const enableWebcamButton = document.getElementById('webcamButton');
 const instructionText = document.getElementById("camiText");
-// const webcam_canvas = document.getElementById('webcam_canvas');
-// const cam_ctx = webcam_canvas.getContext('2d');
+const webcam_canvas = document.getElementById('webcam_canvas');
+// const temp_canvas_fuck = document.getElementById('temp_fuck');
+const cam_ctx = webcam_canvas.getContext('2d');
 const width = 640
 const height = 480
 var model = undefined;
 var model_emotion = undefined;
-
+var control = true;
 // Error fallback when webcam access is denied.
 var errorCallback = function(error) {
   if (error.name == 'NotAllowedError') {instructionText.innerHTML = "Webcam Access Not Allowed";}
@@ -19,13 +19,29 @@ var errorCallback = function(error) {
 
 };
 
+
+function resetEverything(){
+	control = false;
+	console.log("Stopping Everything.")
+	const stream = video.srcObject;
+  const tracks = stream.getTracks();
+
+  tracks.forEach(function(track) {
+    track.stop();
+  });
+
+  videoElem.srcObject = null;
+		instruction.style.display = "flex";
+		document.getElementById("cam_chart_main").style.left = "-253px";
+}
+
 // Function to handle enableWebcamButton click.
 // Takes video feed and the call predictWebcam function.
 function enableCam(event) {
   // getUsermedia parameters to force video but not audio.
   const constraints = {
     audio: false,
-		video: { width: width, height: height },
+		video: { width: 640, height: 480 },
   };
   // Activate the webcam stream.
   navigator.mediaDevices.getUserMedia(constraints).then(function(stream) {
@@ -78,41 +94,45 @@ tf.loadLayersModel('model/model.json', false).then(function (loadedModel) {
 	instructionText	.innerHTML = "getUserMedia() is not supported by your browser"
 }
 
+
 /*For code debigging*/
-/*
-	if(model && model_emotion){
-	enableWebcamButton.style.display = "inline-flex";
-	instructionText.innerHTML = "Please provide Webcam Access."
-}
 
-	else{
-	blazeface.load().then(function (loadedModel) {
-  model = loadedModel;
-	if(model_emotion)
- {
-	video.src = "video.mp4"
-		document.getElementById("cam_chart_main").style.left = 0;
-video.addEventListener('loadeddata', predictWebcam);
+// 	if(model && model_emotion){
+// 	enableWebcamButton.style.display = "inline-flex";
+// 	instructionText.innerHTML = "Please provide Webcam Access."
+// }
+//
+// 	else{
+// 	blazeface.load().then(function (loadedModel) {
+//   model = loadedModel;
+// 	if(model_emotion)
+//  {
+// 	video.src = "video.mp4"
+// 		document.getElementById("cam_chart_main").style.left = 0;
+// video.addEventListener('loadeddata', predictWebcam);
+//
+// }
+// });
+//
+// tf.loadLayersModel('model/model.json', false).then(function (loadedModel) {
+//   model_emotion = loadedModel;
+// 	if(model)
+//  {
+// 	 video.src = "video.mp4"
+// 		document.getElementById("cam_chart_main").style.left = 0;
+// video.addEventListener('loadeddata', predictWebcam);
+// }
+// });
+// 	}
+	var i = 0
 
-}
-});
-
-tf.loadLayersModel('model/model.json', false).then(function (loadedModel) {
-  model_emotion = loadedModel;
-	if(model)
- {
-	 video.src = "video.mp4"
-		document.getElementById("cam_chart_main").style.left = 0;
-video.addEventListener('loadeddata', predictWebcam);
-}
-});
-	}*/
-var count = 1
 function predictWebcam() {
-	count+=1
+	i+=1
+	console.log(i)
+	cam_ctx.drawImage(video, 0, 0, width, height);
+	const frame =cam_ctx.getImageData(0, 0, width, height);
   // Now let's start classifying a frame in the stream.
-	const video_temp = video
-  model.estimateFaces(video_temp).then(function (predictions) {
+  model.estimateFaces(frame).then(function (predictions) {
 		if(predictions.length === 1)
 	{
 		landmark = predictions[0]['landmarks'];
@@ -121,19 +141,15 @@ function predictWebcam() {
 		right = landmark[4][0];
 		left = landmark[5][0];
 		length = (left-right)/2 + 5;
-		x1 = (nosex - length)/width
-		x2 = (nosex + length)/width
-		y1 = (nosey - length)/height
-		y2 = (nosey + length)/height
 		//Cropping the image.
-		var tensor = tf.browser.fromPixels(video_temp).mean(2).toFloat().expandDims(0).expandDims(-1)
-		var image_tensor= tf.image.cropAndResize(tensor, tf.tensor2d([[x1, y1, x2, y2]]), [0], [48, 48], "bilinear" )
+		const frame2 = cam_ctx.getImageData(nosex - length, nosey-length, 2*length, 2*length);
 		//Image is converted to tensor, resized, toBlackandWhite, then additional dimesion are added to match with [1, 48, 48, 1].
+		var image_tensor = tf.browser.fromPixels(frame2).resizeBilinear([48, 48]).mean(2).toFloat().expandDims(0).expandDims(-1)
 		//PIxels converted to image to check if the image is correct or not.
-	tf.browser.toPixels(image_tensor.squeeze(0).squeeze(-1).div(tf.scalar(255)).clipByValue(0, 1)
+		/*tf.browser.toPixels(image_tensor.squeeze(0).squeeze(-1).div(tf.scalar(255)).clipByValue(0, 1)
     .mul(tf.scalar(255)) // floats automatically are multiplied by toPixels
-    .cast('int32'), image_dis) //image_dis    -------->   img element.
-
+    .cast('int32'), temp_canvas_fuck)   //temp_canvas_fuck    -------->   img element.
+*/
 			//Predicting from image.
 		const result = model_emotion.predict(image_tensor);
 		const predictedValue = result.arraySync();
@@ -146,7 +162,9 @@ function predictWebcam() {
 		document.getElementById("neutral").style.width = 100*predictedValue['0'][6]+"%";
 	}
     // Call this function again to keep predicting when the browser is ready.
-    if(count<100)
+    if(i>100)
+		resetEverything();
+    if(control )
     window.requestAnimationFrame(predictWebcam);
   });
 }

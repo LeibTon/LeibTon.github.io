@@ -180,9 +180,9 @@ font-size: 1.2em;
 	left: 0;
 	width: 100%;
 	height: 480px;
-	text-align: center;
+/* 	text-align: center; */
 	display: flex;
-/* 	display: none; */
+		display: none;
 	justify-content: center;
 	align-items: center;
 	background: #C1CFC0;
