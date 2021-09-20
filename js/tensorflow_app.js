@@ -146,6 +146,6 @@ function predictWebcam() {
 		document.getElementById("neutral").style.width = 100*predictedValue['0'][6]+"%";
 	}
     // Call this function again to keep predicting when the browser is ready.
-//     window.requestAnimationFrame(predictWebcam);
+    window.requestAnimationFrame(predictWebcam);
   });
 }
