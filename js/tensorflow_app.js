@@ -5,7 +5,33 @@ const liveView = document.getElementById('liveView');
 const enableWebcamButton = document.getElementById('webcamButton');
 const instructionText = document.getElementById("camiText");
 var model = undefined;
-var cameraaccess = false;
+var model_emotion = undefined;
+
+if(model && model_emotion){
+	enableWebcamButton.classList.remove("hidden");
+	instructionText.innerHTML = "Please provide Webcam Access."
+}
+
+cocoSsd.load().then(function (loadedModel) {
+  model = loadedModel;
+	if(model_emotion)
+ {
+	 enableWebcamButton.classList.remove("hidden");
+	instructionText.innerHTML = "Please provide Webcam Access."
+}
+});
+
+tf.loadLayersModel('model/model.json').then(function (loadedModel) {
+  model_emotion = loadedModel;
+	if(model)
+ {
+	 enableWebcamButton.classList.remove("hidden");
+	instructionText.innerHTML = "Please provide Webcam Access."
+}
+});
+
+/*Add condition for emotion model loading here.*/
+
 // Check if webcam access is supported.
 function getUserMediaSupported() {
   return !!(navigator.mediaDevices &&
@@ -42,12 +68,7 @@ function enableCam(event) {
     video.addEventListener('loadeddata', predictWebcam);
 		cameraaccess = true;
 		enableWebcamButton.classList.add('removed');
-		if(!model){
-			instructionText.innerHTML = "Loading Models";
-		}
-		else {
-			instruction.classList.add('removed');
-		}
+		instruction.classList.add('hidden');
   }, errorCallback(error));
 }
 
@@ -57,17 +78,6 @@ function enableCam(event) {
 // to get everything needed to run.
 // Note: cocoSsd is an external object loaded from our index.html
 // script tag import so ignore any warning in Glitch.
-cocoSsd.load().then(function (loadedModel) {
-  model = loadedModel;
-	if(cameraaccess)
- {
-	 instruction.classList.add('removed');
-}
-else
-{
-	 instructionText.innerHTML = "Please provide Webcam Access."
-}
-});
 
 
 function predictWebcam() {
@@ -81,7 +91,7 @@ function predictWebcam() {
 
     // Now lets loop through predictions and draw them to the live view if
     // they have a high confidence score.
-    for (let n = 0; n < predictions.length; n++) {
+    for (let n = 0; n < predictions.length; n++pra) {
       // If we are over 66% sure we are sure we classified it right, draw it!
       if (predictions[n].score > 0.66) {
         const p = document.createElement('p');
