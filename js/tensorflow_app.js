@@ -19,7 +19,10 @@ var errorCallback = function(error) {
 
 };
 
-
+document.addEventListener('scroll', function(e){
+	if(window.scrollY < 5400 || window.scrollY > 6200)
+		resetEverything()
+})
 function resetEverything(){
 	control = false;
 	console.log("Stopping Everything.")
@@ -129,8 +132,8 @@ tf.loadLayersModel('model/model.json', false).then(function (loadedModel) {
 	var i = 0
 
 function predictWebcam() {
-	i+=1
-	console.log(i)
+// 	i+=1
+// 	console.log(i)
 	cam_ctx.drawImage(video, 0, 0, width, height);
 	const frame =cam_ctx.getImageData(0, 0, width, height);
   // Now let's start classifying a frame in the stream.

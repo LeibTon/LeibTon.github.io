@@ -196,9 +196,3 @@ font-size: 1.2em;
 	font-size: 1.3rem;
 	font-family: 'Inconsolata', monospace;
 }
-
-img {
-	position: relative;
-	top: 100vh;
-	left: 0;
-}

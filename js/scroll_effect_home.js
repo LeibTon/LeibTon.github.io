@@ -105,42 +105,14 @@ const scene2 = new ScrollMagic.Scene({
 const tw3 = new TimelineLite();
 
 tw3.add(
-    TweenLite.to("#deep-learning .sub_section_headingxyz", 0.8, {
-        transform: "translateX(0)",
+    TweenLite.to("#cam_detail_main", 2, {
+        left: "0px",
         ease: Power1.easeInOut
     }));
-tw3.add(
-    TweenLite.to("#deep-learning .section_parapqr", 0.7, {
-        opacity: 1,
-        ease: Power1.easeInOut
-    }), "-=0.5");
-
-const deep_learning_single_project = document.querySelectorAll(".deep_learning_single_project")
-const additional_photo = document.querySelectorAll(".additional_photo")
-for (var i = 0; i < deep_learning_single_project.length; i++) {
-    tw3.add(
-        TweenLite.to(deep_learning_single_project[i], 0.5, {
-            transform: "translateY(-10px)",
-            opacity: 1,
-            ease: Power0.easeNone
-        }));
-    tw3.add(
-        TweenLite.to(deep_learning_single_project[i], 0.5, {
-            transform: "translateY(0px)",
-            ease: Power0.easeNone
-        }));
-    tw3.add(
-        TweenLite.to(additional_photo[i], 0.1, {
-            opacity: 1,
-            transform: "scale(1)",
-            ease: Power1.easeInOut
-        }), "-=0.5");
-}
-
 
 const controller3 = new ScrollMagic.Controller();
 const scene3 = new ScrollMagic.Scene({
-        triggerElement: "#deep-learning"
+        triggerElement: "#deeplearning"
     })
     .setTween(tw3)
     .addTo(controller3);
