@@ -30,7 +30,7 @@ function resetEverything(){
     track.stop();
   });
 
-  videoElem.srcObject = null;
+  video.srcObject = null;
 		instruction.style.display = "flex";
 		document.getElementById("cam_chart_main").style.left = "-253px";
 }
