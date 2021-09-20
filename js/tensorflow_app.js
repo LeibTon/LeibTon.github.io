@@ -33,7 +33,8 @@ function enableCam(event) {
 		document.getElementById("cam_chart_main").style.left = 0;
     video.addEventListener('loadeddata', predictWebcam);
 		cameraaccess = true;
-  }, errorCallback(error));
+  })
+	.catch(errorCallback(err))
 }
 
 //The main functioning starts from here. Check if webcam is supported/acceesible or not.
