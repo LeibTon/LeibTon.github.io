@@ -1,0 +1,32 @@
+ 
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Fucked Up</title>
+    <meta charset="utf-8">
+    <!-- Import the webpage's stylesheet -->
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+      <div id="liveView" class="camView">
+      <div class = "camTitle"><span>Info</span><span>Emotion Recognition</span><span> </span></div>
+      <div class = "camBox">
+        <div class = "camInstruction" id = "caminstruct">
+        <div style="text-align: center;">
+        <button id="webcamButton" class = "cambutton">Enable Webcam</button><br/>
+        <span id = "camiText">Please Give Webcam access if you want to use the web app.</span>
+        </div>
+        </div>
+        <video id="webcam" autoplay muted width="640" height="480"></video>
+        </div>
+      </div>
+
+    <!-- Import TensorFlow.js library -->
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs/dist/tf.min.js" type="text/javascript"></script>
+    <!-- Load the coco-ssd model to use to recognize things in images -->
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/coco-ssd"></script>
+
+    <!-- Import the page's JavaScript to do some stuff -->
+    <script src = "js/tensorflow_app.js"></script>
+  </body>
+</html>
