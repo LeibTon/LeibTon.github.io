@@ -34,7 +34,7 @@ function enableCam(event) {
     video.addEventListener('loadeddata', predictWebcam);
 		cameraaccess = true;
   })
-	.catch(errorCallback(err))
+	.catch(errorCallback)
 }
 
 //The main functioning starts from here. Check if webcam is supported/acceesible or not.
