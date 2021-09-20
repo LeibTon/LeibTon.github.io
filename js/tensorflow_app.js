@@ -8,7 +8,7 @@ var model = undefined;
 var model_emotion = undefined;
 
 if(model && model_emotion){
-	enableWebcamButton.classList.remove("hidden");
+	enableWebcamButton.classList.remove("removed");
 	instructionText.innerHTML = "Please provide Webcam Access."
 }
 
@@ -16,7 +16,7 @@ cocoSsd.load().then(function (loadedModel) {
   model = loadedModel;
 	if(model_emotion)
  {
-	 enableWebcamButton.classList.remove("hidden");
+	 enableWebcamButton.classList.remove("removed");
 	instructionText.innerHTML = "Please provide Webcam Access."
 }
 });
@@ -25,7 +25,7 @@ tf.loadLayersModel('model/model.json').then(function (loadedModel) {
   model_emotion = loadedModel;
 	if(model)
  {
-	 enableWebcamButton.classList.remove("hidden");
+	 enableWebcamButton.classList.remove("removed");
 	instructionText.innerHTML = "Please provide Webcam Access."
 }
 });
@@ -68,7 +68,7 @@ function enableCam(event) {
     video.addEventListener('loadeddata', predictWebcam);
 		cameraaccess = true;
 		enableWebcamButton.classList.add('removed');
-		instruction.classList.add('hidden');
+		instruction.classList.add('removed');
   }, errorCallback(error));
 }
 
