@@ -32,7 +32,9 @@ function resetEverything(){
 
   video.srcObject = null;
 		instruction.style.display = "flex";
-		document.getElementById("cam_chart_main").style.left = "-253px";
+		document.getElementById("cam_chart_main").style.left = "-225px";
+// 		document.getElementById("cam_chart_main").style.left = "-253px";
+		window.setTimeout(function(){control = true}, 2500);
 }
 
 // Function to handle enableWebcamButton click.
@@ -162,8 +164,6 @@ function predictWebcam() {
 		document.getElementById("neutral").style.width = 100*predictedValue['0'][6]+"%";
 	}
     // Call this function again to keep predicting when the browser is ready.
-    if(i>100)
-		resetEverything();
     if(control )
     window.requestAnimationFrame(predictWebcam);
   });
