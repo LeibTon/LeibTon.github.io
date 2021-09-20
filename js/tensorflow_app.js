@@ -111,7 +111,6 @@ tf.loadLayersModel('model/model.json', false).then(function (loadedModel) {
 // 	}
 
 function predictWebcam() {
-	console.log("PredictWebcam called.")
 	cam_ctx.drawImage(video, 0, 0, width, height);
 	const frame =cam_ctx.getImageData(0, 0, width, height);
   // Now let's start classifying a frame in the stream.
