@@ -116,7 +116,10 @@ function Draw() {
     }
     init();
 		if(!canvas_control && window.scrollY < 700)
+	{
+		canvas_control = true;
     animate();
+	}
     window.addEventListener("resize", () => {
         canvas.height = window.innerHeight;
         canvas.width = window.innerWidth;
