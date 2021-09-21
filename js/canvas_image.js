@@ -1,7 +1,7 @@
 /*Particle Effect in About Me page using Canvas*/
 const canvas = document.querySelector("#canvas");
 const ctx = canvas.getContext("2d");
-
+var canvas_control = false;
 //Resizing
 canvas.height = window.innerHeight;
 canvas.width = window.innerWidth;
@@ -53,7 +53,7 @@ function Draw() {
         this.colour = colour;
         this.draw = function() {
             ctx.beginPath();
-            ctx.arc(this.x + Math.random()*2, this.y + Math.random()*2, this.size, Math.PI * 2, false);
+            ctx.arc(this.x + Math.random(), this.y + Math.random(), this.size, Math.PI * 2, false);
             ctx.fillStyle = this.colour;
             ctx.fill();
         }
@@ -105,22 +105,34 @@ function Draw() {
             }
         }
     }
-
     function animate() {
+			if(canvas_control){
         requestAnimationFrame(animate);
         ctx.clearRect(0, 0, innerWidth, innerHeight)
         for (let i = 0; i < particleArray.length; i++) {
             particleArray[i].update();
         }
+			}
     }
     init();
+		if(!control && window.scrollY < 700)
     animate();
     window.addEventListener("resize", () => {
         canvas.height = window.innerHeight;
         canvas.width = window.innerWidth;
         init();
     })
-
+  document.addEventListener("scroll", ()=>{
+			if(canvas_control && window.scrollY > 700)
+ {
+	 canvas_control = false;
+}
+	else if(!canvas_control && window.scrollY < 700)
+ {
+	 canvas_control = true;
+	animate();
+}
+	})
 }
 
 
