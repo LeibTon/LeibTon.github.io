@@ -1,11 +1,19 @@
 /*Displays the Blog details into the Blog Page
 Using HTML DOM manipulation, creating elements.*/
 
-var blog_details = [{
+var blog_details = [
+{
+	title: "Facial Emotion Recognition in Browser using TensorflowJS",
+	subtitle: "Surprised?",
+	date: "Sept 21, 2021",
+	read: "6 min Read",
+	link: "https://prakashaditya369.medium.com/facial-emotion-recognition-in-browser-using-tensorflowjs-f100d69962a9?source=friends_link&sk=cc64b866f80243c648a797bba1ad4d94"
+},
+{
         title: "Moment After Watching “Fabric of Cosmos”",
         subtitle: "Framing Some Questions?",
         date: "Feb 15, 2021",
-        rad: "3 min Read",
+        read: "3 min Read",
         link: "https://prakashaditya369.medium.com/moment-after-watching-fabric-of-cosmos-65dd901328a7?source=friends_link&sk=c2c281eaf2c4a33e58739a581fffe3af"
     },
 
