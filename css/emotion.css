@@ -43,7 +43,7 @@ align-items: center;
 
 .cam_detail_main{
 	position: relative;
-	left: 0px;
+	left: 225px;
 		box-shadow: 0.3em 0.3em 1em rgba(0,0,0,0.3);
 	padding: 15px 15px;
 	padding-left:30px;
@@ -74,7 +74,7 @@ margin-bottom: 10px;
 
 .cam_chart_main{
 	position: relative;
-	left: 0px;
+	left: -225px;
 	box-shadow: 0.3em 0.3em 1em rgba(0,0,0,0.3);
 	border-bottom-right-radius: 15px;
 	border-top-right-radius: 15px;

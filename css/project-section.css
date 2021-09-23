@@ -92,8 +92,7 @@ font-family: 'special';
 }
 .home-web-browser-theme{
 font-family: 'Ubuntu', sans-serif;
-max-width: 700px;
-width: 90%;
+width: 702.41px;
 border: 3px #222 solid;
 border-radius: 5px;
 }
@@ -124,8 +123,8 @@ margin-right: 5px;
 .home-web-address-bar{
 width: 65%;
 padding-left: 15px;
-padding-top: 3px;
-padding-bottom: 5px;
+padding-top: 2px;
+padding-bottom: 1px;
 background: #222;
 border-radius: 7px;
 font-size: 0.91rem;
@@ -158,8 +157,18 @@ margin-bottom: 3px;
 
 .home-web-main-body{
 padding: 0;
-height: 375px;
+height: 380px;
 background: white;
+overflow: hidden;
+overflow-y: scroll;
+}
+
+.home-web-main-body {
+    -ms-overflow-style: none;  /* Internet Explorer 10+ */
+    scrollbar-width: none;  /* Firefox */
+}
+.home-web-main-body::-webkit-scrollbar {
+    display: none;  /* Safari and Chrome */
 }
 
 .home-web-main-body img{
