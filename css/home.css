@@ -33,7 +33,7 @@ overflow-y: hidden;
 }
 
 .about_me h1{
-opacity: 0;
+opacity: 1;
 position: absolute;
 top: 50px;
 left: 30px;
@@ -41,7 +41,6 @@ font-family: aditya;
 font-size: 3rem;
 margin-bottom: 25px;
 transform-origin: 0 0;
-transform: rotateZ(90deg);
 color: #FFEAEE;
 }
 
@@ -55,8 +54,7 @@ max-width: 300px;
 font-family: 'Lora', serif;
 color: #6BA292;
 margin-bottom: 50px;
-opacity: 0;
-
+opacity: 1;
 }
 .about_me_quote{
 position: absolute;
@@ -81,7 +79,7 @@ cursor: pointer;
 font-family: 'Inconsolata', monospace;
 color: #E9C46A;
 transform: translateX(220px);
-opacity: 0;
+/* opacity: 0; */
 }
 
 .instruction_display{
@@ -90,7 +88,8 @@ top: 170px;
 font-size: 1.1rem;
 font-family: 'Inconsolata', monospace;
 color: #E76F51;
-right: -300px;
+/* right: -300px; */
+right : 0px;
 transition:  2s;
 transition-timing-function: ease-out;
 }
@@ -145,8 +144,8 @@ margin-left: 50px;
 margin-bottom: 25px;
 color: #001F54;
 transform-origin: 0 0;
-transform: rotateZ(90deg);
-opacity: 0;
+/*transform: rotateZ(90deg);
+opacity: 0;*/
 }
 
 .sub_section_headingxyz{
