@@ -10,7 +10,10 @@ html {
 }
 
 
-
+@font-face{
+	src: url(Inconsolata.otf);
+	font-family: "Inconsolata";
+}
 
 @font-face{
 font-family: aditya;
@@ -90,7 +93,7 @@ top: 170px;
 font-size: 1.1rem;
 font-family: 'Inconsolata', monospace;
 color: #E76F51;
-right: -300px;
+right: -360px;
 transition:  2s;
 transition-timing-function: ease-out;
 }
@@ -328,7 +331,18 @@ visibility: collapse;
 }
 /*Project Web Development Part Ends Here */
 
+.bottom_links{
+	position: absolute;
+	bottom: 20px;
+	left: 0px;
+	display: flex;
+	width: 100%;
+	justify-content:space-around;
+}
 
-iframe {
-	pointer-events:none;
+.bottom_links a{
+	text-decoration: none;
+color: #FFF5FD;
+font-family: "Inconsolata";
+font-size: 1.3rem;
 }

@@ -1,0 +1,179 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+@font-face{
+	src: url(Inconsolata.otf);
+	font-family: "Inconsolata";
+}
+
+@font-face{
+	src: url(FrederickatheGreat-Regular.ttf);
+	font-family: "FrederickatheGreat";
+}
+/*Research Navigation*/
+.navigation{
+	position: fixed;
+	width: 70px;
+	background: #005A8D;
+	height: 100vh;
+	top: 0;
+	left: 0;
+	z-index: 1000;
+	transition: width 1.5s;
+}
+
+.navigation_enlarge{
+	width: 250px;
+}
+.nav_control{
+	position: relative;
+	top:0px;
+	width: 40px;
+	right: 15px;
+	margin-top: 30px;
+	margin-left:auto;
+margin-right:0;
+	background: #548CA8;
+	padding-left: 12.5px;
+	padding-right: 12.5px;
+	padding-top: 14px;
+	padding-bottom: 14px;
+	height: 40px;
+	cursor: pointer;
+}
+
+.nav_control_bar{
+	background: #FFF5FD;
+	height: 2px;
+	width: 15px;
+	margin-top: 2px;
+	margin-bottom: 2px;
+}
+
+.nav_item_main{
+	position: relative;
+	top:0px;
+	right: 0px;
+	margin-top: 30px;
+	margin-left:auto;
+margin-right:0;
+padding-right: 20px;
+overflow-x: hidden;
+}
+
+.nav_item_list{
+	opacity: 0;
+	list-style-type: none;
+}
+
+.nav_item_list_after{
+	opacity: 1;
+	transition: opacity 1.5s;
+}
+
+.nav_item{
+text-align: right;
+margin-top: 20px;
+max-width: 210px;
+}
+
+.nav_item a{
+text-decoration: none;
+color: #FFF5FD;
+font-family: "Inconsolata";
+font-size: 1.3rem;
+}
+
+/*Research Navigation Ends Here*/
+.homepage{
+	text-align: center;
+	margin-left: 70px;
+	width: calc(100% - 70px);
+	background: #FFF5FD;
+	min-height: 100vh;
+}
+
+.section{
+	width: 99%;
+	max-width: 900px;
+	margin: auto;
+	padding-top: 25px;
+	padding-bottom: 25px;
+}
+
+.title-part{
+	width: 100%;
+	padding-top: 20px;
+	padding-bottom: 30px;
+	font-size: 1.8rem;
+font-family: "FrederickatheGreat";
+background: #022E57;
+color: #FFF5FD;
+}
+
+.text-part{
+	position: relative;
+	top: -20px;
+	width: 95%;
+	margin: auto;
+	padding-top: 10px;
+	padding-left: 30px;
+	padding-right: 10px;
+	text-align: left;
+	padding-bottom: 10px;
+	font-size: 1rem;
+	font-family: "Inconsolata";
+	background: white;
+	color: #022E57;
+}
+
+.timeline{
+	margin: 40px auto;
+/* 	padding: 10px 40px; */
+padding-left: 40px;
+	border-left: 4px solid #548CA8;
+	list-style: none;
+	text-align: left;
+	width: calc(100% - 132px);
+	max-width: 500px;
+	position: relative
+}
+
+.event{
+	margin-top: 10px;
+	margin-bottom: 10px;
+position: relative;
+}
+
+.event:before, .event:after{
+	position: absolute;
+      display: block;
+      top: 0;
+}
+
+.event:before{
+	opacity: 0.75;
+	text-align: right;
+  width: 120px;
+	font-size: 0.9rem;
+	left: -190px;
+	content: attr(data-date);
+}
+
+.event:after{
+	opacity: 1;
+	left: -52px;
+	content: attr(data-icon);
+}
+
+.ed-degree{
+font-weight: bold;
+}
+
+.home-link{
+	text-decoration: none;
+	opacity: 0.8;
+}

@@ -41,8 +41,13 @@ tween_loader.add(
     })
 )
 
-
-window.addEventListener("load", () => {
+var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+		var element = document.getElementById('text');
+		if (isMobile) {
+			console.log("Mobile phone login")
+  			window.open("/research.html", "_self")
+		} else {
+			window.addEventListener("load", () => {
     if (!sessionStorage.getItem('doNotShow')) {
         sessionStorage.setItem('doNotShow', true);
         tween_loader.play();
@@ -51,3 +56,4 @@ window.addEventListener("load", () => {
         document.querySelector("body").style.overflow = "auto";
     }
 })
+		}

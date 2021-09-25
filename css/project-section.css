@@ -174,9 +174,3 @@ overflow-y: scroll;
 .home-web-main-body img{
 width: 100%;
 }
-.home-web-main-body iframe{
-width: 100%;
-height: 100%;
-outline: none;
-border: none;
-}
