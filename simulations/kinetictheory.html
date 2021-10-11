@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="">
+  <head>
+    <meta charset="utf-8">
+    <title>Kinetic Theory Simulation</title>
+    <link rel="stylesheet" href="css/kinetictheory.css" />
+  </head>
+  <body>
+<canvas id = "main">Not Supported by you</canvas>
+<div class = "box_text" style = "left: 25%;">Box A</div>
+<div class = "box_text" style = "right: 25%;">Box B</div>
+<div class = "division_line"></div>
+
+<div class = "control_input_main" id = "control_input_main">
+<div class = "cross" onclick = "if(document.getElementById('control_input_main').classList.contains('control_input_main_enlarge'))document.getElementById('control_input_main').classList.remove('control_input_main_enlarge')
+else
+document.getElementById('control_input_main').classList.add('control_input_main_enlarge')">Controls</div>
+<div class = "contents">
+<h2>Kinetic Theory Simulation</h2>
+</div>
+<table class = "control_input_table">
+<tr>
+<td></td>
+<td>Box A</td>
+<td>Box B</td>
+</tr>
+<tr>
+<td>Molar Mass of particles in grams (> 0)</td>
+<td><input type = "text" placeholder = "m_A"></td>
+<td><input type = "text" placeholder = "m_B"></td>
+</tr>
+<tr>
+<td>Temperature in Kelvin ( > 0K )</td>
+<td><input type = "text" placeholder = "T_A"></td>
+<td><input type = "text" placeholder = "T_B"></td>
+</tr>
+<tr>
+<td>Total Number of Particles</td>
+<td><input type = "text" placeholder = "N_A"></td>
+<td><input type = "text" placeholder = "N_B"></td>
+</tr>
+</table>
+<div style="display: flex; justify-content: space-around;">
+<button class = "control_buttons"> Initialise Boxes </button>
+<button id = "openBarrier" class = "control_buttons" disabled> Open the Barrier </button>
+</div>
+<div class = "contents">
+<p> You are recommended to use desktop in fullscreen mode.</p>
+<p>For more details visit the following links:</p>
+<a href= "">This one</a><br/>
+</div>
+</div>
+<div class = "graphs_main" id = "graphs_main">
+<div class = "cross" onclick = "if(document.getElementById('graphs_main').classList.contains('graphs_main_enlarge'))document.getElementById('graphs_main').classList.remove('graphs_main_enlarge')
+else
+document.getElementById('graphs_main').classList.add('graphs_main_enlarge')" style = "display:none;">Graphs</div>
+<div style="display: flex; justify-content: space-around;">
+<button class = "control_buttons"> Opaque Background </button>
+<button class = "control_buttons" style = "display: none;"> Print </button>
+<button class = "control_buttons" style = "display: none;"> Others </button>
+</div>
+<div class = "graph_canvas"><canvas id = "histogram1">Not Supported by you</canvas></div>
+<div class = "graph_canvas"><canvas id = "histogram2">Not Supported by you</canvas></div>
+<div class = "graph_canvas" style = "height: 200px;"><canvas id = "temperature1">Not Supported by you</canvas></div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@3.5.1/dist/chart.min.js"></script>
+<script src="js/kinetictheory.js" charset="utf-8"></script>
+  </body>
+</html>
