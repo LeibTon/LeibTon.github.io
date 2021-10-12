@@ -195,6 +195,7 @@ margin-top: 10px;
   background: #BBBFCA;
   text-align: center;
   cursor: pointer;
+  visibility: collapse;
 }
 
 .graphs_main_enlarge{

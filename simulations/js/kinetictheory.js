@@ -3,6 +3,8 @@ const ctx_main = canvas_main.getContext("2d");
 const histogram1_ctx = document.getElementById("histogram1").getContext("2d");
 const histogram2_ctx = document.getElementById("histogram2").getContext("2d");
 const temperature1_ctx = document.getElementById("temperature1").getContext("2d");
+let animationPlay = true;
+
 canvas_main.height = window.innerHeight;
 canvas_main.width = window.innerWidth;
 let particles;
@@ -311,7 +313,6 @@ var tempPlot1 = new Chart(temperature1_ctx, {
 /////// Charts Ends here /////////////
 /////// Formatting, controls and Animations///////
 const initButton = document.getElementById("initButton")
-const divButton = document.getElementById("divButton")
 const mAInput = document.getElementById("mAInput")
 const mBInput = document.getElementById("mBInput")
 const TAInput = document.getElementById("TAInput")
@@ -320,26 +321,85 @@ const NAInput = document.getElementById("NAInput")
 const NBInput = document.getElementById("NBInput")
 const transButton = document.getElementById("transButton")
 const printButton = document.getElementById("printButton")
+const division_line = document.getElementById("division_line")
+const SRButton = document.getElementById("stop_resume_button")
+const graphMain = document.getElementById("graphs_main");
+const graphCross = document.getElementById("graphs_cross");
 
 initButton.addEventListener("click", function(){
-	console.log(mAInput.value);
+	var m_A = parseInt(mAInput.value);
+	var m_B = parseInt(mBInput.value);
+	var T_A = parseInt(TAInput.value)
+	var T_B = parseInt(TBInput.value)
+	var N_A = parseInt(NAInput.value)
+	var N_B = parseInt(NBInput.value);
+	if(m_A > 0 && m_B > 0 && T_A > 0 && T_B > 0)
+	{
+		init(m_A, m_B, T_A, T_B, N_A, N_B);
+		animate();
+		controlButton.disabled = false;
+		SRButton.disabled = false;
+	}
+	else
+	{
+		alert("Temperature and Mass must be greater than 0.")
+	}
 })
 ///// Formatting and animation ends here /////
 
 window.addEventListener("load", () => {
-    init();
-    animate();
   console.log("Don't forget to uncomment in load and chnage display of control div in css")
 })
 
 controlButton.addEventListener("click", () => {
+	division_line.style.opacity = "0.1";
   for(var i = 0; i< particles.length; i++)
 	{
 	  particles[i].border_left = 0;
 	  particles[i].border_right = canvas_main.width;
 	}
+	controlButton.disabled = true;
+	document.getElementById('control_input_main').classList.add('control_input_main_enlarge');
+	if(!animationPlay)
+	{
+		animationPlay = true;
+		animate();
+		SRButton.innerHTML = "Stop"
+	}
+
 })
 
+SRButton.addEventListener("click", function(){
+	if(animationPlay)
+	{
+		animationPlay = false;
+		SRButton.innerHTML = "Resume"
+	}
+	else
+	{
+		animationPlay = true;
+		animate();
+		SRButton.innerHTML = "Stop"
+	}
+})
+
+
+transButton.addEventListener("click", function(){
+	if(graphMain.style.background == "transparent")
+	{
+		graphMain.style.background = "rgb(187,191,202)";
+		graphCross.style.visibility = "visible";
+		printButton.style.visibility = "visible";
+		transButton.innerHTML = "Transparent"
+	}
+	else
+	{
+		graphMain.style.background = "transparent";
+		graphCross.style.visibility = "collapse";
+		printButton.style.visibility = "collapse";
+		transButton.innerHTML  = "Opaque Background";
+	}
+})
 ////// Functions are declared below./////////////
 
 //Functions required For Collision Tasks
@@ -612,15 +672,10 @@ function intitializeParticle(m, T, N_total, type, radius)
 }
 
 
-function init()
+function init(mA, mB, TA, TB, N_totalA, N_totalB)
 {
+	division_line.style.opacity = "1";
   particles = [];
-  var mA = 14;
-  var TA = 300;
-  var N_totalA = 100;
-  var mB = 10;
-  var TB = 100;
-  var N_totalB = 100;
   if(mA > mB)
 	{
 	  var radiusA = 5;
@@ -645,7 +700,8 @@ function init()
 var i = 0
 ////////    ___animate function /////////////////
 function animate(){
-  requestAnimationFrame(animate)
+	if(animationPlay)
+ 		 requestAnimationFrame(animate)
   i+=1
   ctx_main.clearRect(0, 0, canvas_main.width, canvas_main.height)
   for (var i = 0; i < particles.length; i++) {
