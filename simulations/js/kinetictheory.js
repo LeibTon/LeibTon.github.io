@@ -385,6 +385,7 @@ SRButton.addEventListener("click", function(){
 
 
 transButton.addEventListener("click", function(){
+/*Event listener for transparent and opaque button*/
 	if(graphMain.style.background == "transparent")
 	{
 		graphMain.style.background = "rgb(187,191,202)";
