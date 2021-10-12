@@ -26,23 +26,23 @@ document.getElementById('control_input_main').classList.add('control_input_main_
 </tr>
 <tr>
 <td>Molar Mass of particles in grams (> 0)</td>
-<td><input type = "text" placeholder = "m_A"></td>
-<td><input type = "text" placeholder = "m_B"></td>
+<td><input type = "text" id = "mAInput" placeholder = "m_A"></td>
+<td><input type = "text" id = "mBInput" placeholder = "m_B"></td>
 </tr>
 <tr>
 <td>Temperature in Kelvin ( > 0K )</td>
-<td><input type = "text" placeholder = "T_A"></td>
-<td><input type = "text" placeholder = "T_B"></td>
+<td><input type = "text" id = "TAInput" placeholder = "T_A"></td>
+<td><input type = "text" id = "TBInput" placeholder = "T_B"></td>
 </tr>
 <tr>
 <td>Total Number of Particles</td>
-<td><input type = "text" placeholder = "N_A"></td>
-<td><input type = "text" placeholder = "N_B"></td>
+<td><input type = "text" id = "NAInput" placeholder = "N_A"></td>
+<td><input type = "text" id = "NBInput" placeholder = "N_B"></td>
 </tr>
 </table>
 <div style="display: flex; justify-content: space-around;">
-<button class = "control_buttons"> Initialise Boxes </button>
-<button id = "openBarrier" class = "control_buttons" disabled> Open the Barrier </button>
+<button class = "control_buttons" id = "initButton"> Initialise Boxes </button>
+<button id = "openBarrier" id = "divButton" class = "control_buttons" disabled> Open the Barrier </button>
 </div>
 <div class = "contents">
 <p> You are recommended to use desktop in fullscreen mode.</p>
@@ -55,8 +55,8 @@ document.getElementById('control_input_main').classList.add('control_input_main_
 else
 document.getElementById('graphs_main').classList.add('graphs_main_enlarge')" style = "display:none;">Graphs</div>
 <div style="display: flex; justify-content: space-around;">
-<button class = "control_buttons"> Opaque Background </button>
-<button class = "control_buttons" style = "display: none;"> Print </button>
+<button class = "control_buttons" id = "transButton"> Opaque Background </button>
+<button class = "control_buttons" id = "printButton" style = "display: none;"> Print </button>
 <button class = "control_buttons" style = "display: none;"> Others </button>
 </div>
 <div class = "graph_canvas"><canvas id = "histogram1">Not Supported by you</canvas></div>

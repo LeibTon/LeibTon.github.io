@@ -46,7 +46,7 @@ color: #495464;
   top: 0;
   left: 0px;
   background: #BBBFCA;
-  display: none; /*Remove this*/
+  /* display: none; Remove this */
   transition: left 2s ease-out;
 }
 

@@ -309,9 +309,21 @@ var tempPlot1 = new Chart(temperature1_ctx, {
 
 
 /////// Charts Ends here /////////////
-/////// Formatting and Animations///////
+/////// Formatting, controls and Animations///////
+const initButton = document.getElementById("initButton")
+const divButton = document.getElementById("divButton")
+const mAInput = document.getElementById("mAInput")
+const mBInput = document.getElementById("mBInput")
+const TAInput = document.getElementById("TAInput")
+const TBInput = document.getElementById("TBInput")
+const NAInput = document.getElementById("NAInput")
+const NBInput = document.getElementById("NBInput")
+const transButton = document.getElementById("transButton")
+const printButton = document.getElementById("printButton")
 
-
+initButton.addEventListener("click", function(){
+	console.log(mAInput.value);
+})
 ///// Formatting and animation ends here /////
 
 window.addEventListener("load", () => {
@@ -605,10 +617,10 @@ function init()
   particles = [];
   var mA = 14;
   var TA = 300;
-  var N_totalA = 1000;
+  var N_totalA = 100;
   var mB = 10;
   var TB = 100;
-  var N_totalB = 1000;
+  var N_totalB = 100;
   if(mA > mB)
 	{
 	  var radiusA = 5;
