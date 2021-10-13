@@ -10,9 +10,10 @@ let barrierRemoved = 0;
 canvas_main.height = window.innerHeight;
 canvas_main.width = window.innerWidth;
 let particles;
-let T_A = 0, T_B = 0, DT = 0.0005;
-let mToPixel = 3779.5275590551;
-let dt = DT * mToPixel
+let T_A = 0, T_B = 0, DT = 0.05, M_A, M_B, N_A, N_B;
+// let mToPixel = 3779.5275590551;
+// let dt = DT * mToPixel
+let dt = DT;
 
 var startTime = performance.now()
 let controlButton = document.getElementById("openBarrier");
@@ -414,17 +415,17 @@ function printData()
 {
 	var tempArray = dataArray;
 	    let text = "Initial Conditions: \n"
-		let mass = "Mass: M_A =  || M_B = \n"
+		let mass = "Mass: M_A = "+M_A+" || M_B = "+M_B+"\n"
 		text+=mass
-		mass = "Temperature: T_A = || T_B = \n"
+		mass = "Temperature: T_A = "+T_A+" || T_B = "+T_B+"\n"
 		text+=mass
-		mass = "Total Particles: N_A = || N_B = \n"
+		mass = "Total Particles: N_A = "+N_A+" || N_B = "+N_B+"\n"
 		text+=mass
 		mass = "Time(s)    T_A(K)    T_B(K)    N_A    N_B\n"
 		text+=mass
 		for(var i =0; i< tempArray.length; i++)
 		{
-			mass  = tempArray[0]+"    "+tempArray[1]+"    "+tempArray[2]+"    "+tempArray[3]+"    "+tempArray[4]+"\n"
+			mass  = tempArray[i][0]+"    "+tempArray[i][1]+"    "+tempArray[i][2]+"    "+tempArray[i][3]+"    "+tempArray[i][4]+"\n"
 			text+=mass;
 		}
 		
@@ -641,10 +642,20 @@ function Particle(x, y, vx, vy, mass, radius, type, bl, br){
 	for(var i = 0; i< particles.length; i++)
  {
 	if(this === particles[i]) continue;
-	if(this.type == particles[i].type && distance(this.x, this.y, particles[i].x, particles[i].y) < this.radius + particles[i].radius)
- {
-   resolveCollision(this, particles[i]);
-}
+	if(barrierRemoved === 0)
+	{
+		if(this.type == particles[i].type && distance(this.x, this.y, particles[i].x, particles[i].y) < this.radius + particles[i].radius)
+		{
+		resolveCollision(this, particles[i]);
+		}
+	}
+	else{
+		if(distance(this.x, this.y, particles[i].x, particles[i].y) < this.radius + particles[i].radius)
+		{
+		resolveCollision(this, particles[i]);
+		}
+	}
+	
 
    if(this.x - this.radius <= this.border_left || this.x + this.radius >= this.border_right){
 	  this.velocity.x = -this.velocity.x;
@@ -705,6 +716,12 @@ function intitializeParticle(m, T, N_total, type, radius)
 
 function init(mA, mB, TA, TB, N_totalA, N_totalB)
 {
+	M_A = mA;
+	M_B = mB;
+	T_A = TA;
+	T_B = TB;
+	N_A = N_totalA;
+	N_B = N_totalB;
 	division_line.style.opacity = "1";
 	frameCount = 0;
 	dataArray = [];
