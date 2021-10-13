@@ -4,7 +4,9 @@ const histogram1_ctx = document.getElementById("histogram1").getContext("2d");
 const histogram2_ctx = document.getElementById("histogram2").getContext("2d");
 const temperature1_ctx = document.getElementById("temperature1").getContext("2d");
 let animationPlay = true;
-
+let dataArray = [] // stores time, tempA, tempB, NA, NB into an array
+let frameCount = 0;
+let barrierRemoved = 0;
 canvas_main.height = window.innerHeight;
 canvas_main.width = window.innerWidth;
 let particles;
@@ -290,20 +292,16 @@ var tempPlot1 = new Chart(temperature1_ctx, {
 		  }
 	},
 	  x: {
+		  label: {display: false},
 		title: {
 		  display: true,
-		  align: "center",
-		  text: "Time in second",
+		  align: "end",
+		  text: "Current Time: ",
 		  color: "#495464"
 		},
 		grid: {
 			  display: false
 		  },
-		  ticks: {
-			autoSkip: true,
-			precision: 1,
-			maxTicksLimit: 10,
-		  }
 	  }
 		}
     }
@@ -348,11 +346,12 @@ initButton.addEventListener("click", function(){
 ///// Formatting and animation ends here /////
 
 window.addEventListener("load", () => {
-  console.log("Don't forget to uncomment in load and chnage display of control div in css")
+  console.log("Welcome !!")
 })
 
 controlButton.addEventListener("click", () => {
 	division_line.style.opacity = "0.1";
+	barrierRemoved  = frameCount*DT;
   for(var i = 0; i< particles.length; i++)
 	{
 	  particles[i].border_left = 0;
@@ -401,11 +400,47 @@ transButton.addEventListener("click", function(){
 		transButton.innerHTML  = "Opaque Background";
 	}
 })
+
+
+printButton.addEventListener("click", function(){
+	printData();
+})
 ////// Functions are declared below./////////////
 
 //Functions required For Collision Tasks
 
 //Function to find Distance between two points
+function printData()
+{
+	var tempArray = dataArray;
+	    let text = "Initial Conditions: \n"
+		let mass = "Mass: M_A =  || M_B = \n"
+		text+=mass
+		mass = "Temperature: T_A = || T_B = \n"
+		text+=mass
+		mass = "Total Particles: N_A = || N_B = \n"
+		text+=mass
+		mass = "Time(s)    T_A(K)    T_B(K)    N_A    N_B\n"
+		text+=mass
+		for(var i =0; i< tempArray.length; i++)
+		{
+			mass  = tempArray[0]+"    "+tempArray[1]+"    "+tempArray[2]+"    "+tempArray[3]+"    "+tempArray[4]+"\n"
+			text+=mass;
+		}
+		
+		var element = document.createElement('a');
+		var filename = "data.txt"
+		element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(text));
+		element.setAttribute('download', filename);
+	  
+		element.style.display = 'none';
+		document.body.appendChild(element);
+		element.click();
+		document.body.removeChild(element);
+	  
+}
+
+
 function distance(point1x, point1y, point2x, point2y) {
     return Math.sqrt((point1x - point2x) * (point1x - point2x) + (point1y - point2y) * (point1y - point2y))
 }
@@ -570,7 +605,7 @@ function get_velocities(m, T, N_total)
 
 ///// Function to get Temperature from RMS distribution /////////////
 
-function getTempRMS(velocities) // velocities contain m and vrms
+function getTempRMS(velocities) // velocities contain m and vrms^2
 {
   var productMVrms = velocities.map(x => x[0]*x[1])
   var sumRMS = arraySum(productMVrms)
@@ -605,17 +640,18 @@ function Particle(x, y, vx, vy, mass, radius, type, bl, br){
   this.update = function(){
 	for(var i = 0; i< particles.length; i++)
  {
+	if(this === particles[i]) continue;
+	if(this.type == particles[i].type && distance(this.x, this.y, particles[i].x, particles[i].y) < this.radius + particles[i].radius)
+ {
+   resolveCollision(this, particles[i]);
+}
+
    if(this.x - this.radius <= this.border_left || this.x + this.radius >= this.border_right){
 	  this.velocity.x = -this.velocity.x;
 	}
 	if(this.y - this.radius <=0 || this.y + this.radius >= canvas_main.height){
 	  this.velocity.y = -this.velocity.y;
 	}
-   if(this === particles[i]) continue;
-	if(this.type == particles[i].type && distance(this.x, this.y, particles[i].x, particles[i].y) < this.radius + particles[i].radius)
- {
-   resolveCollision(this, particles[i]);
-}
 }
 	this.x += (this.velocity.x*dt);
 	this.y += (this.velocity.y*dt);
@@ -624,12 +660,6 @@ function Particle(x, y, vx, vy, mass, radius, type, bl, br){
 	}
 	else{
 	  this.box = "A"
-	}
-	if(this.x - this.radius <= this.border_left || this.x + this.radius >= this.border_right){
-	  this.velocity.x = -this.velocity.x;
-	}
-	if(this.y - this.radius <=0 || this.y + this.radius >= canvas_main.height){
-	  this.velocity.y = -this.velocity.y;
 	}
 	this.draw();
   }
@@ -655,7 +685,7 @@ function intitializeParticle(m, T, N_total, type, radius)
 	{
 	  let x = Math.random()*(br - 2*radius - bl) + radius+bl;
 	  let y = Math.random()*(canvas_main.height - 2* radius) + radius;
-	  if(i!=0){
+	  if(i!==0){
 		for(var j = 0; j < particles.length; j++)
 		{
 		  if(distance(x, y, particles[j].x, particles[j].y) < radius + particles[j]+radius){
@@ -664,18 +694,21 @@ function intitializeParticle(m, T, N_total, type, radius)
 			j = -1;
 		  }
 		}
-	}
+		}
 	var angle = Math.random()*2*Math.PI
 	var v = velocities[i]
 // var v = 5
 	particles.push(new Particle(x, y, v*Math.sin(angle), v*Math.cos(angle), m, radius, type, bl, br));
-  }
+  	}
 }
 
 
 function init(mA, mB, TA, TB, N_totalA, N_totalB)
 {
 	division_line.style.opacity = "1";
+	frameCount = 0;
+	dataArray = [];
+	barrierRemoved = 0;
   particles = [];
   if(mA > mB)
 	{
@@ -698,17 +731,17 @@ function init(mA, mB, TA, TB, N_totalA, N_totalB)
 }
 
 
-var i = 0
+
 ////////    ___animate function /////////////////
 function animate(){
 	if(animationPlay)
  		 requestAnimationFrame(animate)
-  i+=1
+  frameCount+=1
   ctx_main.clearRect(0, 0, canvas_main.width, canvas_main.height)
   for (var i = 0; i < particles.length; i++) {
         particles[i].update();
     }
-  if(performance.now() - startTime > 1000)
+  if(frameCount%2 === 0)
 	{
 	  var particlesA = particles.filter(x => x.box == "A")
 	  var particlesB = particles.filter(x => x.box == "B")
@@ -720,10 +753,14 @@ function animate(){
   drawHistogram(velocitiesB, histPlot2);
   var vel_MA = particlesA.map(x => [x.mass, x.velocity.x**2 + x.velocity.y**2])
   var vel_MB = particlesB.map(x => [x.mass, x.velocity.x**2 + x.velocity.y**2])
-  tempPlot1.data.datasets[0].data.push(getTempRMS(vel_MA))
+  var rmstempA = getTempRMS(vel_MA);
+  var rmstempB = getTempRMS(vel_MB);
+  tempPlot1.options.scales.x.title.text = "Current Time: " + (frameCount*DT).toFixed(4) + " s";
+  tempPlot1.data.datasets[0].data.push(rmstempA)
   tempPlot1.data.datasets[0].data.shift()
-  tempPlot1.data.datasets[1].data.push(getTempRMS(vel_MB))
+  tempPlot1.data.datasets[1].data.push(rmstempB)
   tempPlot1.data.datasets[1].data.shift()
   tempPlot1.update();
+  dataArray.push([(frameCount * DT).toFixed(4), rmstempA, rmstempB, particlesA.length, particlesB.length]);
 	}
 }
