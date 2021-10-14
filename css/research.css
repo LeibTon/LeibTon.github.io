@@ -35,7 +35,7 @@
 	right: 15px;
 	margin-top: 30px;
 	margin-left:auto;
-margin-right:0;
+	margin-right:0;
 	background: #548CA8;
 	padding-left: 12.5px;
 	padding-right: 12.5px;
@@ -76,6 +76,7 @@ overflow-x: hidden;
 
 .nav_item{
 text-align: right;
+margin: auto;
 margin-top: 20px;
 max-width: 210px;
 }
@@ -120,8 +121,8 @@ color: #FFF5FD;
 	width: 95%;
 	margin: auto;
 	padding-top: 10px;
-	padding-left: 30px;
-	padding-right: 10px;
+	padding-left: 20px;
+	padding-right: 20px;
 	text-align: left;
 	padding-bottom: 10px;
 	font-size: 1rem;
@@ -177,3 +178,105 @@ font-weight: bold;
 	text-decoration: none;
 	opacity: 0.8;
 }
+
+
+@media screen and (max-width: 768px) {
+    .navigation{
+		width: 0px;
+		z-index: 1000;
+	}
+
+	.navigation_enlarge{
+		width: 90%;
+	}
+
+	.homepage{
+		width: 100%;
+		margin-left: 0px;
+	}
+
+	.nav_control{
+		right: -10px;
+	}
+}
+
+
+/*Container Part*/
+.container-main {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+	gap: 1rem;
+	/* margin: 2rem 5vw; */
+	padding: 0;
+	list-style-type: none;
+}
+
+.container-items{
+	position: relative;
+  display: block;
+  height: auto;
+  overflow: hidden;
+  text-decoration: none;
+}
+
+.container-items img{
+	width: 100%;
+	height: auto;
+}
+
+
+.card__overlay {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	z-index: 1;    
+	transform: translateY(100%);
+	transition: .2s ease-in-out;
+	background: #005A8D;
+	color: #FFF5FD;
+  }
+  
+  .container-items:hover .card__overlay {
+	transform: translateY(0);
+  }
+  
+  .card__header {
+	position: relative;
+	display: flex;
+	align-items: center;
+	gap: 2em;
+	padding: 5px;
+	transform: translateY(-100%);
+	transition: .2s ease-in-out;
+	background: #005A8D;
+  }
+  
+   
+  
+  .container-items:hover .card__header {
+	transform: translateY(0);
+  }
+ 
+  
+  .card__title {
+	font-size: 1em;
+	color: #FFF5FD;
+  }
+  
+
+  
+  .card__status {
+	font-size: .9em;
+	color: #FFF5FD;
+  }
+  
+  .card__description {
+	padding: 7px;
+	margin: 0;
+	background: #005A8D;
+	color: #FFF5FD;
+	-webkit-box-orient: vertical;
+	-webkit-line-clamp: 3;
+	overflow: hidden;
+  }    
