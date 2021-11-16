@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300&display=swap');
 
 *{
   margin: 0;
@@ -7,7 +8,7 @@
 }
 
 body {
-  font-family: 'Oswald', sans-serif;
+  font-family: 'IBM Plex Mono', monospace;
   font-weight: 300;
   overflow-x: hidden;
 }
@@ -17,6 +18,7 @@ body {
   color: red;
   font-size: 2rem;
   top: 10px;
+  font-family: 'Oswald', sans-serif;
 }
 
 .division_line{
@@ -28,6 +30,10 @@ left: 50%;
 translateX: -50%;
 background: red;
 /* opacity: 0.4; */
+}
+
+.contents h2 {
+  font-family: 'Oswald', sans-serif;
 }
 
 .graph_canvas{
@@ -67,6 +73,7 @@ margin-top: 10px;
 .control_input_main table tr td{
   max-width: 300px;
   padding-left: 10px;
+  font-size: 0.9rem;
 }
 
 .control_input_main table tr td input{
@@ -96,6 +103,7 @@ margin-top: 10px;
   background: #BBBFCA;
   text-align: center;
   cursor: pointer;
+  font-family: 'Oswald', sans-serif;
 }
 
 /*.control_input_main .cross:after, .control_input_main .cross:before{
@@ -147,6 +155,7 @@ margin-top: 10px;
   font-size: 1rem;
   margin-left: 10px;
   margin-top: 10px;
+  font-family: 'Oswald', sans-serif;
 }
 
 .control_buttons:focus {
