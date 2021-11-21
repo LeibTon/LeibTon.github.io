@@ -3,6 +3,27 @@ Using HTML DOM manipulation, creating elements.*/
 
 var blog_details = [
 {
+  title: "Kinetic Theory Simulation",
+  subtitle: "Overview of Kinetic Theory simulation in simulations",
+  date: "Nov 21, 2021",
+  read: "4 min read",
+  link: "https://prakashaditya369.medium.com/kinetic-theory-simulation-60f00bd563c5?source=friends_link&sk=201a53fec431911dd09b8846d9121144",
+},
+{
+  title: "Simulating Gas Molecules",
+  subtitle: "Asking molecules to collide and observing their heat.",
+  date: "Nov 22, 2021",
+  read: "6 min read",
+  link: "https://prakashaditya369.medium.com/simulating-gas-molecules-f3ba06596ee2?source=friends_link&sk=34632ff1673489ccbe908ba364fb176d",
+},
+{
+  title: "Kinetic Theory of Gases (Basics)",
+  subtitle: "micro and MACRO worlds.",
+  date: "Nov 16, 2021",
+  read: "6 min read",
+  link: "https://prakashaditya369.medium.com/kinetic-theory-of-gases-basics-417752d6672c?source=friends_link&sk=c19d6532f96c421da41f1bc338b1f666",
+},
+{
 	title: "Facial Emotion Recognition in Browser using TensorflowJS",
 	subtitle: "Surprised?",
 	date: "Sept 21, 2021",
