@@ -1,198 +1,200 @@
- 
-@font-face{
-font-family: aditya;
-src: url(font.ttf);
-}
+ @font-face {
+ 	font-family: aditya;
+ 	src: url(font.ttf);
+ }
 
 
-video {
-  display: block;
-}
+ video {
+ 	display: block;
+ }
 
 
-.removed {
-  display: none;
-}
+ .removed {
+ 	display: none;
+ }
 
-.invisible {
-  opacity: 0.2;
-}
-.facial-main{
-	position: relative;
-	top:0;
-	margin-bottom: 30px;
-	margin-top: 30px;
-display: flex;
-justify-content: center;
-align-items: center;
-}
+ .invisible {
+ 	opacity: 0.2;
+ }
 
-
-.camView {
-	z-index: 10;
-  position: relative;
-  width: 640px;
-	border: none;
-  margin: 0px;
-	background: white;
-  cursor: pointer;
-	box-shadow: 0.3em 0.3em 1em rgba(0,0,0,0.3);
-	border-top-left-radius: 15px;
-	border-top-right-radius: 15px;
-}
-
-.cam_detail_main{
-	position: relative;
-	left: 225px;
-		box-shadow: 0.3em 0.3em 1em rgba(0,0,0,0.3);
-	padding: 15px 15px;
-	padding-left:30px;
-	width: 250px;
-background: #C1CFC0;
-	border-top-left-radius: 15px;
-	border-bottom-left-radius: 15px;
-	font-family: "JetBrains Mono",monospace;
-	transition: left 2s;
-}
-
-.cam_detail_main h1{
-font-size: 1.4rem;
-color: #11324D;
-}
-
-.cam_detail_main span{
-margin-bottom: 10px;
-}
-
-.cam_detail_main a{
-	display: block;
-	margin-top: 5px;
-	margin-bottom: 5px;
-	text-decoration: none;
-	margin-left: 20px;
-}
-
-.cam_chart_main{
-	position: relative;
-	left: -225px;
-	box-shadow: 0.3em 0.3em 1em rgba(0,0,0,0.3);
-	border-bottom-right-radius: 15px;
-	border-top-right-radius: 15px;
-	padding: 15px 15px;
-	width: 250px;
-background: #C1CFC0;
-transition: left 2s;
-}
-
-.cam_bar_text{
-margin-bottom: 3px;
-margin-top: 3px;
-font-family: "JetBrains Mono",monospace;
-}
-
-.cam_bar_main{
-height: 15px;
-width: 200px;
-background-color: lightgrey;
-}
-
-.cam_bar_sub{
-height: 15px;
-width: 30%;
-transition: width 1s;
-background-color: #11324D;
-}
-
-.camView p {
-  position: absolute;
-  padding: 5px;
-  background-color: rgba(255, 111, 0, 0.85);
-  color: #FFF;
-  border: 1px dashed rgba(255, 255, 255, 0.7);
-  z-index: 2;
-  font-size: 12px;
-}
-
-.camTitle{
-	display: flex;
-  justify-content: center;
-	padding: 5px 10px;
-	background: #11324D;
-	color: #E7E0C9;
-font-family: "JetBrains Mono",monospace;
-font-size: 1.2em;
-	border-top-left-radius: 15px;
-	border-top-right-radius: 15px;
-}
-
-.camBox{
-	position: relative;
-
-}
+ .facial-main {
+ 	position: relative;
+ 	top: 0;
+ 	margin-bottom: 30px;
+ 	margin-top: 30px;
+ 	display: flex;
+ 	justify-content: center;
+ 	align-items: center;
+ }
 
 
-.cambutton{
-  align-items: center;
-  appearance: none;
-  background-color: #FCFCFD;
-  border-radius: 4px;
-  border-width: 0;
-  box-shadow: rgba(45, 35, 66, 0.4) 0 2px 4px,rgba(45, 35, 66, 0.3) 0 7px 13px -3px,#D6D6E7 0 -3px 0 inset;
-  box-sizing: border-box;
-  color: #36395A;
-  cursor: pointer;
-  display: none;
-  font-family: "JetBrains Mono",monospace;
-  height: 48px;
-  justify-content: center;
-  line-height: 1;
-  list-style: none;
-  overflow: hidden;
-  padding-left: 16px;
-  padding-right: 16px;
-  position: relative;
-  text-align: left;
-  text-decoration: none;
-  transition: box-shadow .15s,transform .15s;
-  user-select: none;
-  -webkit-user-select: none;
-  touch-action: manipulation;
-  white-space: nowrap;
-  will-change: box-shadow,transform;
-  font-size: 18px;
-	margin-bottom: 35px;
-}
+ .camView {
+ 	z-index: 10;
+ 	position: relative;
+ 	width: 640px;
+ 	border: none;
+ 	margin: 0px;
+ 	background: white;
+ 	cursor: pointer;
+ 	box-shadow: 0.3em 0.3em 1em rgba(0, 0, 0, 0.3);
+ 	border-top-left-radius: 15px;
+ 	border-top-right-radius: 15px;
+ }
 
-.cambutton:focus {
-  box-shadow: #D6D6E7 0 0 0 1.5px inset, rgba(45, 35, 66, 0.4) 0 2px 4px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
-}
-.cambutton:hover {
-  box-shadow: rgba(45, 35, 66, 0.4) 0 4px 8px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
-  transform: translateY(-2px);
-}
+ .cam_detail_main {
+ 	position: relative;
+ 	left: 225px;
+ 	box-shadow: 0.3em 0.3em 1em rgba(0, 0, 0, 0.3);
+ 	padding: 15px 15px;
+ 	padding-left: 30px;
+ 	width: 250px;
+ 	background: #C1CFC0;
+ 	border-top-left-radius: 15px;
+ 	border-bottom-left-radius: 15px;
+ 	font-family: "JetBrains Mono", monospace;
+ 	transition: left 2s;
+ }
 
-.cambutton:active {
-  box-shadow: #D6D6E7 0 3px 7px inset;
-  transform: translateY(2px);
-}
+ .cam_detail_main h1 {
+ 	font-size: 1.4rem;
+ 	color: #11324D;
+ }
+
+ .cam_detail_main span {
+ 	margin-bottom: 10px;
+ }
+
+ .cam_detail_main a {
+ 	display: block;
+ 	margin-top: 5px;
+ 	margin-bottom: 5px;
+ 	text-decoration: none;
+ 	margin-left: 20px;
+ }
+
+ .cam_chart_main {
+ 	position: relative;
+ 	left: -225px;
+ 	box-shadow: 0.3em 0.3em 1em rgba(0, 0, 0, 0.3);
+ 	border-bottom-right-radius: 15px;
+ 	border-top-right-radius: 15px;
+ 	padding: 15px 15px;
+ 	width: 250px;
+ 	background: #C1CFC0;
+ 	transition: left 2s;
+ }
+
+ .cam_bar_text {
+ 	margin-bottom: 3px;
+ 	margin-top: 3px;
+ 	font-family: "JetBrains Mono", monospace;
+ }
+
+ .cam_bar_main {
+ 	height: 15px;
+ 	width: 200px;
+ 	background-color: lightgrey;
+ }
+
+ .cam_bar_sub {
+ 	height: 15px;
+ 	width: 30%;
+ 	transition: width 1s;
+ 	background-color: #11324D;
+ }
+
+ .camView p {
+ 	position: absolute;
+ 	padding: 5px;
+ 	background-color: rgba(255, 111, 0, 0.85);
+ 	color: #FFF;
+ 	border: 1px dashed rgba(255, 255, 255, 0.7);
+ 	z-index: 2;
+ 	font-size: 12px;
+ }
+
+ .camTitle {
+ 	display: flex;
+ 	justify-content: center;
+ 	padding: 5px 10px;
+ 	background: #11324D;
+ 	color: #E7E0C9;
+ 	font-family: "JetBrains Mono", monospace;
+ 	font-size: 1.2em;
+ 	border-top-left-radius: 15px;
+ 	border-top-right-radius: 15px;
+ }
+
+ .camBox {
+ 	position: relative;
+
+ }
 
 
-.camInstruction{
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 480px;
-	text-align: center;
-	display: flex;
-/* 		display: none; */
-	justify-content: center;
-	align-items: center;
-	background: #C1CFC0;
-}
-#camiText{
-	display: block;
-	color: #E05D5D;
-	font-size: 1.3rem;
-	font-family: 'Inconsolata', monospace;
-}
+ .cambutton {
+ 	align-items: center;
+ 	appearance: none;
+ 	background-color: #FCFCFD;
+ 	border-radius: 4px;
+ 	border-width: 0;
+ 	box-shadow: rgba(45, 35, 66, 0.4) 0 2px 4px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
+ 	box-sizing: border-box;
+ 	color: #36395A;
+ 	cursor: pointer;
+ 	display: none;
+ 	font-family: "JetBrains Mono", monospace;
+ 	height: 48px;
+ 	justify-content: center;
+ 	line-height: 1;
+ 	list-style: none;
+ 	overflow: hidden;
+ 	padding-left: 16px;
+ 	padding-right: 16px;
+ 	position: relative;
+ 	text-align: left;
+ 	text-decoration: none;
+ 	transition: box-shadow .15s, transform .15s;
+ 	user-select: none;
+ 	-webkit-user-select: none;
+ 	touch-action: manipulation;
+ 	white-space: nowrap;
+ 	will-change: box-shadow, transform;
+ 	font-size: 18px;
+ 	margin-bottom: 35px;
+ }
+
+ .cambutton:focus {
+ 	box-shadow: #D6D6E7 0 0 0 1.5px inset, rgba(45, 35, 66, 0.4) 0 2px 4px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
+ }
+
+ .cambutton:hover {
+ 	box-shadow: rgba(45, 35, 66, 0.4) 0 4px 8px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
+ 	transform: translateY(-2px);
+ }
+
+ .cambutton:active {
+ 	box-shadow: #D6D6E7 0 3px 7px inset;
+ 	transform: translateY(2px);
+ }
+
+
+ .camInstruction {
+ 	position: absolute;
+ 	top: 0;
+ 	left: 0;
+ 	width: 100%;
+ 	height: 480px;
+ 	text-align: center;
+ 	display: flex;
+ 	/* 		display: none; */
+ 	justify-content: center;
+ 	align-items: center;
+ 	background: #C1CFC0;
+ }
+
+ #camiText {
+ 	display: block;
+ 	color: #E05D5D;
+ 	font-size: 1.3rem;
+ 	font-family: 'Inconsolata', monospace;
+ }

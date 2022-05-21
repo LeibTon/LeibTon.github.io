@@ -11,14 +11,14 @@ animation.add({
     targets: ".menu_item",
     width: "100px",
     height: "100px",
-    translateX: function(el, i) {
+    translateX: function (el, i) {
         return translateXValues[i]
     },
-    translateY: function(el, i) {
+    translateY: function (el, i) {
         return translateYValues[i]
     },
     duration: 2000,
-    delay: function(el, i) {
+    delay: function (el, i) {
         return i * 700;
     },
     easing: 'easeOutCubic'
@@ -27,18 +27,18 @@ animation.add({
     targets: ".menu_item a",
     opacity: 1,
     duration: 500,
-    delay: function(el, i) {
+    delay: function (el, i) {
         return i * 700;
     },
     easing: 'easeInSine'
 }, "-=3000")
 for (var i = 0; i < itemsID.length; i++) {
-    document.querySelectorAll(".menu_item")[i].addEventListener("click", function(e) {
+    document.querySelectorAll(".menu_item")[i].addEventListener("click", function (e) {
         animationToggle = 0;
         animation.reverse()
     })
 }
-menuButton.addEventListener("click", function(e) {
+menuButton.addEventListener("click", function (e) {
 
     if (animationToggle) {
         animationToggle = 0;

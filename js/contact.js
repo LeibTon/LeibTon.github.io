@@ -21,14 +21,14 @@ function message_write(message, num) {
     }
 }
 
-window.addEventListener("load", function() {
+window.addEventListener("load", function () {
     i = 0;
     paragraph.innerHTML = "";
     message_write(main_message, 0)
 })
 
 /*Hover effects*/
-document.getElementById("git").addEventListener("mouseover", function(e) {
+document.getElementById("git").addEventListener("mouseover", function (e) {
     if (cross_check !== "git") {
         final_num = 3
         i = 0;
@@ -37,7 +37,7 @@ document.getElementById("git").addEventListener("mouseover", function(e) {
         cross_check = "git";
     }
 })
-document.getElementById("facebook").addEventListener("mouseover", function(e) {
+document.getElementById("facebook").addEventListener("mouseover", function (e) {
     if (cross_check !== "face") {
         final_num = 5
         i = 0;
@@ -46,7 +46,7 @@ document.getElementById("facebook").addEventListener("mouseover", function(e) {
         cross_check = "face";
     }
 })
-document.getElementById("email").addEventListener("mouseover", function(e) {
+document.getElementById("email").addEventListener("mouseover", function (e) {
     if (cross_check !== "email") {
         final_num = 1;
         i = 0;
@@ -56,7 +56,7 @@ document.getElementById("email").addEventListener("mouseover", function(e) {
     }
 })
 
-document.getElementById("linkedin").addEventListener("mouseover", function(e) {
+document.getElementById("linkedin").addEventListener("mouseover", function (e) {
     if (cross_check !== "linkedin") {
         final_num = 4;
         i = 0;
@@ -65,7 +65,7 @@ document.getElementById("linkedin").addEventListener("mouseover", function(e) {
         cross_check = "linkedin";
     }
 })
-document.getElementById("twitter").addEventListener("mouseover", function(e) {
+document.getElementById("twitter").addEventListener("mouseover", function (e) {
     if (cross_check !== "twitter") {
         final_num = 2
         i = 0;
@@ -77,18 +77,18 @@ document.getElementById("twitter").addEventListener("mouseover", function(e) {
 
 
 /*Click events */
-document.getElementById("email").addEventListener("click", function() {
+document.getElementById("email").addEventListener("click", function () {
     open("mailto:prakashaditya144@gmail.com", "_blank")
 })
-document.getElementById("twitter").addEventListener("click", function() {
+document.getElementById("twitter").addEventListener("click", function () {
     open("https://twitter.com/_rickaditya_", "_blank")
 })
-document.getElementById("git").addEventListener("click", function() {
+document.getElementById("git").addEventListener("click", function () {
     open("https://github.com/prakashaditya369", "_blank")
 })
-document.getElementById("linkedin").addEventListener("click", function() {
+document.getElementById("linkedin").addEventListener("click", function () {
     open("https://www.linkedin.com/in/prakashaditya144/", "_blank")
 })
-document.getElementById("facebook").addEventListener("click", function() {
+document.getElementById("facebook").addEventListener("click", function () {
     open("https://www.facebook.com/144ap/", "_blank")
 })

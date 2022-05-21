@@ -1,7 +1,7 @@
 /*Navigation Menu in About Me page containing links to Now and Blog*/
 const tw1 = new TimelineLite({
     paused: true,
-    onComplete: function() {
+    onComplete: function () {
         document.querySelector(".about_nav .links").style.pointerEvents = "auto";
     }
 });
@@ -58,7 +58,7 @@ tw1.add(
     }), "-=1"
 )
 
-document.querySelector(".about_nav_button").addEventListener("click", function() {
+document.querySelector(".about_nav_button").addEventListener("click", function () {
     if (toggle === 0) {
         tw1.play();
         toggle = 1;

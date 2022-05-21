@@ -1,111 +1,115 @@
 @import url('https://fonts.googleapis.com/css?family=Archivo+Black');
 @import url('https://fonts.googleapis.com/css2?family=Alegreya&display=swap');
-*{
-margin: 0;
-padding: 0;
-box-sizing: border-box;
+
+* {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
 }
 
-body{
-background-color: #eee;
-overflow-x: hidden;
-}
-@font-face{
-font-family: hacked;
-src: url(Hacked.ttf);
+body {
+        background-color: #eee;
+        overflow-x: hidden;
 }
 
-@font-face{
-font-family: autography;
-src: url(Autography.otf);
+@font-face {
+        font-family: hacked;
+        src: url(Hacked.ttf);
 }
 
-#line{
-height: 100vh;
-width: 100vw;
-background-color: #14274e;
-overflow: hidden; 
+@font-face {
+        font-family: autography;
+        src: url(Autography.otf);
 }
 
-.introduction{
-color: #e8e8e8;
-position: absolute;
-top: 90px;
-left: 30px;
-font-size: 1.3rem;
-font-family: hacked;
+#line {
+        height: 100vh;
+        width: 100vw;
+        background-color: #14274e;
+        overflow: hidden;
 }
 
-.introduction p{
-margin: 4px;
+.introduction {
+        color: #e8e8e8;
+        position: absolute;
+        top: 90px;
+        left: 30px;
+        font-size: 1.3rem;
+        font-family: hacked;
+}
+
+.introduction p {
+        margin: 4px;
 }
 
 .glitch-wrapper-hidden {
-visibility: visible;
+        visibility: visible;
 }
 
 
 .glitch-wrapper {
-	height: 100%;
+        height: 100%;
         position: absolute;
         opacity: 0;
         top: 50%;
         left: 50%;
-        transform: translate(-50%,-50%);
-  font-family: 'Archivo Black', sans-serif;
+        transform: translate(-50%, -50%);
+        font-family: 'Archivo Black', sans-serif;
 }
 
 .glitch {
-	color: white;
-	font-size: 150px;
-	text-transform: upercase;
+        color: white;
+        font-size: 150px;
+        text-transform: upercase;
         position: absolute;
         top: 50%;
-        transform: translate(-50%,-50%);
-text-align: center;
+        transform: translate(-50%, -50%);
+        text-align: center;
 }
 
 
 .glitch-before {
-	left: 2px;
-	text-shadow: -2px 0 #49FC00;
-	clip: none;
+        left: 2px;
+        text-shadow: -2px 0 #49FC00;
+        clip: none;
 }
 
 .glitch-after {
-	left: -2px;
-	text-shadow: -2px 0 #b300fc;
-	clip: none;
+        left: -2px;
+        text-shadow: -2px 0 #b300fc;
+        clip: none;
 }
 
 
 #canvas {
-background: #eee;
-position: -webkit-sticky; /* Safari */
-position: sticky;
-top: 0;
+        background: #eee;
+        position: -webkit-sticky;
+        /* Safari */
+        position: sticky;
+        top: 0;
 }
+
 .main_container {
-position: absolute;
-top: 100vh;
-margin-top: 40px;
-margin-bottom: 40px; 
-text-align: center;
-width: 100%;
+        position: absolute;
+        top: 100vh;
+        margin-top: 40px;
+        margin-bottom: 40px;
+        text-align: center;
+        width: 100%;
 }
 
 .notes-container {
-position: relative;
-width: 90%;
-text-align:center;
-display: inline-block;
-    border: 3px solid #333333;
-border-radius: 2% 6% 5% 4% / 1% 1% 2% 4%;
-padding: 5px 25px;
-margin-bottom: 20px;
-margin-top: 20px;
-font-family: autography;
-font-size: 3rem;
+        position: relative;
+        width: 90%;
+        text-align: center;
+        display: inline-block;
+        border: 3px solid #333333;
+        border-radius: 2% 6% 5% 4% / 1% 1% 2% 4%;
+        padding: 5px 25px;
+        margin-bottom: 20px;
+        margin-top: 20px;
+        font-family: autography;
+        font-size: 3rem;
 }
 
 
@@ -120,4 +124,4 @@ font-size: 3rem;
         left: 50%;
         transform: translate3d(-50%, -50%, 0) scale(1.015) rotate(0.5deg);
         border-radius: 1% 1% 2% 4% / 2% 6% 5% 4%;
-    }
+}

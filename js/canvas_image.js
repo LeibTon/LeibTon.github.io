@@ -51,13 +51,13 @@ function Draw() {
         this.velocity = 10
         this.size = 1.1;
         this.colour = colour;
-        this.draw = function() {
+        this.draw = function () {
             ctx.beginPath();
-            ctx.arc(this.x + 2*Math.random(), this.y +2* Math.random(), this.size, Math.PI * 2, false);
+            ctx.arc(this.x + 2 * Math.random(), this.y + 2 * Math.random(), this.size, Math.PI * 2, false);
             ctx.fillStyle = this.colour;
             ctx.fill();
         }
-        this.update = function() {
+        this.update = function () {
             if (mouse.state && Math.random() > 0.8) {
                 this.x = this.basex + Math.random() * (mouse.x - mouse.fixedPosx + 1);
                 this.y = this.basey + Math.random() * (mouse.y - mouse.fixedPosy + 1);
@@ -105,37 +105,34 @@ function Draw() {
             }
         }
     }
+
     function animate() {
-			if(canvas_control){
-        requestAnimationFrame(animate);
-        ctx.clearRect(0, 0, innerWidth, innerHeight)
-        for (let i = 0; i < particleArray.length; i++) {
-            particleArray[i].update();
+        if (canvas_control) {
+            requestAnimationFrame(animate);
+            ctx.clearRect(0, 0, innerWidth, innerHeight)
+            for (let i = 0; i < particleArray.length; i++) {
+                particleArray[i].update();
+            }
         }
-			}
     }
     init();
-		if(!canvas_control && window.scrollY < 700)
-	{
-		canvas_control = true;
-    animate();
-	}
+    if (!canvas_control && window.scrollY < 700) {
+        canvas_control = true;
+        animate();
+    }
     window.addEventListener("resize", () => {
         canvas.height = window.innerHeight;
         canvas.width = window.innerWidth;
         init();
     })
-  document.addEventListener("scroll", ()=>{
-			if(canvas_control && window.scrollY > 700)
- {
-	 canvas_control = false;
-}
-	else if(!canvas_control && window.scrollY < 700)
- {
-	 canvas_control = true;
-	animate();
-}
-	})
+    document.addEventListener("scroll", () => {
+        if (canvas_control && window.scrollY > 700) {
+            canvas_control = false;
+        } else if (!canvas_control && window.scrollY < 700) {
+            canvas_control = true;
+            animate();
+        }
+    })
 }
 
 

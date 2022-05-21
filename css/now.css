@@ -3,94 +3,98 @@
 @import url('https://fonts.googleapis.com/css2?family=Gotu&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Caveat&display=swap');
-*{
-margin: 0;
-padding: 0;
-outline: none;
+
+* {
+    margin: 0;
+    padding: 0;
+    outline: none;
 }
+
 body {
-padding: 30px 60px;
+    padding: 30px 60px;
 }
 
-nav{
-font-family: 'Lora', sans-serif;
-font-size: 1.5rem;
-margin-bottom: 20px;
+nav {
+    font-family: 'Lora', sans-serif;
+    font-size: 1.5rem;
+    margin-bottom: 20px;
 }
 
-nav a{
-color: #CCA43B;
-font-weight: bold;
-text-decoration: none;
+nav a {
+    color: #CCA43B;
+    font-weight: bold;
+    text-decoration: none;
 }
 
-.heading_part h1{
-font-size: 1.9rem;
-color: #F28482;
+.heading_part h1 {
+    font-size: 1.9rem;
+    color: #F28482;
 
-font-family: 'EB Garamond', serif;
-}
-
-a{
-text-decoration: none;
-}
-.heading_part p{
-color: #F6BD60;
-font-size: 1.4rem;
-font-family: 'Gotu', sans-serif;
-font-weight: normal;
+    font-family: 'EB Garamond', serif;
 }
 
-.main_container{
-margin-top: 40px;
-}
-.main_container h2{
-color: #1EA896;
-font-family: 'Xanh Mono', monospace;
-font-weight: normal;
-font-size: 3.5rem;
-margin-top: 10px;
-margin-bottom: 10px;
-text-transform: uppercase;
+a {
+    text-decoration: none;
 }
 
-.main_container p{
-color: #051014;
-font-size: 1.3rem;
-font-family: 'Open Sans Condensed', sans-serif;
-margin-bottom: 4px;
+.heading_part p {
+    color: #F6BD60;
+    font-size: 1.4rem;
+    font-family: 'Gotu', sans-serif;
+    font-weight: normal;
+}
+
+.main_container {
+    margin-top: 40px;
+}
+
+.main_container h2 {
+    color: #1EA896;
+    font-family: 'Xanh Mono', monospace;
+    font-weight: normal;
+    font-size: 3.5rem;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.main_container p {
+    color: #051014;
+    font-size: 1.3rem;
+    font-family: 'Open Sans Condensed', sans-serif;
+    margin-bottom: 4px;
 }
 
 .acknowledge {
-text-align: center;
-margin-top: 60px;
-margin-bottom: 60px;
-font-family: 'Caveat', cursive;
-font-size: 1.5rem;
+    text-align: center;
+    margin-top: 60px;
+    margin-bottom: 60px;
+    font-family: 'Caveat', cursive;
+    font-size: 1.5rem;
 }
 
-.acknowledge span a{
-text-decoration: none;
-color: #404040;
+.acknowledge span a {
+    text-decoration: none;
+    color: #404040;
 }
 
-.acknowledge span{
-padding-left: 15px;
-padding-top: 10px;
-padding-bottom: 10px;
-border-left: 10px solid #489FB5;
+.acknowledge span {
+    padding-left: 15px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-left: 10px solid #489FB5;
 }
 
 ul {
-list-style-type: "-";
-padding-left: 30px;
-color: orange;
+    list-style-type: "-";
+    padding-left: 30px;
+    color: orange;
 }
 
-li a{
-margin-left: 10px;
-text-decoration: none;
-color: orange;
-font-size: 1.3rem;
-font-family: 'Xanh Mono', monospace;
+li a {
+    margin-left: 10px;
+    text-decoration: none;
+    color: orange;
+    font-size: 1.3rem;
+    font-family: 'Xanh Mono', monospace;
 }

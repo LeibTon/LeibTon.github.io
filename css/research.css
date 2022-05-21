@@ -1,20 +1,21 @@
-*{
+* {
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
 }
 
-@font-face{
+@font-face {
 	src: url(Inconsolata.otf);
 	font-family: "Inconsolata";
 }
 
-@font-face{
+@font-face {
 	src: url(FrederickatheGreat-Regular.ttf);
 	font-family: "FrederickatheGreat";
 }
+
 /*Research Navigation*/
-.navigation{
+.navigation {
 	position: fixed;
 	width: 70px;
 	background: #005A8D;
@@ -25,17 +26,18 @@
 	transition: width 1.5s;
 }
 
-.navigation_enlarge{
+.navigation_enlarge {
 	width: 250px;
 }
-.nav_control{
+
+.nav_control {
 	position: relative;
-	top:0px;
+	top: 0px;
 	width: 40px;
 	right: 15px;
 	margin-top: 30px;
-	margin-left:auto;
-	margin-right:0;
+	margin-left: auto;
+	margin-right: 0;
 	background: #548CA8;
 	padding-left: 12.5px;
 	padding-right: 12.5px;
@@ -45,7 +47,7 @@
 	cursor: pointer;
 }
 
-.nav_control_bar{
+.nav_control_bar {
 	background: #FFF5FD;
 	height: 2px;
 	width: 15px;
@@ -53,43 +55,43 @@
 	margin-bottom: 2px;
 }
 
-.nav_item_main{
+.nav_item_main {
 	position: relative;
-	top:0px;
+	top: 0px;
 	right: 0px;
 	margin-top: 30px;
-	margin-left:auto;
-margin-right:0;
-padding-right: 20px;
-overflow-x: hidden;
+	margin-left: auto;
+	margin-right: 0;
+	padding-right: 20px;
+	overflow-x: hidden;
 }
 
-.nav_item_list{
+.nav_item_list {
 	opacity: 0;
 	list-style-type: none;
 }
 
-.nav_item_list_after{
+.nav_item_list_after {
 	opacity: 1;
 	transition: opacity 1.5s;
 }
 
-.nav_item{
-text-align: right;
-margin: auto;
-margin-top: 20px;
-max-width: 210px;
+.nav_item {
+	text-align: right;
+	margin: auto;
+	margin-top: 20px;
+	max-width: 210px;
 }
 
-.nav_item a{
-text-decoration: none;
-color: #FFF5FD;
-font-family: "Inconsolata";
-font-size: 1.3rem;
+.nav_item a {
+	text-decoration: none;
+	color: #FFF5FD;
+	font-family: "Inconsolata";
+	font-size: 1.3rem;
 }
 
 /*Research Navigation Ends Here*/
-.homepage{
+.homepage {
 	text-align: center;
 	margin-left: 70px;
 	width: calc(100% - 70px);
@@ -97,7 +99,7 @@ font-size: 1.3rem;
 	min-height: 100vh;
 }
 
-.section{
+.section {
 	width: 99%;
 	max-width: 900px;
 	margin: auto;
@@ -105,17 +107,17 @@ font-size: 1.3rem;
 	padding-bottom: 25px;
 }
 
-.title-part{
+.title-part {
 	width: 100%;
 	padding-top: 20px;
 	padding-bottom: 30px;
 	font-size: 1.8rem;
-font-family: "FrederickatheGreat";
-background: #022E57;
-color: #FFF5FD;
+	font-family: "FrederickatheGreat";
+	background: #022E57;
+	color: #FFF5FD;
 }
 
-.text-part{
+.text-part {
 	position: relative;
 	top: -20px;
 	width: 95%;
@@ -131,10 +133,10 @@ color: #FFF5FD;
 	color: #022E57;
 }
 
-.timeline{
+.timeline {
 	margin: 40px auto;
-/* 	padding: 10px 40px; */
-padding-left: 40px;
+	/* 	padding: 10px 40px; */
+	padding-left: 40px;
 	border-left: 4px solid #548CA8;
 	list-style: none;
 	text-align: left;
@@ -143,59 +145,60 @@ padding-left: 40px;
 	position: relative
 }
 
-.event{
+.event {
 	margin-top: 10px;
 	margin-bottom: 10px;
-position: relative;
+	position: relative;
 }
 
-.event:before, .event:after{
+.event:before,
+.event:after {
 	position: absolute;
-      display: block;
-      top: 0;
+	display: block;
+	top: 0;
 }
 
-.event:before{
+.event:before {
 	opacity: 0.75;
 	text-align: right;
-  width: 120px;
+	width: 120px;
 	font-size: 0.9rem;
 	left: -190px;
 	content: attr(data-date);
 }
 
-.event:after{
+.event:after {
 	opacity: 1;
 	left: -52px;
 	content: attr(data-icon);
 }
 
-.ed-degree{
-font-weight: bold;
+.ed-degree {
+	font-weight: bold;
 }
 
-.home-link{
+.home-link {
 	text-decoration: none;
 	opacity: 0.8;
 }
 
 
 @media screen and (max-width: 768px) {
-    .navigation{
+	.navigation {
 		width: 0px;
 		z-index: 1000;
 	}
 
-	.navigation_enlarge{
+	.navigation_enlarge {
 		width: 90%;
 	}
 
-	.homepage{
+	.homepage {
 		width: 100%;
 		margin-left: 0px;
 	}
 
-	.nav_control{
+	.nav_control {
 		right: -10px;
 	}
 }
@@ -211,15 +214,15 @@ font-weight: bold;
 	list-style-type: none;
 }
 
-.container-items{
+.container-items {
 	position: relative;
-  display: block;
-  height: auto;
-  overflow: hidden;
-  text-decoration: none;
+	display: block;
+	height: auto;
+	overflow: hidden;
+	text-decoration: none;
 }
 
-.container-items img{
+.container-items img {
 	width: 100%;
 	height: auto;
 }
@@ -230,18 +233,18 @@ font-weight: bold;
 	bottom: 0;
 	left: 0;
 	right: 0;
-	z-index: 1;    
+	z-index: 1;
 	transform: translateY(100%);
 	transition: .2s ease-in-out;
 	background: #005A8D;
 	color: #FFF5FD;
-  }
-  
-  .container-items:hover .card__overlay {
+}
+
+.container-items:hover .card__overlay {
 	transform: translateY(0);
-  }
-  
-  .card__header {
+}
+
+.card__header {
 	position: relative;
 	display: flex;
 	align-items: center;
@@ -250,28 +253,28 @@ font-weight: bold;
 	transform: translateY(-100%);
 	transition: .2s ease-in-out;
 	background: #005A8D;
-  }
-  
-   
-  
-  .container-items:hover .card__header {
+}
+
+
+
+.container-items:hover .card__header {
 	transform: translateY(0);
-  }
- 
-  
-  .card__title {
+}
+
+
+.card__title {
 	font-size: 1em;
 	color: #FFF5FD;
-  }
-  
+}
 
-  
-  .card__status {
+
+
+.card__status {
 	font-size: .9em;
 	color: #FFF5FD;
-  }
-  
-  .card__description {
+}
+
+.card__description {
 	padding: 7px;
 	margin: 0;
 	background: #005A8D;
@@ -279,4 +282,4 @@ font-weight: bold;
 	-webkit-box-orient: vertical;
 	-webkit-line-clamp: 3;
 	overflow: hidden;
-  }    
+}

@@ -1,78 +1,86 @@
 <!DOCTYPE html>
 <html lang="">
-  <head>
-    <meta charset="utf-8">
-    <title>Kinetic Theory Simulation</title>
-    <link rel="stylesheet" href="css/kinetictheory.css" />
-    <link rel="icon" href="../img/favicon.ico" />
-  </head>
-  <body>
-<canvas id = "main">Not Supported by you</canvas>
-<div class = "box_text" style = "left: 25%;">Box A</div>
-<div class = "box_text" style = "right: 25%;">Box B</div>
-<div class = "division_line" id = "division_line"></div>
 
-<div class = "control_input_main" id = "control_input_main">
-<div class = "cross" onclick = "if(document.getElementById('control_input_main').classList.contains('control_input_main_enlarge'))document.getElementById('control_input_main').classList.remove('control_input_main_enlarge')
+<head>
+  <meta charset="utf-8">
+  <title>Kinetic Theory Simulation</title>
+  <link rel="stylesheet" href="css/kinetictheory.css" />
+  <link rel="icon" href="../img/favicon.ico" />
+</head>
+
+<body>
+  <canvas id="main">Not Supported by you</canvas>
+  <div class="box_text" style="left: 25%;">Box A</div>
+  <div class="box_text" style="right: 25%;">Box B</div>
+  <div class="division_line" id="division_line"></div>
+
+  <div class="control_input_main" id="control_input_main">
+    <div class="cross" onclick="if(document.getElementById('control_input_main').classList.contains('control_input_main_enlarge'))document.getElementById('control_input_main').classList.remove('control_input_main_enlarge')
 else
 document.getElementById('control_input_main').classList.add('control_input_main_enlarge')">Controls</div>
-<div class = "contents">
-<h2>Kinetic Theory Simulation</h2>
-</div>
-<table class = "control_input_table">
-<tr>
-<td></td>
-<td>Box A</td>
-<td>Box B</td>
-</tr>
-<tr>
-<td>Molar Mass of particles in grams (>0)</td>
-<td><input type = "text" id = "mAInput" placeholder = "m_A"></td>
-<td><input type = "text" id = "mBInput" placeholder = "m_B"></td>
-</tr>
-<tr>
-<td>Temperature in Kelvin (>0K)</td>
-<td><input type = "text" id = "TAInput" placeholder = "T_A"></td>
-<td><input type = "text" id = "TBInput" placeholder = "T_B"></td>
-</tr>
-<tr>
-<td>Total Number of Particles</td>
-<td><input type = "text" id = "NAInput" placeholder = "N_A"></td>
-<td><input type = "text" id = "NBInput" placeholder = "N_B"></td>
-</tr>
-</table>
-<div style="display: flex; justify-content: space-around;">
-<button class = "control_buttons" id = "initButton"> Initialise Boxes </button>
-<button id = "openBarrier" class = "control_buttons" disabled> Open the Barrier </button>
-</div>
-<div style="display: flex; justify-content: space-around;">
-  <button id = "stop_resume_button" class = "control_buttons" disabled> Stop </button>
+    <div class="contents">
+      <h2>Kinetic Theory Simulation</h2>
+    </div>
+    <table class="control_input_table">
+      <tr>
+        <td></td>
+        <td>Box A</td>
+        <td>Box B</td>
+      </tr>
+      <tr>
+        <td>Molar Mass of particles in grams (>0)</td>
+        <td><input type="text" id="mAInput" placeholder="m_A"></td>
+        <td><input type="text" id="mBInput" placeholder="m_B"></td>
+      </tr>
+      <tr>
+        <td>Temperature in Kelvin (>0K)</td>
+        <td><input type="text" id="TAInput" placeholder="T_A"></td>
+        <td><input type="text" id="TBInput" placeholder="T_B"></td>
+      </tr>
+      <tr>
+        <td>Total Number of Particles</td>
+        <td><input type="text" id="NAInput" placeholder="N_A"></td>
+        <td><input type="text" id="NBInput" placeholder="N_B"></td>
+      </tr>
+    </table>
+    <div style="display: flex; justify-content: space-around;">
+      <button class="control_buttons" id="initButton"> Initialise Boxes </button>
+      <button id="openBarrier" class="control_buttons" disabled> Open the Barrier </button>
+    </div>
+    <div style="display: flex; justify-content: space-around;">
+      <button id="stop_resume_button" class="control_buttons" disabled> Stop </button>
+    </div>
+    <div class="contents">
+      <p> You are recommended to use desktop in fullscreen mode.</p><br />
+      <p>Download the data collected during the simulation for research purpose, by clicking on <em>Opaque Background
+        </em> button and then on <em>Download Data </em> button. </p><br />
+      <p>For more details visit the following links:</p>
+      <a
+        href="https://prakashaditya369.medium.com/kinetic-theory-simulation-60f00bd563c5?source=friends_link&sk=201a53fec431911dd09b8846d9121144">Overview</a><br />
+      <a
+        href="https://prakashaditya369.medium.com/kinetic-theory-of-gases-basics-417752d6672c?source=friends_link&sk=c19d6532f96c421da41f1bc338b1f666">Kinetic
+        Theory (Basics)</a><br />
+      <a
+        href="https://prakashaditya369.medium.com/simulating-gas-molecules-f3ba06596ee2?source=friends_link&sk=34632ff1673489ccbe908ba364fb176d">Simulation</a><br />
+      <br />
+      <a href="../simulation.html">All simulations</a>
+    </div>
   </div>
-<div class = "contents">
-<p> You are recommended to use desktop in fullscreen mode.</p><br/>
-<p>Download the data collected during the simulation for research purpose, by clicking on <em>Opaque Background </em> button and then on <em>Download Data </em> button. </p><br/>
-<p>For more details visit the following links:</p>
-<a href= "https://prakashaditya369.medium.com/kinetic-theory-simulation-60f00bd563c5?source=friends_link&sk=201a53fec431911dd09b8846d9121144">Overview</a><br/>
-<a href= "https://prakashaditya369.medium.com/kinetic-theory-of-gases-basics-417752d6672c?source=friends_link&sk=c19d6532f96c421da41f1bc338b1f666">Kinetic Theory (Basics)</a><br/>
-<a href= "https://prakashaditya369.medium.com/simulating-gas-molecules-f3ba06596ee2?source=friends_link&sk=34632ff1673489ccbe908ba364fb176d">Simulation</a><br/>
-<br />
-<a href = "../simulation.html">All simulations</a>
-</div>
-</div>
-<div class = "graphs_main" id = "graphs_main">
-<div class = "cross" id = "graphs_cross" onclick = "if(document.getElementById('graphs_main').classList.contains('graphs_main_enlarge'))document.getElementById('graphs_main').classList.remove('graphs_main_enlarge')
+  <div class="graphs_main" id="graphs_main">
+    <div class="cross" id="graphs_cross" onclick="if(document.getElementById('graphs_main').classList.contains('graphs_main_enlarge'))document.getElementById('graphs_main').classList.remove('graphs_main_enlarge')
 else
 document.getElementById('graphs_main').classList.add('graphs_main_enlarge')">Graphs</div>
-<div style="display: flex; justify-content: space-around;">
-<button class = "control_buttons" id = "printButton" style = "visibility: collapse;"> Download Data </button>
-<button class = "control_buttons" id = "transButton"> Opaque Background </button>
-<!-- <button class = "control_buttons" style = "visibility: collapse;"> Others </button> -->
-</div>
-<div class = "graph_canvas"><canvas id = "histogram1">Not Supported by you</canvas></div>
-<div class = "graph_canvas"><canvas id = "histogram2">Not Supported by you</canvas></div>
-<div class = "graph_canvas" style = "height: 200px;"><canvas id = "temperature1">Not Supported by you</canvas></div>
-</div>
-<script src="https://cdn.jsdelivr.net/npm/chart.js@3.5.1/dist/chart.min.js"></script>
-<script src="js/kinetictheory.js" charset="utf-8"></script>
-  </body>
+    <div style="display: flex; justify-content: space-around;">
+      <button class="control_buttons" id="printButton" style="visibility: collapse;"> Download Data </button>
+      <button class="control_buttons" id="transButton"> Opaque Background </button>
+      <!-- <button class = "control_buttons" style = "visibility: collapse;"> Others </button> -->
+    </div>
+    <div class="graph_canvas"><canvas id="histogram1">Not Supported by you</canvas></div>
+    <div class="graph_canvas"><canvas id="histogram2">Not Supported by you</canvas></div>
+    <div class="graph_canvas" style="height: 200px;"><canvas id="temperature1">Not Supported by you</canvas></div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@3.5.1/dist/chart.min.js"></script>
+  <script src="js/kinetictheory.js" charset="utf-8"></script>
+</body>
+
 </html>

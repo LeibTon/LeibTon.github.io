@@ -1,7 +1,7 @@
 // Preloader animation of Homepage
 const tween_loader = new TimelineLite({
     paused: true,
-    onComplete: function() {
+    onComplete: function () {
         document.querySelector(".preloader_preloader_main").remove()
         document.querySelector("body").style.overflow = "auto";
     }
@@ -42,18 +42,18 @@ tween_loader.add(
 )
 
 var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
-		var element = document.getElementById('text');
-		if (isMobile) {
-			console.log("Mobile phone login")
-  			window.open("/research.html", "_self")
-		} else {
-			window.addEventListener("load", () => {
-    if (!sessionStorage.getItem('doNotShow')) {
-        sessionStorage.setItem('doNotShow', true);
-        tween_loader.play();
-    } else {
-        document.querySelector(".preloader_preloader_main").remove()
-        document.querySelector("body").style.overflow = "auto";
-    }
-})
-		}
+var element = document.getElementById('text');
+if (isMobile) {
+    console.log("Mobile phone login")
+    window.open("/research.html", "_self")
+} else {
+    window.addEventListener("load", () => {
+        if (!sessionStorage.getItem('doNotShow')) {
+            sessionStorage.setItem('doNotShow', true);
+            tween_loader.play();
+        } else {
+            document.querySelector(".preloader_preloader_main").remove()
+            document.querySelector("body").style.overflow = "auto";
+        }
+    })
+}

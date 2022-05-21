@@ -116,4 +116,3 @@ const scene3 = new ScrollMagic.Scene({
     })
     .setTween(tw3)
     .addTo(controller3);
-

@@ -1,195 +1,196 @@
 [{
-"name": "Gravity",
-"remark": "",
-"quotes": ["What is the think you like about here?\nSilence"]
-},
-{
-"name": "Fury",
-"remark": "",
-"quotes": ["Enter your quote here."]
-},
-{
-"name": "Hackshaw Ridge",
-"remark": "",
-"quotes": ["Enter your quote here."]
-},
-{
-"name": "Contagion",
-"remark": "",
-"quotes": ["Enter your quote here."]
-},
-{
-"name": "The Intern",
-"remark": "",
-"quotes": ["Enter your quote here."]
-},
-{
-"name": "Arrival",
-"remark": "",
-"quotes": ["Enter your quote here."]
-},
-{
-"name": "The Martian",
-"remark": "",
-"quotes": ["Enter your quote here."]
-},
-{
-"name": "Ready or Not",
-"remark": "",
-"quotes": ["Enter your quote here."]
-},
-{
-"name": "Into The Wild",
-"remark": "",
-"quotes": ["Enter your quote here."]
-},
-{
-"name": "American Beauty",
-"remark": "",
-"quotes": ["Enter your quote here."]
-},
-{
-"name": "Jojo Rabbit",
-"remark": "",
-"quotes": ["Enter your quote here."]
-},
-{
-"name": "Source Code",
-"remark": "",
-"quotes": ["Enter your quote here."]
-},
-{
-"name": "Atonement",
-"remark": "",
-"quotes": ["Enter your quote here."]
-},
-{
-"name": "Dark",
-"remark": "",
-"quotes": ["Enter your quote here."]
-},
-{
-"name": "Predestination",
-"remark": "",
-"quotes": ["Enter your quote here."]
-},
-{
-"name": "Blood Diamond",
-"remark": "",
-"quotes": ["Enter your quote here."]
-},
-{
-"name": "Gone Girl",
-"remark": "",
-"quotes": ["Enter your quote here."]
-},
-{
-"name": "A Thouand Words",
-"remark": "",
-"quotes": ["Enter your quote here."]
-},
-{
-"name": "Taxi Driver",
-"remark": "",
-"quotes": ["Enter your quote here."]
-},
-{
-"name": "Booksmart",
-"remark": "",
-"quotes": ["Enter your quote here."]
-},
-{
-"name": "Life is Beautiful",
-"remark": "",
-"quotes": ["Enter your quote here."]
-},
-{
-"name": "Heat",
-"remark": "",
-"quotes": ["Enter your quote here."]
-},
-{
-"name": "The Green Mile",
-"remark": "",
-"quotes": ["Enter your quote here."]
-},
-{
-"name": "Chinatown",
-"remark": "",
-"quotes": ["Enter your quote here."]
-},
-{
-"name": "Reservoir Dogs",
-"remark": "",
-"quotes": ["Enter your quote here."]
-},
-{
-"name": "No Country For Old Men",
-"remark": "",
-"quotes": ["Enter your quote here."]
-},
-{
-"name": "The usual suspects",
-"remark": "",
-"quotes": ["Enter your quote here."]
-},
-{
-"name": "The Departed",
-"remark": "",
-"quotes": ["Enter your quote here."]
-},
-{
-"name": "Se7en",
-"remark": "",
-"quotes": ["Enter your quote here."]
-},
-{
-"name": "Dunkirk",
-"remark": "",
-"quotes": ["Enter your quote here."]
-},
-{
-"name": "Gattaca",
-"remark": "",
-"quotes": ["Enter your quote here."]
-},
-{
-"name": "Snowden",
-"remark": "",
-"quotes": ["Enter your quote here."]
-},
-{
-"name": "Goodfellas",
-"remark": "",
-"quotes": ["Enter your quote here."]
-},
-{
-"name": "Saving Private Ryan",
-"remark": "",
-"quotes": ["Enter your quote here."]
-},
-{
-"name": "1917",
-"remark": "",
-"quotes": ["Enter your quote here."]
-},
-{
-"name": "The Imitation Game",
-"remark": "",
-"quotes": ["Enter your quote here."]
-},
-{
-"name": "Tumbbad",
-"remark": "",
-"quotes": ["Enter your quote here."]
-},
-{
-"name": "Interstellar",
-"remark": "",
-"quotes": ["Enter your quote here."]
-},
-{
-"name": "Forrest Gump",
-"remark": "",
-"quotes": ["Enter your quote here."]
-}]
+        "name": "Gravity",
+        "remark": "",
+        "quotes": ["What is the think you like about here?\nSilence"]
+    },
+    {
+        "name": "Fury",
+        "remark": "",
+        "quotes": ["Enter your quote here."]
+    },
+    {
+        "name": "Hackshaw Ridge",
+        "remark": "",
+        "quotes": ["Enter your quote here."]
+    },
+    {
+        "name": "Contagion",
+        "remark": "",
+        "quotes": ["Enter your quote here."]
+    },
+    {
+        "name": "The Intern",
+        "remark": "",
+        "quotes": ["Enter your quote here."]
+    },
+    {
+        "name": "Arrival",
+        "remark": "",
+        "quotes": ["Enter your quote here."]
+    },
+    {
+        "name": "The Martian",
+        "remark": "",
+        "quotes": ["Enter your quote here."]
+    },
+    {
+        "name": "Ready or Not",
+        "remark": "",
+        "quotes": ["Enter your quote here."]
+    },
+    {
+        "name": "Into The Wild",
+        "remark": "",
+        "quotes": ["Enter your quote here."]
+    },
+    {
+        "name": "American Beauty",
+        "remark": "",
+        "quotes": ["Enter your quote here."]
+    },
+    {
+        "name": "Jojo Rabbit",
+        "remark": "",
+        "quotes": ["Enter your quote here."]
+    },
+    {
+        "name": "Source Code",
+        "remark": "",
+        "quotes": ["Enter your quote here."]
+    },
+    {
+        "name": "Atonement",
+        "remark": "",
+        "quotes": ["Enter your quote here."]
+    },
+    {
+        "name": "Dark",
+        "remark": "",
+        "quotes": ["Enter your quote here."]
+    },
+    {
+        "name": "Predestination",
+        "remark": "",
+        "quotes": ["Enter your quote here."]
+    },
+    {
+        "name": "Blood Diamond",
+        "remark": "",
+        "quotes": ["Enter your quote here."]
+    },
+    {
+        "name": "Gone Girl",
+        "remark": "",
+        "quotes": ["Enter your quote here."]
+    },
+    {
+        "name": "A Thouand Words",
+        "remark": "",
+        "quotes": ["Enter your quote here."]
+    },
+    {
+        "name": "Taxi Driver",
+        "remark": "",
+        "quotes": ["Enter your quote here."]
+    },
+    {
+        "name": "Booksmart",
+        "remark": "",
+        "quotes": ["Enter your quote here."]
+    },
+    {
+        "name": "Life is Beautiful",
+        "remark": "",
+        "quotes": ["Enter your quote here."]
+    },
+    {
+        "name": "Heat",
+        "remark": "",
+        "quotes": ["Enter your quote here."]
+    },
+    {
+        "name": "The Green Mile",
+        "remark": "",
+        "quotes": ["Enter your quote here."]
+    },
+    {
+        "name": "Chinatown",
+        "remark": "",
+        "quotes": ["Enter your quote here."]
+    },
+    {
+        "name": "Reservoir Dogs",
+        "remark": "",
+        "quotes": ["Enter your quote here."]
+    },
+    {
+        "name": "No Country For Old Men",
+        "remark": "",
+        "quotes": ["Enter your quote here."]
+    },
+    {
+        "name": "The usual suspects",
+        "remark": "",
+        "quotes": ["Enter your quote here."]
+    },
+    {
+        "name": "The Departed",
+        "remark": "",
+        "quotes": ["Enter your quote here."]
+    },
+    {
+        "name": "Se7en",
+        "remark": "",
+        "quotes": ["Enter your quote here."]
+    },
+    {
+        "name": "Dunkirk",
+        "remark": "",
+        "quotes": ["Enter your quote here."]
+    },
+    {
+        "name": "Gattaca",
+        "remark": "",
+        "quotes": ["Enter your quote here."]
+    },
+    {
+        "name": "Snowden",
+        "remark": "",
+        "quotes": ["Enter your quote here."]
+    },
+    {
+        "name": "Goodfellas",
+        "remark": "",
+        "quotes": ["Enter your quote here."]
+    },
+    {
+        "name": "Saving Private Ryan",
+        "remark": "",
+        "quotes": ["Enter your quote here."]
+    },
+    {
+        "name": "1917",
+        "remark": "",
+        "quotes": ["Enter your quote here."]
+    },
+    {
+        "name": "The Imitation Game",
+        "remark": "",
+        "quotes": ["Enter your quote here."]
+    },
+    {
+        "name": "Tumbbad",
+        "remark": "",
+        "quotes": ["Enter your quote here."]
+    },
+    {
+        "name": "Interstellar",
+        "remark": "",
+        "quotes": ["Enter your quote here."]
+    },
+    {
+        "name": "Forrest Gump",
+        "remark": "",
+        "quotes": ["Enter your quote here."]
+    }
+]
