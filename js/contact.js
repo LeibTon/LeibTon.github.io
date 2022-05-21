@@ -1,9 +1,9 @@
 /*Display messages in Say Hi Page*/
-var email_message = "I am usually happy to talk about stuff, even if I don't know you. And the best way to reach me is by email. Let's talk... :)";
-var twitter_message = "Here You can have a look at inner me. I post whatever is in my mind. :)"
-var facebook_message = "Only uses facebook for club communications. Still you can contact, if that's your thing. :)"
-var linkedin_message = "Feel free to have a look at my professional side... :)"
-var github_message = "The most important profile of a programmer: github. Have a look at my projects. :)"
+var email_message = "You gotta email me, so we could talk about all the things in the world.";
+var twitter_message = "Just for good academic memes and the fun in the world."
+var instagram_message = "For the fun in life and the surroundings. You can't see me anywhere.";
+var linkedin_message = "The place with least entropy."
+var github_message = "All weird things I do with Python, Javascript and a lot of colab notebooks."
 var main_message = "Hey There! Feel free to say Hi... 😃"
 var speed = 70;
 var paragraph = document.querySelector(".text_box p")
@@ -37,12 +37,12 @@ document.getElementById("git").addEventListener("mouseover", function (e) {
         cross_check = "git";
     }
 })
-document.getElementById("facebook").addEventListener("mouseover", function (e) {
+document.getElementById("instagram").addEventListener("mouseover", function (e) {
     if (cross_check !== "face") {
         final_num = 5
         i = 0;
         paragraph.innerHTML = "";
-        message_write(facebook_message, 5)
+        message_write(instagram_message, 5)
         cross_check = "face";
     }
 })
@@ -81,7 +81,7 @@ document.getElementById("email").addEventListener("click", function () {
     open("mailto:prakashaditya144@gmail.com", "_blank")
 })
 document.getElementById("twitter").addEventListener("click", function () {
-    open("https://twitter.com/_rickaditya_", "_blank")
+    open("https://twitter.com/_rick.aditya_", "_blank")
 })
 document.getElementById("git").addEventListener("click", function () {
     open("https://github.com/prakashaditya369", "_blank")
@@ -89,6 +89,6 @@ document.getElementById("git").addEventListener("click", function () {
 document.getElementById("linkedin").addEventListener("click", function () {
     open("https://www.linkedin.com/in/prakashaditya144/", "_blank")
 })
-document.getElementById("facebook").addEventListener("click", function () {
-    open("https://www.facebook.com/144ap/", "_blank")
+document.getElementById("instagram").addEventListener("click", function () {
+    open("https://www.facebook.com/_rick.aditya_", "_blank")
 })

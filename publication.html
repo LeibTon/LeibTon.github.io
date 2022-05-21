@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, intial-scale=1.0" />
+  <link rel="stylesheet" href="css/research.css" />
+  <link rel="icon" href="img/favicon.ico" />
+  <title>Publications | Aditya Prakash</title>
+</head>
+
+<body onload="publication_element()">
+  <div class="navigation" id="navigation">
+    <div class="nav_control" id="nav_control"
+      onclick="if(document.getElementById('navigation').classList.contains('navigation_enlarge')){document.getElementById('nav_item_list').classList.remove('nav_item_list_after'); window.setTimeout(function(){document.getElementById('navigation').classList.remove('navigation_enlarge')}, 100); }else{document.getElementById('navigation').classList.add('navigation_enlarge'); window.setTimeout(function(){document.getElementById('nav_item_list').classList.add('nav_item_list_after');}, 800)}">
+      <div class="nav_control_bar"></div>
+      <div class="nav_control_bar"></div>
+      <div class="nav_control_bar"></div>
+    </div>
+    <div class="nav_item_main">
+      <ul class="nav_item_list" id="nav_item_list">
+        <li class="nav_item"><a href="/research.html">Home</a></li>
+        <li class="nav_item"><a href="/about.html">I.</a></li>
+        <li class="nav_item"><a href="/index.html">LeibTon</a></li>
+        <li class="nav_item"><a href="/publication.html">Publications</a></li>
+        <li class="nav_item"><a href="/simulation.html">Simulations</a></li>
+        <li class="nav_item"><a href="/coursework.html">Coursework</a></li>
+        <li class="nav_item"><a href="/blog.html">Blogs</a></li>
+        <li class="nav_item"><a href="/now.html">Now</a></li>
+        <li class="nav_item"><a href="/kidding.html">Just Kidding.</a></li>
+        <li class="nav_item"><a href="/contact.html">Say Hi.</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="homepage">
+
+    <!--  Quote-->
+    <div class="section">
+      <div class="title-part">
+        Publications
+      </div>
+    </div>
+
+    <!--  Journals-->
+    <div class="section">
+      <div class="title-part">
+        Journals
+      </div>
+      <div class="text-part" id = "journal_box">
+      </div>
+    </div>
+
+    <!--  Conferences-->
+    <div class="section">
+      <div class="title-part">
+        Conferences
+      </div>
+      <div class="text-part" id = "conf_box">
+       
+      </div>
+    </div>
+
+    <!--  Section Ends here-->
+    <div class="text-part">
+      Enjoy !!
+    </div>
+  </div>
+
+  <script src = 'js/publications.js'></script>
+</body>
+
+</html>

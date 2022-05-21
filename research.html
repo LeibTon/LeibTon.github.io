@@ -9,7 +9,7 @@
   <title>Research | Aditya Prakash</title>
 </head>
 
-<body>
+<body onload="research_pub_element()">
   <div class="navigation" id="navigation">
     <div class="nav_control" id="nav_control"
       onclick="if(document.getElementById('navigation').classList.contains('navigation_enlarge')){document.getElementById('nav_item_list').classList.remove('nav_item_list_after'); window.setTimeout(function(){document.getElementById('navigation').classList.remove('navigation_enlarge')}, 100); }else{document.getElementById('navigation').classList.add('navigation_enlarge'); window.setTimeout(function(){document.getElementById('nav_item_list').classList.add('nav_item_list_after');}, 800)}">
@@ -102,6 +102,26 @@
         theoretical physics, I am more invested towards the Entropy, the asymmetry in nature. <br /><br />
         <strong>Research Experience</strong>
         <ul class="timeline">
+          <li class="event" data-date="2022 - present" data-icon="&#x1F6F0;">
+            <div class="ed-degree">
+              Human Computer Interface Lab, UNB
+            </div>
+            <div>
+              <strong>Topic:</strong> Development of Human Robot Interface for Robotic Manipulator. <br />
+              <strong>Advisor:</strong> <a class="home-link" href="https://www.cs.unb.ca/people/drea1"> Prof.
+                Daniel Rea</a>
+            </div>
+          </li>
+          <li class="event" data-date="2022 - present" data-icon="&#x1F6F0;">
+            <div class="ed-degree">
+              Space Dynamics and Control Laboratory, IIT Kanpur
+            </div>
+            <div>
+              <strong>Topic:</strong> Working on the development of Low gravity testing setup for Space Dynamics Lab, IIT Kanpur. <br />
+              <strong>Advisor:</strong> <a class="home-link" href="https://www.iitk.ac.in/new/dipak-kumar-giri"> Prof.
+                Dipak Kumar Giri</a>
+            </div>
+          </li>
           <li class="event" data-date="2021" data-icon="&#x1F6F0;">
             <div class="ed-degree">
               SURGE, IIT Kanpur
@@ -121,7 +141,9 @@
         Publications
       </div>
       <div class="text-part">
-        Working
+        <div id = "research-pub-area"></div>
+        <div style="text-align: right; margin-top:0px"><a class="home-link" href="publication.html">All Publications
+          ...</a>
       </div>
     </div>
 
@@ -174,5 +196,6 @@
       Enjoy !!
     </div>
   </div>
+  <script src = 'js/publications.js'></script>
 </body>
 </html>

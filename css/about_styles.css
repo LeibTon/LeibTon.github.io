@@ -4,6 +4,12 @@
   box-sizing: border-box;
 }
 
+
+@font-face {
+	src: url(Inconsolata.otf);
+	font-family: "Inconsolata";
+}
+
 /* Canvas Div*/
 .canvas_class {
   overflow: hidden;
@@ -11,6 +17,8 @@
   top: 0;
   left: 0;
   height: 100vh;
+  max-width: 1020px;
+  width: 100%;
   background: #ff8a80;
 }
 
@@ -28,8 +36,8 @@
 }
 
 .canvas_class_info p {
-  font-size: 1.1rem;
-  font-family: 'Open Sans', sans-serif;
+  font-size: 1.3rem;
+  font-family: "Inconsolata", sans-serif;
   color: #472836;
   margin-top: 5px;
   margin-bottom: 5px;
@@ -81,6 +89,7 @@
 .informal_one_info {
   margin-top: 80px;
   margin-left: 70px;
+  font-family: "Inconsolata";
 }
 
 .informal_one_info h3 {
@@ -95,6 +104,7 @@
   max-width: 600px;
   margin-top: 1px;
   margin-bottom: 1px;
+  font-family: "Inconsolata";
 }
 
 /*Blending Image*/
@@ -144,7 +154,7 @@
 /*Informal One Ends Here*/
 .informal_one_2 {
   font-size: 1.1rem;
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Inconsolata", sans-serif;
   color: #472836;
 }
 
@@ -159,11 +169,12 @@
 .informal_one_2 .quote_para blockquote {
   max-width: 600px;
   font-weight: bold;
+  font-family: "Inconsolata";
 }
 
 .informal_one_2 p {
   font-size: 1.1rem;
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Inconsolata", sans-serif;
   color: #472836;
   margin-top: 5px;
   margin-bottom: 5px;

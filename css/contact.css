@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300&display=swap'); 
 * {
   padding: 0;
   margin: 0;
@@ -18,6 +19,7 @@ svg {
   bottom: 0;
   left: 50%;
   transform: translateX(-50%);
+  height: 100%;
 }
 
 #linkedin:hover,
@@ -37,13 +39,14 @@ svg {
   transform: translate(-66.5%, 60%);
   display: flex;
   align-items: center;
+  align-content: center;
 
 }
 
 .text_box p {
-  font-family: 'Special Elite', cursive;
-  font-size: 1.1rem;
+  font-family: 'IBM Plex Sans', cursive;
+  font-size: 16px;
   padding: 0.2rem;
-  color: #F96E46;
+  color: rgb(170, 130, 81);
   text-align: left;
 }
