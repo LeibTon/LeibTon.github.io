@@ -17,10 +17,10 @@ Aditya Prakash is a student of Aerospace Engineering at IIT Kanpur and expects t
 
 - [About Me](prakashaditya369.github.io/about.html): Everything you need to know about me. This page contains a Canvas to provide the image effects [*For fun, try dragging the image*].
 
-- [Say Hi](prakashaditya369.github.io/contact.html): All my contact details. I tried to present it creatively.
+- [Say Hi](prakashaditya369.github.io/contact.html): All my contact details. I tried to present it in an interactive way.
 
 - [Blogs](prakashaditya369.github.io/blog.html): This page contains links to Medium posts I write.
-- [What I am doing now](prakashaditya369.github.io/now.html): I am trying to summarise everything going on in my life on one page.
+- [What I am doing now](prakashaditya369.github.io/now.html): I am trying to summarise everything going on in my life at present in one page.
 
 ## Things I am proud of about my site:
 
@@ -30,7 +30,7 @@ I designed every aspect of my site the way I wanted it to be. But these are some
 
 - [Image Effect in About Me Page]: The particle effect used for the image is another fascinating thing I learnt. Especially the dragging effect of the image is my favourite.
 
-- [Browser in Project section of Homepage]: To present all my websites, I used **iframe**. But I presented them in a Browser; I designed using CSS, which I particularly love a lot.
+- [Browser in Project section of Homepage]: To present all my websites, I used long screenshots of webpage. I designed using CSS, which I particularly love a lot.
 
 - [Theme of Blog Page]: It's pleasant.
 
