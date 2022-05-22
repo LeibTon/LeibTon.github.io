@@ -80,7 +80,7 @@ function Draw() {
             this.draw();
         }
     }
-    var resize = 2
+    var resize = 1
 
     /*Initialising the particles*/
     function init() {
@@ -111,7 +111,7 @@ function Draw() {
         if (canvas_control) {
             requestAnimationFrame(animate);
             ctx.clearRect(0, 0, innerWidth, innerHeight)
-            for (let i = 0; i < particleArray.length; i++) {
+            for (let i = 0; i < particleArray.length; i+=2) {
                 particleArray[i].update();
             }
         }
@@ -142,7 +142,7 @@ function Draw() {
 // Image
 var png = new Image();
 
-png.src = "img/smart.png"
+png.src = "img/smart3.png"
 
 window.addEventListener("load", () => {
     ctx.drawImage(png, 0, 0);
