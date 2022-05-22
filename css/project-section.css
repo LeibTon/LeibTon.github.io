@@ -105,28 +105,48 @@
 
 .home-web-browser-theme {
     font-family: 'Ubuntu', sans-serif;
-    width: 702.41px;
+    max-width: 1000px;
+    width: 95%;
     border: 3px #222 solid;
     border-radius: 5px;
+    padding: 0px;
 }
+.all-tab-home::-webkit-scrollbar {
+    display: none;
+  }
 
 .home-web-browser-title {
     display: flex;
     justify-content: space-between;
     align-items: center;
     height: 30px;
+    overflow-y: hidden;
 }
 
+.all-tab-home{
+    display: inline-block;
+    width: calc(100% - 100px);
+    white-space: nowrap;
+    height: 100%;
+    overflow-x:scroll;
+    overflow-y: hidden;
+    scrollbar-width: none;
+}
+
+
 .home-web-title-tab {
-    background: #444;
-    margin-left: 6px;
+    background: #222;
+    border-right: solid 0.025px lightgrey;
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
     padding-left: 10px;
-    padding-bottom: 10px;
-    padding-right: 7px;
+    padding-bottom: 15px;
+    padding-right: 3px;
     padding-top: 3px;
+    margin-bottom: 0;
+    cursor: pointer;
 }
+
 
 .browser-window-logo {
     width: 13px;
@@ -135,9 +155,11 @@
 
 .home-web-address-bar {
     width: 65%;
+    height: 100%;
+    margin-top: 5px;
+    display: flex;
+    align-items: center;
     padding-left: 15px;
-    padding-top: 2px;
-    padding-bottom: 1px;
     background: #222;
     border-radius: 7px;
     font-size: 0.91rem;
@@ -164,13 +186,13 @@
     margin-right: 10px;
     text-decoration: none;
     color: white;
-    margin-top: 3px;
-    margin-bottom: 3px;
+    display: flex;
+    align-items: center;
 }
 
 .home-web-main-body {
     padding: 0;
-    height: 380px;
+    height: 550px;
     background: white;
     overflow: hidden;
     overflow-y: scroll;

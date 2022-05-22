@@ -8,7 +8,8 @@
   left: 30px;
   position: fixed;
   width: 50px;
-  background: #EE6C4D;
+  background: #FFF5FD;
+  border: solid 1px #022E57;
   height: 50px;
   display: flex;
   align-items: center;
@@ -73,7 +74,7 @@ a {
 /*--Button Styles--*/
 .btn-slice {
   padding: 1.2rem 2.5rem;
-  color: #ffffff;
+  color: #022E57;
   font-size: 0.6875rem;
   font-weight: 700;
   letter-spacing: 0.3rem;
@@ -184,7 +185,7 @@ a {
   content: '';
   height: 1px;
   width: 10px;
-  background-color: #ffffff;
+  background-color: #022E57;
   position: absolute;
   margin-top: 6px;
   right: 20px;

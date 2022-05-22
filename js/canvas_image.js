@@ -1,10 +1,11 @@
 /*Particle Effect in About Me page using Canvas*/
 const canvas = document.querySelector("#canvas");
 const ctx = canvas.getContext("2d");
+const canvas_main_box = document.getElementById("about_canvas_box");
 var canvas_control = false;
 //Resizing
 canvas.height = window.innerHeight;
-canvas.width = window.innerWidth;
+canvas.width = canvas_main_box.clientWidth;
 var velocity = 0.5;
 let particleArray = [];
 let mouse = {
@@ -94,12 +95,12 @@ function Draw() {
                     let g = data.data[(y * 4 * data.width) + (x * 4) + 1];
                     let b = data.data[(y * 4 * data.width) + (x * 4) + 2];
                     let avg = (r + g + b) / 3;
-                    let color = "rgba(" + (avg / 174 * 255) + "," + (avg / 174 * 138) + "," + (avg / 174 * 128) + "," + data.data[(y * 4 * data.width) + (x * 4) + 3] + ")";
+                    let color = "rgba(" + (avg / 251 * 255) + "," + (avg / 251 * 245) + "," + (avg / 251 * 253) + "," + data.data[(y * 4 * data.width) + (x * 4) + 3] + ")";
                     particleArray.push(new Particle(positionX * resize, positionY * resize, velocity, color));
                 } else if (data.data[(y * 4 * data.width) + (x * 4) + 3] > 50) {
                     let positionX = x;
                     let positionY = y;
-                    let color = "rgba(" + (2 * 255 + data.data[(y * 4 * data.width) + (x * 4)]) / 3 + "," + (2 * 138 + data.data[(y * 4 * data.width) + (x * 4) + 1]) / 3 + "," + (2 * 128 + data.data[(y * 4 * data.width) + (x * 4) + 2]) / 3 + ",10)";
+                    let color = "rgba(" + (2 * 255 + data.data[(y * 4 * data.width) + (x * 4)]) / 3 + "," + (2 * 245 + data.data[(y * 4 * data.width) + (x * 4) + 1]) / 3 + "," + (2 * 253 + data.data[(y * 4 * data.width) + (x * 4) + 2]) / 3 + ",10)";
                     particleArray.push(new Particle(positionX * resize, positionY * resize, velocity, color));
                 }
             }
@@ -122,7 +123,7 @@ function Draw() {
     }
     window.addEventListener("resize", () => {
         canvas.height = window.innerHeight;
-        canvas.width = window.innerWidth;
+        canvas.width = canvas_main_box.clientWidth;
         init();
     })
     document.addEventListener("scroll", () => {

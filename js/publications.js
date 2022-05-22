@@ -35,7 +35,7 @@ const publication_data = {
         volume: "",
         number: "",
         pages: "",
-        year: 2021,
+        year: 2022,
         DOI: "https://doi.org/10.1016/j.ast.2022.107650",
         related_blog: {
             title: "",

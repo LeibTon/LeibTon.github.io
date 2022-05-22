@@ -1,9 +1,15 @@
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&family=Raleway&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display');
 
 @font-face {
     font-family: combrida;
     src: url('font.ttf');
 }
+
+@font-face {
+	src: url(Inconsolata.otf);
+	font-family: "Inconsolata";
+}
+
 
 * {
     margin: 0px;
@@ -12,7 +18,7 @@
 }
 
 body {
-    background: #fcd1d1;
+    background: #FFF5FD;
 }
 
 .blog-post-main {
@@ -24,7 +30,7 @@ body {
 .blog-post-main-title {
     font-family: combrida;
     font-size: 4.5rem;
-    color: #e97878;
+    color: #548CA8;
 }
 
 .blog-posts {
@@ -50,7 +56,7 @@ body {
 }
 
 .blog-single-post-marker .circle {
-    border: 1px solid #ee99a0;
+    border: 1px solid #bb8bb1;
     height: 10px;
     width: 10px;
     border-radius: 5px;
@@ -64,7 +70,7 @@ body {
     left: 50%;
     transform: translate(-50%, -50%);
     width: 1px;
-    background-color: #ee99a0;
+    background-color: #bb8bb1;
 }
 
 .blog-single-post-main {
@@ -75,22 +81,22 @@ body {
 .blog-single-post-main-title a {
     text-decoration: none;
     font-family: 'Playfair Display', serif;
-    font-size: 1.6rem;
-    color: #ef4f4f;
+    font-size: 1.4rem;
+    color: #022E57;
 }
 
 .blog-single-post-main-subtitle {
     margin-top: 5px;
-    font-family: 'Raleway', sans-serif;
+    font-family: "Inconsolata";
     font-size: 1.2rem;
-    color: #ff8585;
+    color: #005A8D;
 }
 
 .additional_info {
     margin-top: 15px;
-    font-family: 'Raleway', sans-serif;
+    font-family: "Inconsolata";
     font-size: 1rem;
-    color: #ff8e71;
+    color: #548CA8;
 }
 
 @media only screen and (max-width: 800px) {

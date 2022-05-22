@@ -3,7 +3,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Gotu&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Caveat&display=swap');
-
+@font-face {
+	src: url(Inconsolata.otf);
+	font-family: "Inconsolata";
+}
+@font-face {
+	src: url(FrederickatheGreat-Regular.ttf);
+	font-family: "FrederickatheGreat";
+}
 * {
     margin: 0;
     padding: 0;
@@ -12,18 +19,25 @@
 
 body {
     padding: 30px 60px;
+    background: #FFF5FD;
 }
 
 nav {
-    font-family: 'Lora', sans-serif;
-    font-size: 1.5rem;
+    font-family: 'EB Garamond', serif;
+    font-size: 1.9rem;
     margin-bottom: 20px;
+    position: absolute;
+    top: 30px;
+    left: 60px;
 }
 
 nav a {
-    color: #CCA43B;
-    font-weight: bold;
+    color: #F28482;
     text-decoration: none;
+}
+
+.heading_part{
+    text-align: right;
 }
 
 .heading_part h1 {
@@ -40,7 +54,7 @@ a {
 .heading_part p {
     color: #F6BD60;
     font-size: 1.4rem;
-    font-family: 'Gotu', sans-serif;
+    font-family: "FrederickatheGreat";
     font-weight: normal;
 }
 
@@ -50,7 +64,7 @@ a {
 
 .main_container h2 {
     color: #1EA896;
-    font-family: 'Xanh Mono', monospace;
+    font-family: "FrederickatheGreat";
     font-weight: normal;
     font-size: 3.5rem;
     margin-top: 10px;
@@ -60,9 +74,9 @@ a {
 
 .main_container p {
     color: #051014;
-    font-size: 1.3rem;
-    font-family: 'Open Sans Condensed', sans-serif;
-    margin-bottom: 4px;
+    font-size: 18px;
+    font-family: "Inconsolata";
+    margin-bottom: 10px;
 }
 
 .acknowledge {

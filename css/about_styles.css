@@ -10,22 +10,35 @@
 	font-family: "Inconsolata";
 }
 
-/* Canvas Div*/
-.canvas_class {
-  overflow: hidden;
-  position: relative;
-  top: 0;
-  left: 0;
-  height: 100vh;
-  max-width: 1020px;
-  width: 100%;
-  background: #ff8a80;
+body {
+  background-color: #EFF5F7;
 }
 
+/* Canvas Div*/
+.section {
+  min-height: 100vh;
+  height: auto;
+  width: 100%;
+  background: #FFF5FD;
+  display: flex;
+  justify-content: center;
+}
+.canvas_class {
+  max-width: 1250px;
+  width: 100%;
+}
+
+#canvas{
+position: absolute;
+top: 50%;
+left: 50%;
+max-width: 1250px;
+width: 100%;
+transform: translate(-50%, -50%);
+}
 .canvas_class_info {
-  position: absolute;
-  top: 140px;
-  left: 60px;
+  margin-top: 100px;
+  margin-bottom: 60px;
   pointer-events: none;
 }
 
@@ -36,7 +49,7 @@
 }
 
 .canvas_class_info p {
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   font-family: "Inconsolata", sans-serif;
   color: #472836;
   margin-top: 5px;
@@ -57,7 +70,7 @@
   position: relative;
   top: 0;
   left: 0;
-  margin-bottom: 70px;
+  padding-bottom: 70px;
 }
 
 .informal_one_info ul {
