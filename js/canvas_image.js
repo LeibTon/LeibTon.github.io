@@ -80,7 +80,7 @@ function Draw() {
             this.draw();
         }
     }
-    var resize = 1
+    var resize = 2
 
     /*Initialising the particles*/
     function init() {
@@ -142,7 +142,7 @@ function Draw() {
 // Image
 var png = new Image();
 
-png.src = "img/smart3.png"
+png.src = "img/smart.png"
 
 window.addEventListener("load", () => {
     ctx.drawImage(png, 0, 0);
