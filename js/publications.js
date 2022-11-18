@@ -28,8 +28,22 @@ Journal:
  */
 
 
-/*
-{
+const publication_data = {
+    Journal: [{
+        title: "Dynamic velocity error based trajectory tracking for space robotic manipulator",
+        authors: ["A. Prakash", "D. K. Giri", "S. R. Kumar"],
+        journal: "Aerospace Science and Technology",
+        volume: "",
+        number: "",
+        pages: "",
+        year: 2022,
+        DOI: "https://doi.org/10.1016/j.ast.2022.107650",
+        related_blog: {
+            title: "",
+            url: ""
+        }
+    }],
+    Conference: [{
         title: "Control Design for transfer of payload between reusable rocket and lower end of the Skyhook",
         authors: ["A. Prakash", "D. K. Giri"],
         journal: "73rd International Aeronautical Congress (IAC)",
@@ -53,36 +67,6 @@ Journal:
         related_blog: {title: "",
                         url: ""}
     }
-*/
-
-const publication_data = {
-    Journal: [{
-        title: "Dynamic velocity error based trajectory tracking for space robotic manipulator",
-        authors: ["A. Prakash", "D. K. Giri", "S. R. Kumar"],
-        journal: "Aerospace Science and Technology",
-        volume: "",
-        number: "",
-        pages: "",
-        year: 2022,
-        DOI: "https://doi.org/10.1016/j.ast.2022.107650",
-        related_blog: {
-            title: "",
-            url: ""
-        }
-    }],
-    Conference: [{
-        title: "Dynamic velocity error based trajectory tracking for space robotic manipulator",
-        authors: ["A. Prakash", "D. K. Giri", "S. R. Kumar"],
-        journal: "Aerospace Science and Technology",
-        volume: "",
-        number: "",
-        pages: "",
-        year: 2022,
-        DOI: "https://doi.org/10.1016/j.ast.2022.107650",
-        related_blog: {
-            title: "",
-            url: ""
-        }
     }]
 }
 
