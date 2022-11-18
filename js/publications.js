@@ -66,7 +66,6 @@ const publication_data = {
         DOI: "https://iafastro.directory/iac/paper/id/70859/ext/abstract-pdf/IAC-22,D1,3,4,x70859.brief.pdf",
         related_blog: {title: "",
                         url: ""}
-    }
     }]
 }
 
