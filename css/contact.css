@@ -1,4 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300&display=swap'); 
+@font-face {
+  font-family: voyage;
+  src: url('voyage.otf');
+}
 * {
   padding: 0;
   margin: 0;
@@ -6,7 +9,7 @@
 }
 
 body {
-  background: #B3CBB9;
+  background: #FFF5FD;
   text-align: center;
 }
 
@@ -44,9 +47,11 @@ svg {
 }
 
 .text_box p {
-  font-family: 'IBM Plex Sans', cursive;
+  font-family: 'voyage', cursive;
   font-size: 16px;
-  padding: 0.2rem;
-  color: rgb(170, 130, 81);
+  font-weight: bold;
+  padding: 0.4rem;
+  padding-bottom: 0.8rem;
+  color: #022E57;
   text-align: left;
 }

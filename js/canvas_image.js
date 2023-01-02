@@ -3,10 +3,11 @@ const canvas = document.querySelector("#canvas");
 const ctx = canvas.getContext("2d");
 const canvas_main_box = document.getElementById("about_canvas_box");
 var canvas_control = false;
-//Resizing
+// Resizing
 canvas.height = window.innerHeight;
 canvas.width = canvas_main_box.clientWidth;
 var velocity = 0.5;
+var resize = 1.8;
 let particleArray = [];
 let mouse = {
     x: undefined,
@@ -35,26 +36,26 @@ canvas.addEventListener("mouseup", () => {
 })
 
 /*Main function to control particles representing pixels*/
-function Draw() {
+function Draw() 
+{
     let imageWidth = png.width;
     let imageHeight = png.height;
     const data = ctx.getImageData(0, 0, imageWidth, imageHeight);
     ctx.clearRect(0, 0, canvas.width, canvas.height);
-
     function Particle(x, y, dy, colour) {
-        this.x = x + canvas.width - 2 * png.width - 50;
-        this.y = Math.random() * (canvas.height) + y + canvas.height / 2 - png.height;
-        this.basex = x + canvas.width - 2 * png.width - 50;
-        this.basey = y + canvas.height / 2 - png.height;
+        this.x = x + canvas.width - resize * png.width - 50;
+        this.y = Math.random() * (canvas.height) + y + canvas.height/2 - resize * png.height/2;
+        this.basex = x + canvas.width - resize * png.width - 50;
+        this.basey = y + canvas.height/2 - resize * png.height/2;
         this.dv = dy
         this.dy = dy
         this.dx = dy
-        this.velocity = 10
+        this.velocity = 12
         this.size = 1.1;
         this.colour = colour;
         this.draw = function () {
             ctx.beginPath();
-            ctx.arc(this.x + 2 * Math.random(), this.y + 2 * Math.random(), this.size, Math.PI * 2, false);
+            ctx.arc(this.x + 1 * Math.random(), this.y + 1 * Math.random(), this.size, Math.PI * 2, false);
             ctx.fillStyle = this.colour;
             ctx.fill();
         }
@@ -62,7 +63,7 @@ function Draw() {
             if (mouse.state && Math.random() > 0.8) {
                 this.x = this.basex + Math.random() * (mouse.x - mouse.fixedPosx + 1);
                 this.y = this.basey + Math.random() * (mouse.y - mouse.fixedPosy + 1);
-                this.velocity = 10;
+                this.velocity = 12;
             } else {
                 this.velocity -= this.dv
 
@@ -80,7 +81,6 @@ function Draw() {
             this.draw();
         }
     }
-    var resize = 2
 
     /*Initialising the particles*/
     function init() {
