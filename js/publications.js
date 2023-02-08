@@ -27,6 +27,7 @@ Journal:
     }
  */
 
+
 const publication_data = {
     Journal: [{
         title: "Dynamic velocity error based trajectory tracking for space robotic manipulator",
@@ -42,7 +43,30 @@ const publication_data = {
             url: ""
         }
     }],
-    Conference: []
+    Conference: [{
+        title: "Control Design for transfer of payload between reusable rocket and lower end of the Skyhook",
+        authors: ["A. Prakash", "D. K. Giri"],
+        journal: "73rd International Aeronautical Congress (IAC)",
+        volume: "",
+        number: "",
+        pages: "",
+        year: 2022,
+        DOI: "https://iafastro.directory/iac/paper/id/70859/ext/abstract-pdf/IAC-22,D1,3,4,x70859.brief.pdf",
+        related_blog: {title: "",
+                        url: ""}
+    },
+    {
+        title: "MagLev based 3-DOF experimental Platform for Autonomous Spacecraft Rendezvous and Docking",
+        authors: ["N. Jaggi", "A. Prakash", "G. Kumar", "P. Dubey", "D. K. Giri"],
+        journal: "73rd International Aeronautical Congress (IAC)",
+        volume: "",
+        number: "",
+        pages: "",
+        year: 2022,
+        DOI: "https://iafastro.directory/iac/paper/id/70859/ext/abstract-pdf/IAC-22,D1,3,4,x70859.brief.pdf",
+        related_blog: {title: "",
+                        url: ""}
+    }]
 }
 
 function create_element(data_, main_) {

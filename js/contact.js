@@ -1,7 +1,7 @@
 /*Display messages in Say Hi Page*/
 var email_message = "You gotta email me, so we could talk about all the things in the world.";
 var twitter_message = "Just for good academic memes and the fun in the world."
-var instagram_message = "For the fun in life and the surroundings. You can't see me anywhere.";
+var instagram_message = "For the fun in life and the surroundings. Now you (can't) see me.";
 var linkedin_message = "The place with least entropy."
 var github_message = "All weird things I do with Python, Javascript and a lot of colab notebooks."
 var main_message = "Hey There! Feel free to say Hi... 😃"
@@ -81,7 +81,7 @@ document.getElementById("email").addEventListener("click", function () {
     open("mailto:prakashaditya144@gmail.com", "_blank")
 })
 document.getElementById("twitter").addEventListener("click", function () {
-    open("https://twitter.com/_rick.aditya_", "_blank")
+    open("https://twitter.com/LeibTon", "_blank")
 })
 document.getElementById("git").addEventListener("click", function () {
     open("https://github.com/prakashaditya369", "_blank")
@@ -90,5 +90,5 @@ document.getElementById("linkedin").addEventListener("click", function () {
     open("https://www.linkedin.com/in/prakashaditya144/", "_blank")
 })
 document.getElementById("instagram").addEventListener("click", function () {
-    open("https://www.facebook.com/_rick.aditya_", "_blank")
+    open("https://www.instagram.com/_rick.aditya_", "_blank")
 })

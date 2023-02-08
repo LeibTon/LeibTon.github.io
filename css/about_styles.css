@@ -24,7 +24,7 @@ body {
   justify-content: center;
 }
 .canvas_class {
-  max-width: 1250px;
+  max-width: 1470px;
   width: 100%;
 }
 
@@ -32,12 +32,13 @@ body {
 position: absolute;
 top: 50%;
 left: 50%;
-max-width: 1250px;
+max-width: 1470px;
 width: 100%;
 transform: translate(-50%, -50%);
 }
 .canvas_class_info {
   margin-top: 100px;
+  margin-left: 20px;
   margin-bottom: 60px;
   pointer-events: none;
 }
