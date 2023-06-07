@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>MEW</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      background-color: #D0E8F2;
+      font-family: Arial, sans-serif;
+    }
+    
+    #loading-image {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      background-color:  #C7EDE8;
+      transform: translate(-50%, -50%);
+      animation: image-background-change 3s cubic-bezier(0.4, 0.01, 0.1, 1) forwards;
+      opacity: 1;
+      z-index: 3;
+      height: 100vh;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+  .sticker {
+  position: absolute;
+  height: 200px; /* Adjust the sticker size as needed */
+  width: auto;
+  transition: top, left, opacity;
+  transition-duration: 0.5s,0.5s, 0.5s;
+  transition-timing-function: linear,linear, ease-in-out;
+  }
+
+    #loading-image-main {
+      background-color: #fff;
+  border: 4px solid #e6e6e6;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  z-index: 999;
+      height: 80%;
+      animation: fade-in 1.5s forwards;
+      transform: scale(0);
+      opacity: 1;
+    }
+
+    #beep{
+      position: absolute;
+      opacity: 0;
+      font-size: 200px;
+      color: black;
+      z-index: 998;
+      font-family: 'Amatic SC', cursive;
+      text-shadow: 5px 0 #e6e6e6, 0 5px #e6e6e6, 5px 0 #e6e6e6, 0 5px #e6e6e6;
+      padding: 20px 60px;
+      border: 4px solid #e6e6e6;
+      border-radius: 60px 100px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+      cursor: pointer;
+    }
+    
+    #welcome-page {
+      display: none;
+      text-align: center;
+      margin-top: 100px;
+    }
+
+    @keyframes image-background-change {
+        0% {
+            background-color: #C7EDE8;
+        }
+        100% {
+            background-color: #FED5C4;
+        }
+        
+    }
+    
+@keyframes fade-in {
+  0%{
+    transform: scale(0);
+  }
+  100%{
+    transform: scale(3.5);
+  }
+}
+    
+    @keyframes fade-in-text {
+      0% {
+        opacity: 0;
+        transform: scale(3.5);
+      }
+      100% {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+
+
+  #second-page{
+    position: absolute;
+    width: 80%;
+    height: 80%;
+    max-width: 800px;
+    max-height: 600px;
+    /* top: 50%;
+    left: 50%; */
+    /* background-color:  #FBB9C8;*/
+    background-color: transparent;
+    /* transform: translate(-50%, -50%); */
+    padding: 30px;
+    border: 10px solid #e6e6e6;
+    z-index: 997;
+    font-family: 'Amatic SC', cursive;
+    color: black;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      border-radius: 100px;
+      opacity: 0;
+  }
+
+  #next_button{
+    font-family: 'Amatic SC', cursive;
+    font-size: 25px;
+    padding: 20px 60px;
+    border: 4px solid #e6e6e6;
+    border-radius: 30px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    background-color: transparent;
+  }
+
+  #final-page{
+    position: absolute;
+    width: 60%;
+    /* height: 100%; */
+    /* max-width: 800px;
+    max-height: 600px; */
+    /* top: 50%;
+    left: 50%; */
+    z-index: 996;
+    /* transform: translate(-50%, -50%); */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    opacity: 0;
+  }
+
+  #final-page span{
+    max-width: 50%;
+    /* margin-left: 20px; */
+  }
+  </style>
+
+  <script>
+    window.onload = function() {
+
+    const all_stickers = [
+    'img/mew/cat-sticker1.png',
+    'img/mew/cat-sticker2.png',
+    'img/mew/cat-sticker3.png',
+    'img/mew/cat-sticker4.png',
+    'img/mew/cat-sticker5.png',
+    'img/mew/cat-sticker6.png',
+    'img/mew/cat-sticker7.png',
+    'img/mew/cat-sticker8.png',
+    'img/mew/cat-sticker9.png',
+    'img/mew/cat-sticker10.png',
+    'img/mew/cat-sticker11.png',
+    'img/mew/cat-sticker12.png',
+  ];
+
+  const numStickers = 8;
+  const stickerHeight = stickerWidth = 200;
+  const container = document.getElementById('loading-image');
+  const containerWidth = container.offsetWidth;
+  const containerHeight = container.offsetHeight;
+
+  function selectRandomElements(array, numElements) {
+  if (numElements >= array.length) {
+    // If the requested number of elements is greater than or equal to the array length,
+    // return a copy of the entire array
+    return array.slice();
+  }
+
+  const selectedElements = [];
+  const arrayCopy = array.slice(); // Create a copy of the original array
+
+  for (let i = 0; i < numElements; i++) {
+    const randomIndex = Math.floor(Math.random() * arrayCopy.length); // Generate a random index within the remaining array length
+    const randomElement = arrayCopy.splice(randomIndex, 1)[0]; // Remove the selected element from the array copy and get the element
+
+    selectedElements.push(randomElement);
+  }
+
+  return selectedElements;
+}
+
+  function addStickers(){
+
+    var stickers = selectRandomElements(all_stickers, numStickers);
+  function getRandomPosition() {
+  const margin = 50; // Adjust the margin as needed
+
+  let x, y;
+
+  if (Math.random() < 0.5) {
+    // Place the sticker on the left or right side
+    if (Math.random() < 0.5) {
+      x = Math.random() * margin;
+    } else {
+      x = containerWidth - margin - stickerWidth;
+    }
+    y = Math.random() * (containerHeight - stickerHeight);
+  } else {
+    // Place the sticker on the top or bottom side
+    if (Math.random() < 0.5) {
+      y = Math.random() * margin;
+    } else {
+      y = containerHeight - margin - stickerHeight;
+    }
+    x = Math.random() * (containerWidth - stickerWidth);
+  }
+
+  return { x, y };
+}
+
+  function createSticker(src) {
+    const sticker = document.createElement('img');
+    sticker.src = src;
+    sticker.classList.add('sticker');
+    return sticker;
+  }
+
+  function placeStickers() {
+    for (let i = 0; i < stickers.length; i++) {
+      const sticker = createSticker(stickers[i]);
+      let overlap = true;
+
+      while (overlap) {
+        const position = getRandomPosition();
+        sticker.style.left = `${position.x}px`;
+        sticker.style.top = `${position.y}px`;
+        overlap = checkOverlap(sticker);
+      }
+
+      container.appendChild(sticker);
+    }
+  }
+
+  function checkOverlap(sticker) {
+    const stickers = container.querySelectorAll('.sticker');
+    for (let i = 0; i < stickers.length; i++) {
+      if (isOverlapping(sticker, stickers[i])) {
+        return true;
+      }
+    }
+    return false;
+  }
+
+  function isOverlapping(element1, element2) {
+    const box1 = element1.getBoundingClientRect();
+    const box2 = element2.getBoundingClientRect();
+    return (
+    box1.left <= box2.right &&
+    box1.right >= box2.left &&
+    box1.top <= box2.bottom &&
+    box1.bottom >= box2.top
+  );
+  }
+
+  placeStickers();
+}
+
+function modifyStickers(){
+  const stickers = container.querySelectorAll('.sticker');
+  let maxRange = 500;
+  let minRange = 100;
+  var vx = Array.from({ length: numStickers }, () => Math.floor(Math.random() * (maxRange - minRange + 1)) + minRange);
+  var vy = Array.from({ length: numStickers }, () => Math.floor(Math.random() * (maxRange - minRange + 1)) + minRange);
+
+  function moveSticker()
+  {
+
+    stickers.forEach((sticker, index) => {
+      let rect = sticker.getBoundingClientRect();
+      let top = rect.top;
+      let left = rect.left;
+
+      let yPos = Math.floor(top + vy[index]);
+      let xPos = Math.floor(left + vx[index]);
+
+      if(xPos >= containerWidth - stickerWidth || xPos <=0)
+      {
+        vx[index] =  -vx[index];
+        console.log(true)
+      }
+      if(yPos >= containerHeight - stickerHeight || yPos <=0)
+      {
+        vy[index] = -vy[index];
+      }
+      yPos = Math.floor(top + vy[index]);
+      xPos = Math.floor(left + vx[index]);
+      sticker.style.left = `${xPos}px`;
+      sticker.style.top = `${yPos}px`;      
+    });
+  }
+
+  function changeSticker(){
+    var new_stickers = selectRandomElements(all_stickers, numStickers);
+    stickers.forEach((sticker, index) => {
+      sticker.style.opacity = 0;
+      moveSticker();
+      setTimeout(() => {
+      sticker.src = new_stickers[index]; // Change the image source
+      sticker.style.opacity = 1; // Fade in the new image
+      moveSticker();
+    }, 500);
+
+    })
+  }
+
+  for(var i = 0; i < Math.floor(Math.random() * (4 + 1)) + 2 ; i++)
+  {
+    setTimeout(moveSticker, 500);
+  }
+  changeSticker();
+  for(var i = 0; i < Math.floor(Math.random() * (4 + 1)) + 2 ; i++)
+  {
+    setTimeout(moveSticker, 500);
+  }
+}
+
+addStickers();
+
+
+function beepClick(){
+  document.getElementById("beep").style.opacity = "0";
+  modifyStickers();
+  document.getElementById("beep").remove();
+  document.getElementById("second-page").style.animation = "fade-in-text 1s forwards";
+}
+
+function boomClick(){
+  document.getElementById("second-page").style.opacity = "0";
+  modifyStickers();
+  document.getElementById("second-page").remove();
+  document.getElementById("final-page").style.animation = "fade-in-text 1s forwards";
+}
+
+document.getElementById("beep").addEventListener("click", beepClick)
+document.getElementById("next_button").addEventListener("click", boomClick)
+
+const greeting_texts = ['BEEP', 'BOOP', 'MEW', 'MEOW', 'ELLO', 'HEMLO'];
+document.getElementById('beep').innerHTML = greeting_texts[Math.floor(Math.random() * greeting_texts.length)];
+
+
+      var loadingImage = document.getElementById('loading-image-main');
+      var welcomePage = document.getElementById('welcome-page');
+      
+      setTimeout(function() {
+        loadingImage.style.opacity = "0";
+        loadingImage.remove();
+        document.getElementById("beep").style.animation = "fade-in-text 1s forwards";
+      }, 2000);
+};
+  </script>
+</head>
+<body>
+  <div id="loading-image">
+    <img src="img/mew/loading-image.jpg" id = "loading-image-main" alt="Loading Image">
+    <h1 title = "Click Here for Cuties" id = "beep"></h1> 
+     <div id = "second-page">
+      <h1>How u?</h1>
+      <h2>the man is toooooo sleepy rn</h2>
+      <div style="margin-top: 40px;">
+        <img src="img/mew/sleepy.jpg" alt="Image" height="300">
+      </div>
+      <button style = "margin-top: 40px;" id = "next_button" title = "Click here for cuties fr this time">Booooooooooom</button>
+    </div>
+
+    <div id = "final-page">
+      <span><blockquote class="twitter-tweet"><a href="https://twitter.com/Yoda4ever/status/1664109513115590661?ref_src=twsrc%5Etfw">June 1, 2023</a></blockquote></span> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+  
+    <span><blockquote class="twitter-tweet"> <a href="https://twitter.com/ghiblicontents/status/1666097886231240704?ref_src=twsrc%5Etfw">June 6, 2023</a></blockquote></span> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+  
+  <span><blockquote class="twitter-tweet"><a href="https://twitter.com/Catshealdeprsn/status/1662793145455656961?ref_src=twsrc%5Etfw">May 30, 2023</a></blockquote></span> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+    </div>
+</body>
+</html>
