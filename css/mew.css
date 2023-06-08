@@ -1,0 +1,152 @@
+body {
+  background-color: #d0e8f2;
+  font-family: Arial, sans-serif;
+}
+
+#loading-image {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  background-color: #c7ede8;
+  transform: translate(-50%, -50%);
+  transition: background-color;
+  transition-timing-function: cubic-bezier(0.4, 0.01, 0.1, 1);
+  transition-duration: 3s;
+  opacity: 1;
+  z-index: 3;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sticker {
+  position: absolute;
+  height: 200px; /* Adjust the sticker size as needed */
+  width: auto;
+  transition: top, left, opacity;
+  transition-duration: 0.5s, 0.5s, 0.5s;
+  transition-timing-function: linear, linear, ease-in-out;
+}
+
+#loading-image-main {
+  background-color: #fff;
+  border: 4px solid #e6e6e6;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  z-index: 999;
+  height: 80%;
+  animation: fade-in 1.5s forwards;
+  transform: scale(0);
+  opacity: 1;
+}
+
+#beep {
+  position: absolute;
+  opacity: 0;
+  font-size: 200px;
+  color: black;
+  z-index: 998;
+  font-family: "Amatic SC", cursive;
+  text-shadow: 5px 0 #e6e6e6, 0 5px #e6e6e6, 5px 0 #e6e6e6, 0 5px #e6e6e6;
+  padding: 20px 60px;
+  border: 4px solid #e6e6e6;
+  border-radius: 60px 100px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+
+#welcome-page {
+  display: none;
+  text-align: center;
+  margin-top: 100px;
+}
+
+
+@keyframes fade-in {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(3.5);
+  }
+}
+
+@keyframes fade-in-text {
+  0% {
+    opacity: 0;
+    transform: scale(3.5);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+
+.containers {
+  position: absolute;
+  width: 80%;
+  height: 80%;
+  max-width: 800px;
+  max-height: 600px;
+  /* top: 50%;
+left: 50%; */
+  /* background-color:  #FBB9C8;*/
+  background-color: transparent;
+  /* transform: translate(-50%, -50%); */
+  padding: 30px;
+  border: 10px solid #e6e6e6;
+  font-family: "Amatic SC", cursive;
+  color: black;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 100px;
+  opacity: 0;
+}
+
+#second-page {
+  z-index: 997;
+}
+
+.button {
+  font-family: "Amatic SC", cursive;
+  font-size: 25px;
+  padding: 20px 60px;
+  border: 4px solid #e6e6e6;
+  border-radius: 30px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  background-color: transparent;
+}
+
+#final-page {
+  z-index: 996;
+}
+
+#final-page .small-container{
+  text-align: center;
+  height: 450px;
+}
+
+#final-page .small-container img, #final-page .small-container iframe{
+  height: 450px;
+  border: 6px solid #e6e6e6;
+  border-radius: 30px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+#final-page .buttons{
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+#final-page .buttons button{
+  margin: 0 10px;
+}
