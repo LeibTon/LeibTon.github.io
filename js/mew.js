@@ -14,15 +14,17 @@ const floridaHours = new Date(floridaTime).getHours();
 
 // Determine the time period based on the hours
 let timePeriod;
+var type;
 
 if (floridaHours >= 5 && floridaHours < 12) {
+  console.log("morning");
   type = "flowers";
 } else if (floridaHours >= 12 && floridaHours < 18) {
   type = "moody";
+
 } else {
  type = "sleepy";
 }
-  var type = "sleepy"; // sleepy, flowers, moody
 
 
   // store image with full address, insta post with post link 
