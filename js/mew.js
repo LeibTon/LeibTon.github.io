@@ -47,6 +47,7 @@ if (floridaHours >= 5 && floridaHours < 12) {
     "1666097886231240704",
     "1665630275819253762",
     "1663281447891881984",
+    "img/mew/random/moody1.jpg",
   ];
 
   function insertProperItem(type){
