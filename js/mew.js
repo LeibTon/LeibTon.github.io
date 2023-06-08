@@ -34,6 +34,11 @@ if (floridaHours >= 5 && floridaHours < 12) {
     "1664109513115590661",
     "1663627154184192002",
     "1662126455030181891",
+    "1666648746610786305",
+    "1666670843248750593",
+    "img/mew/random/sleepy1.jpg",
+    "1658708033910849536",
+
   ];
 
   const flowers_library = [
@@ -48,6 +53,15 @@ if (floridaHours >= 5 && floridaHours < 12) {
     "1665630275819253762",
     "1663281447891881984",
     "img/mew/random/moody1.jpg",
+    "1666622526443737089",
+    "1661047882391367680",
+    "1660307039095070726",
+    "1659027218650243073",
+    "1656984393347645440",
+    "https://www.instagram.com/p/CsLLLRjAaXg",
+    "https://www.instagram.com/p/CpyH84WsjR5",
+    
+
   ];
 
   function insertProperItem(type){
