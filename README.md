@@ -3,6 +3,9 @@
 Personal Website of Aditya Prakash: [LeibTon](prakashaditya369.github.io)  
 Aditya Prakash is a student of Aerospace Engineering at IIT Kanpur and expects to be graduated by June 2023.  
 
+/usr/bin/ld: /usr/local/lib/libpython3.8.a(call.o): relocation R_AARCH64_ADR_PREL_PG_HI21 against symbol `_PyFunction_Vectorcall' which may bind externally can not be used when making a shared object; recompile with -fPIC
+/usr/local/lib/libpython3.8.a(call.o): in function `_PyObject_FastCallDict':
+/home/ubuntu/Downloads/Python-3.8.0/Objects/call.c:96:(.text.hot+0x58): dangerous relocation: unsupported relocation
 
 
 ## Tools and Techniques used.
