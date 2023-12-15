@@ -6,40 +6,44 @@
 	<meta name="viewport" content="width=device-width, intial-scale=1.0" />
 	<script src="https://use.fontawesome.com/b6c5778ba9.js"></script>
 	<link rel="icon" href="img/favicon.ico" />
-	<link rel="stylesheet" href="css/about_navigation.css" />
-	<link rel="stylesheet" href="css/navigation.css" />
+	<link rel="stylesheet" href="css/research.css" />
 	<link rel="stylesheet" href="css/blog.css" />
 	<title>Blogs</title>
 </head>
 
-<body>
-	<!--About Home Navigation Thing-->
-	<div class="about_nav">
-		<div class="links">
-			<a class="btn-slice" href="/about.html">
-				<div class="top"><span>About Me</span></div>
-				<div class="bottom"><span>About Me</span></div>
-			</a>
+<body onload="publication_element()">
+	<div class="navigation" id="navigation">
+	  <div class="nav_control" id="nav_control"
+		onclick="if(document.getElementById('navigation').classList.contains('navigation_enlarge')){document.getElementById('nav_item_list').classList.remove('nav_item_list_after'); window.setTimeout(function(){document.getElementById('navigation').classList.remove('navigation_enlarge')}, 100); }else{document.getElementById('navigation').classList.add('navigation_enlarge'); window.setTimeout(function(){document.getElementById('nav_item_list').classList.add('nav_item_list_after');}, 800)}">
+		<div class="nav_control_bar"></div>
+		<div class="nav_control_bar"></div>
+		<div class="nav_control_bar"></div>
+	  </div>
+	  <div class="nav_item_main">
+		<ul class="nav_item_list" id="nav_item_list">
+		  <li class="nav_item"><a href="/research.html">Home</a></li>
+		  <li class="nav_item"><a href="/about.html">I.</a></li>
+		  <li class="nav_item"><a href="/index.html">LeibTon</a></li>
+		  <li class="nav_item"><a href="/publication.html">Publications</a></li>
+		  <li class="nav_item"><a href="/simulation.html">Simulations</a></li>
+		  <li class="nav_item"><a href="/coursework.html">Coursework</a></li>
+		  <li class="nav_item"><a href="/blog.html">Blogs</a></li>
+		  <li class="nav_item"><a href="/now.html">Now</a></li>
+		  <li class="nav_item"><a href="/kidding.html">Just Kidding.</a></li>
+		  <li class="nav_item"><a href="/contact.html">Say Hi.</a></li>
+		</ul>
+	  </div>
+	</div>
+	<div class="homepage">
 
-			<a class="btn-slice" href="/now.html">
-				<div class="top"><span>Now</span></div>
-				<div class="bottom"><span>Now</span></div>
-			</a>
+	  <div class="section">
+		<div class="title-part">
+		  Blogs
 		</div>
-		<div class="about_nav_button">
-			<span class="top"> </span>
-			<span class="middle"></span>
-			<span class="bottom"> </span>
+		<div id="contain_blog" class="text-part">
 		</div>
-	</div>
-	<!--About Home Navigation Thing Ends-->
-	<div class="blog-post-main">
-		<div class="blog-post-main-title">Blogs</div>
-		<div class="blog-posts">
-			<div id="contain_blog" style="max-width: 900px; width: 100%;">
-			</div>
-		</div>
-	</div>
+	  </div>
+
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TimelineLite.min.js"
 		integrity="sha512-tSIDeirKC6suYILHqqPuZH3s0MvD4a5vCHXhBIcdmq4gQXZ2IB3fEYA5x2f3D2p/CbSqzKEvuTEVbS5VZ2u+ew=="
 		crossorigin="anonymous"></script>

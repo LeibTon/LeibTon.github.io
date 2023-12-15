@@ -74,28 +74,28 @@ body {
 }
 
 .blog-single-post-main {
-    width: calc(100% - 40px);
+    width: calc(100% - 20px);
 }
 
 
 .blog-single-post-main-title a {
     text-decoration: none;
     font-family: 'Playfair Display', serif;
-    font-size: 1.4rem;
+    font-size: 1.2rem;
     color: #022E57;
 }
 
 .blog-single-post-main-subtitle {
     margin-top: 5px;
     font-family: "Inconsolata";
-    font-size: 1.2rem;
+    font-size: 1rem;
     color: #005A8D;
 }
 
 .additional_info {
-    margin-top: 15px;
+    margin-top: 7.5px;
     font-family: "Inconsolata";
-    font-size: 1rem;
+    font-size: 0.9rem;
     color: #548CA8;
 }
 

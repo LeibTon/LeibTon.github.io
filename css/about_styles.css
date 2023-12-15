@@ -103,7 +103,7 @@ transform: translate(-50%, -50%);
 }
 
 .informal_one_info {
-  margin-top: 80px;
+  margin-top: 10px;
   margin-left: 70px;
   font-family: "Inconsolata";
 }
@@ -132,6 +132,7 @@ transform: translate(-50%, -50%);
 .informal_one_2 {
   display: inline;
   margin-right: 50px;
+  width: 650px;
 }
 
 .informal_one .quote_para {
@@ -156,9 +157,9 @@ transform: translate(-50%, -50%);
   margin-bottom: 5px;
 }
 
-.informal_one p a {
+.informal_one h3 a {
   text-decoration: none;
-  color: #C57B57;
+  color: inherit;
 }
 
 /*INformal one2 starts here*/

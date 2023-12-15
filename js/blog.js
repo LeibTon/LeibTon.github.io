@@ -100,14 +100,9 @@ for (var i = 0; i < blog_details.length; i++) {
   bspm.appendChild(bspms);
   bspm.appendChild(bspma);
 
-  if (flag === 1) {
-    bsp.appendChild(bspmr);
-    bsp.appendChild(bspm);
-  } else {
-    bspm.style.textAlign = "right";
-    bsp.appendChild(bspm);
-    bsp.appendChild(bspmr);
-  }
+  bsp.appendChild(bspmr);
+  bsp.appendChild(bspm);
+
   blog_container.appendChild(bsp);
   flag = -flag;
 }
