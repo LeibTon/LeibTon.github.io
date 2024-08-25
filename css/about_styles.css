@@ -138,17 +138,21 @@ transform: translate(-50%, -50%);
 .informal_one .quote_para {
   margin-left: 60px;
   margin-top: 20px;
-  border-left: 10px solid lightgreen;
+  border-left: 10px solid #022E57;
   padding-left: 15px;
   text-align: left;
 }
 
 .informal_one .quote_para blockquote {
   max-width: 600px;
-  font-weight: bold;
+  /* font-weight: bold; */
   font-family: "Inconsolata";
 }
 
+.informal_one .quote_para cite{
+  font-family: "Inconsolata";
+  font-style: normal;
+}
 .informal_one p {
   font-size: 1.1rem;
   font-family: "Inconsolata", sans-serif;
