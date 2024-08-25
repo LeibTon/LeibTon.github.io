@@ -2,39 +2,53 @@
 Using HTML DOM manipulation, creating elements.*/
 
 var blog_details = [{
+  title: "C++ Code for SPI communication between IMU and Raspberry Pi",
+  subtitle: "",
+  date: "Feb 23, 2024",
+  read: "4 min read",
+  link: "https://leibton.medium.com/c-code-for-spi-communication-between-imu-and-raspberry-pi-203afe4784e0?source=friends_link&sk=0bc8cd8dc5b53573d6de06142d459203",
+  },
+  {
+  title: "Communication between LSM6DSOX/MPU6500 and Raspberry PI through SPI",
+  subtitle: "",
+  date: "Feb 22, 2024",
+  read: "7 min read",
+  link: "https://leibton.medium.com/communication-between-lsm6dsox-and-raspberry-pi-through-spi-97fe2e30432b?source=friends_link&sk=48b1ec535ce4a6a08948a2cc8b6b9e74",
+  },
+  {
     title: "Kinetic Theory Simulation",
     subtitle: "Overview of Kinetic Theory simulation in simulations",
     date: "Nov 21, 2021",
     read: "4 min read",
-    link: "https://prakashaditya369.medium.com/kinetic-theory-simulation-60f00bd563c5?source=friends_link&sk=201a53fec431911dd09b8846d9121144",
+    link: "https://leibton.medium.com/kinetic-theory-simulation-60f00bd563c5?source=friends_link&sk=201a53fec431911dd09b8846d9121144",
   },
   {
     title: "Simulating Gas Molecules",
     subtitle: "Asking molecules to collide and observing their heat.",
     date: "Nov 22, 2021",
     read: "6 min read",
-    link: "https://prakashaditya369.medium.com/simulating-gas-molecules-f3ba06596ee2?source=friends_link&sk=34632ff1673489ccbe908ba364fb176d",
+    link: "https://leibton.medium.com/simulating-gas-molecules-f3ba06596ee2?source=friends_link&sk=34632ff1673489ccbe908ba364fb176d",
   },
   {
     title: "Kinetic Theory of Gases (Basics)",
     subtitle: "micro and MACRO worlds.",
     date: "Nov 16, 2021",
     read: "6 min read",
-    link: "https://prakashaditya369.medium.com/kinetic-theory-of-gases-basics-417752d6672c?source=friends_link&sk=c19d6532f96c421da41f1bc338b1f666",
+    link: "https://leibton.medium.com/kinetic-theory-of-gases-basics-417752d6672c?source=friends_link&sk=c19d6532f96c421da41f1bc338b1f666",
   },
   {
     title: "Facial Emotion Recognition in Browser using TensorflowJS",
     subtitle: "Surprised?",
     date: "Sept 21, 2021",
     read: "6 min Read",
-    link: "https://prakashaditya369.medium.com/facial-emotion-recognition-in-browser-using-tensorflowjs-f100d69962a9?source=friends_link&sk=cc64b866f80243c648a797bba1ad4d94"
+    link: "https://leibton.medium.com/facial-emotion-recognition-in-browser-using-tensorflowjs-f100d69962a9?source=friends_link&sk=cc64b866f80243c648a797bba1ad4d94"
   },
   {
     title: "Moment After Watching “Fabric of Cosmos”",
     subtitle: "Framing Some Questions?",
     date: "Feb 15, 2021",
     read: "3 min Read",
-    link: "https://prakashaditya369.medium.com/moment-after-watching-fabric-of-cosmos-65dd901328a7?source=friends_link&sk=c2c281eaf2c4a33e58739a581fffe3af"
+    link: "https://leibton.medium.com/moment-after-watching-fabric-of-cosmos-65dd901328a7?source=friends_link&sk=c2c281eaf2c4a33e58739a581fffe3af"
   },
 
   {
@@ -42,14 +56,14 @@ var blog_details = [{
     subtitle: "Domge Vocabulary",
     date: "Feb 7, 2021",
     read: "1 min Read",
-    link: "https://prakashaditya369.medium.com/emglish-e369a073c211?source=friends_link&sk=db50685260fa0fc641cf4a23de64f1d7"
+    link: "https://leibton.medium.com/emglish-e369a073c211?source=friends_link&sk=db50685260fa0fc641cf4a23de64f1d7"
   },
   {
     title: "LeibTon- My Personal Website",
     subtitle: "",
     date: "Feb 7, 2021",
     read: "2 min Read",
-    link: "https://prakashaditya369.medium.com/leibton-my-personal-site-70ced7633ce?source=friends_link&sk=312097a4d53074bd8fdf035be7e61d61"
+    link: "https://leibton.medium.com/leibton-my-personal-site-70ced7633ce?source=friends_link&sk=312097a4d53074bd8fdf035be7e61d61"
   }
 ]
 var blog_container = document.querySelector("#contain_blog");

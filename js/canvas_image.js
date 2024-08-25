@@ -7,7 +7,7 @@ var canvas_control = false;
 canvas.height = window.innerHeight;
 canvas.width = canvas_main_box.clientWidth;
 var velocity = 0.5;
-var resize = 1.8;
+var resize = 1.9;
 let particleArray = [];
 let mouse = {
     x: undefined,
@@ -50,7 +50,7 @@ function Draw()
         this.dv = dy
         this.dy = dy
         this.dx = dy
-        this.velocity = 12
+        this.velocity = 30
         this.size = 1.1;
         this.colour = colour;
         this.draw = function () {
@@ -71,9 +71,14 @@ function Draw()
                     this.dy = (this.basey - this.y) / this.velocity
                     this.y += this.dy;
                 }
-                if (this.x !== this.basex) {
+                
+    
+                if (Math.abs(this.x - this.basex) > 5) {
                     this.dx = (this.basex - this.x) / this.velocity
                     this.x += this.dx;
+                }
+                else{
+                    this.x = this.basex + 5 * Math.random()
                 }
 
             }
@@ -142,7 +147,7 @@ function Draw()
 // Image
 var png = new Image();
 
-png.src = "img/smart.png"
+png.src = "img/smart1.png"
 
 window.addEventListener("load", () => {
     ctx.drawImage(png, 0, 0);
