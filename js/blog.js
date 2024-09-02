@@ -1,7 +1,15 @@
 /*Displays the Blog details into the Blog Page
 Using HTML DOM manipulation, creating elements.*/
 
-var blog_details = [{
+var blog_details = [
+  {
+    title: "Entropy",
+    subtitle: "",
+    date: "Sep 02, 2024",
+    read: "3 min read",
+    link: "https://leibton.medium.com/entropy-2998df22c18a?source=friends_link&sk=b66ad2f6a5c89e7ea2135865e1256500"
+  },
+  {
   title: "C++ Code for SPI communication between IMU and Raspberry Pi",
   subtitle: "",
   date: "Feb 23, 2024",
