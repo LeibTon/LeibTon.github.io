@@ -44,14 +44,14 @@ const publication_data = {
         }
     }],
     Conference: [{
-        title: "Control Design for transfer of payload between reusable rocket and lower end of the Skyhook",
-        authors: ["A. Prakash", "D. K. Giri"],
-        journal: "73rd International Aeronautical Congress (IAC)",
+        title: "Design and Characterization of Thruster System Using Blowers for Upcoming Spacecraft Simulator",
+        authors: ["A. Prakash", "M. Shanmukha", "N. Jaggi", "D. K. Giri"],
+        journal: "2024 IEEE Space, Aerospace and Defence Conference (SPACE)",
         volume: "",
         number: "",
         pages: "",
-        year: 2022,
-        DOI: "https://iafastro.directory/iac/paper/id/70859/ext/abstract-pdf/IAC-22,D1,3,4,x70859.brief.pdf",
+        year: 2024,
+        DOI: "https://doi.org/10.1109/SPACE63117.2024.10668217",
         related_blog: {title: "",
                         url: ""}
     },
