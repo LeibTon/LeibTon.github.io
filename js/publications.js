@@ -1,128 +1,110 @@
-/*Instructions for adding a new publication data:
-Journal:
-    title: Add the correct title.
-    authors: Add authors in correct order (array). While adding names make sure that only family name is complete and given name is in initials format. 
-            Ensure space between initials. For example, "Aditya Kumar Prakash" = "A. K. Prakash"
-    journal: Journal Name
-    volume: volume of journal.
-    pages: pages in the journal in the format, startingpage-endingpage. For examples, 20-30 (string)
-    year: Year of publication (number)
-    DOI: URL
-    related_blog: title: Title should contain 5 words at max and if longer use ellipsis after this.
-                  url: Link to blog.
-    NOTE: use empty string for fields which are not given. If volume is not given, then define `volume: ""`
+// Uses Zotero API to update my publications
 
-    Template:
-    {
-        title: "",
-        authors: [""],
-        journal: "",
-        volume: "",
-        number: "",
-        pages: "",
-        year: 2022,
-        DOI: "",
-        related_blog: {title: "",
-                        url: ""}
-    }
- */
+function fetchData() {
+    // Make a request to your API or data source
+    fetch('https://api.zotero.org/users/8673209/publications/items')
+      .then(response => response.json())
+      .then(data => {
+        // Update the website based on the received data
+        data.forEach((x) => {addPublication(x.data)});
+      })
+      .catch(error => {
+        console.error('Error fetching data:', error);
+      });
+  }
 
-
-const publication_data = {
-    Journal: [{
-        title: "Dynamic velocity error based trajectory tracking for space robotic manipulator",
-        authors: ["A. Prakash", "D. K. Giri", "S. R. Kumar"],
-        journal: "Aerospace Science and Technology",
-        volume: "",
-        number: "",
-        pages: "",
-        year: 2022,
-        DOI: "https://doi.org/10.1016/j.ast.2022.107650",
-        related_blog: {
-            title: "",
-            url: ""
-        }
-    }],
-    Conference: [{
-        title: "Design and Characterization of Thruster System Using Blowers for Upcoming Spacecraft Simulator",
-        authors: ["A. Prakash", "M. Shanmukha", "N. Jaggi", "D. K. Giri"],
-        journal: "2024 IEEE Space, Aerospace and Defence Conference (SPACE)",
-        volume: "",
-        number: "",
-        pages: "",
-        year: 2024,
-        DOI: "https://doi.org/10.1109/SPACE63117.2024.10668217",
-        related_blog: {title: "",
-                        url: ""}
-    },
-    {
-        title: "MagLev based 3-DOF experimental Platform for Autonomous Spacecraft Rendezvous and Docking",
-        authors: ["N. Jaggi", "A. Prakash", "G. Kumar", "P. Dubey", "D. K. Giri"],
-        journal: "73rd International Aeronautical Congress (IAC)",
-        volume: "",
-        number: "",
-        pages: "",
-        year: 2022,
-        DOI: "https://iafastro.directory/iac/paper/id/70859/ext/abstract-pdf/IAC-22,D1,3,4,x70859.brief.pdf",
-        related_blog: {title: "",
-                        url: ""}
-    }]
-}
-
-function create_element(data_, main_) {
-    /*
-    data_: each publication data
-    main_: for journal page or research page, true indicates for journal page
-    */
-    var authors = "";
-    data_.authors.forEach((author, index) => {
-        if (author == "A. Prakash")
-            authors += "<em>A. Prakash</em>"
-        else
-            authors += author
-
-        authors += ", "
+  function formatCreatorDetails(creators) {
+    const creatorNames = creators.map(creator => {
+      return `${creator.firstName} ${creator.lastName}`;
     });
+  
+    return creatorNames.join(", ");
+  }
 
-    var styling_;
-    if (main_)
-        styling_ = "class = 'pub-box'"
-    else
-        styling_ = "style='margin: 0px 0px 20px'"
+  function camelCaseToSentenceCase(str) {
+    str = str.replace(/([A-Z])/g, ' $1').trim();
+    return str.charAt(0).toUpperCase() + str.slice(1); 
+  }
 
-    var main_string = `<div ${styling_}>${authors}<strong>${data_.title}</strong>
-    , ${data_.journal} ${data_.volume} (${data_.year}) ${data_.pages}<br/> DOI: <a href="${data_.DOI}" target="_blank">${data_.DOI}</a></div>`
-    if (data_.related_blog.title != "") {
-        main_string = `<div ${styling_}>${authors}<strong>${data_.title}</strong>
-        , ${data_.journal} ${data_.volume} (${data_.year}) ${data_.pages}<br/> DOI: <a href="${data_.DOI}" target="_blank">${data_.DOI}</a> <br/> Related Blog: <a href="${data_.related_blog.url}" target="_blank">${data_.related_blog.title}</a></div>`
+  function applyLinkTag(value) {
+    const urlRegex = /^(?:https?:\/\/)?(?:www\.)?[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b(?:[-a-zA-Z0-9()@:%_\+.~#?&\/=]*)*$/;
+  
+    if (urlRegex.test(value)) {
+      return `<a href="${value}">${value}</a>`;
+    } else {
+      return value;
     }
+  }
+
+  function getPubField(data){
+    var finalString = ""
+    for(const key in data){
+        if(key !== 'key' && key !== 'version' && key !=='itemType' && key !== 'abstractNote' && key !== 'accessDate' && key !== "shortTitle"
+     && key != "language" && key!== "callNumber" && key !== "libraryCatalog" && data[key] !== ""
+        )
+        {
+            if(key == "creators"){
+                finalString +=  "<p><strong>Author:</strong>" + `   ${formatCreatorDetails(data.creators)}`;
+            }
+            else if(key == "DOI" || key == "ISSN" || key == "ISBN"){
+                finalString +=  `<p><strong>${key}:</strong> ${data[key]}`;
+            }
+            else
+            {
+                finalString += `<p><strong>${camelCaseToSentenceCase(key)}:</strong> ${applyLinkTag(data[key])}`
+            }
+
+        }
+    }
+    return finalString
+  }
+
+  function toggleDivVisibility(dataKey) {
+    const divElement = dataKey
+    if (divElement.style.display === "none") {
+      divElement.style.display = "block";
+    } else {
+      divElement.style.display = "none";   
+  
+    }
+  }
+
+  function createPubElement(data){
+    var publicationTitle = ""
+    if(data['itemType']=='conferencePaper')
+        {
+            publicationTitle = data['conferenceName'];
+        }
+        else if(data['itemType'] == "journalArticle")
+        {
+            publicationTitle = data['publicationTitle']
+        }
+    var main_string = `<div "style='margin: 0px 0px 0px'"><a href="${data['url']}" style="text-decoration: none; color: inherit;" target="_blank"><strong>${data.title}</strong></a>
+    , ${publicationTitle} (${data['date']})</div> <div style = "font-size: 15px; margin-top: 5px; margin-bottom: 5px; cursor: pointer;" onclick="toggleDivVisibility(${data.key})"><strong><u>Details</u> </strong></div> 
+  <div style = "font-size: 14px; display: none;" id = "${data.key}">
+    ${getPubField(data)}
+</div><br/>`
     return main_string;
-}
+  }
 
-function research_pub_element() {
-    var all_data = [...publication_data["Journal"], ...publication_data['Conference']];
-    all_data.sort((a, b) => b.year - a.year);
-    all_data = all_data.slice(0, 5);
-    var main_string = "";
-    all_data.forEach((element) => {
-        main_string += create_element(element, false);
-    })
-    var research_pub_area = document.getElementById("research-pub-area");
-    research_pub_area.innerHTML = main_string;
-}
 
-function publication_element() {
-    var journal_box = document.getElementById("journal_box");
-    var journal_string = "";
-    publication_data['Journal'].forEach(element => {
-        journal_string += create_element(element, true)
-    })
-    journal_box.innerHTML = journal_string;
+  function addPublication(data) {
+    var box = "";
+    if(data['itemType']=='conferencePaper')
+    {
+        box = document.getElementById('conf_box');
+    }
+    else if(data['itemType'] == "journalArticle")
+    {
+        box = document.getElementById('journal_box');
+    }
+    else
+    {
+        box = document.getElementById('conf_box');
+    }
 
-    var conf_box = document.getElementById("conf_box");
-    var conf_string = "";
-    publication_data['Conference'].forEach(element => {
-        conf_string += create_element(element, true)
-    })
-    conf_box.innerHTML = conf_string;
+    var box_string = box.innerHTML;
+    box_string += createPubElement(data);
+    box.innerHTML = box_string;
 }
+  fetchData();

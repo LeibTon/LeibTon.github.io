@@ -9,7 +9,7 @@
   <title>Research | Aditya Prakash</title>
 </head>
 
-<body onload="research_pub_element()">
+<body>
   <div class="navigation" id="navigation">
     <div class="nav_control" id="nav_control"
       onclick="if(document.getElementById('navigation').classList.contains('navigation_enlarge')){document.getElementById('nav_item_list').classList.remove('nav_item_list_after'); window.setTimeout(function(){document.getElementById('navigation').classList.remove('navigation_enlarge')}, 100); }else{document.getElementById('navigation').classList.add('navigation_enlarge'); window.setTimeout(function(){document.getElementById('nav_item_list').classList.add('nav_item_list_after');}, 800)}">
@@ -261,6 +261,52 @@
       Enjoy !!
     </div>
   </div>
-  <script src = 'js/publications.js'></script>
+  <script>
+    function fetchData() {
+    // Make a request to your API or data source
+    fetch('https://api.zotero.org/users/8673209/publications/items')
+      .then(response => response.json())
+      .then(data => {
+        // Update the website based on the received data
+        data = data.slice(0, 5);
+        data.forEach((x) => {addPublication(x.data)});
+      })
+      .catch(error => {
+        console.error('Error fetching data:', error);
+      });
+  }
+
+  function createPubElement(data){
+        /*
+    data_: each publication data
+    main_: for journal page or research page, true indicates for journal page
+    */
+        // if (main_)
+        //     styling_ = "class = 'pub-box'"
+        // else
+        //     styling_ = "style='margin: 0px 0px 20px'"
+    var publicationTitle = ""
+    if(data['itemType']=='conferencePaper')
+        {
+            publicationTitle = data['conferenceName'];
+        }
+        else if(data['itemType'] == "journalArticle")
+        {
+            publicationTitle = data['publicationTitle']
+        }
+    var main_string = `<div "class = 'pub-box'"><a href="${data['url']}" style="text-decoration: none; color: inherit;" target="_blank"><strong>${data.title}</strong></a>
+    , ${publicationTitle} (${data['date']})</div> <br/>`
+    return main_string;
+  }
+
+  function addPublication(data) {
+    var box = document.getElementById("research-pub-area");
+    var box_string = box.innerHTML;
+    box_string += createPubElement(data);
+    box.innerHTML = box_string;
+}
+fetchData();
+
+  </script>
 </body>
 </html>
