@@ -132,7 +132,9 @@ transform: translate(-50%, -50%);
 .informal_one_2 {
   display: inline;
   margin-right: 50px;
-  width: 650px;
+  width: 600px;
+  margin-top: 50px;
+  margin-bottom: 50px;
 }
 
 .informal_one .quote_para {
