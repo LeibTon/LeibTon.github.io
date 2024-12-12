@@ -15,35 +15,28 @@ const all_website_data = {
     },
     "visualizer": {
         "title": "Algorithm Visualizer",
-        "link": "https://prakashaditya369.github.io/visualizer/",
-        "github-link": "https://github.com/prakashaditya369/visualizer",
+        "link": "https://leibton.github.io/visualizer/",
+        "github-link": "https://github.com/leibton/visualizer",
         "github-name": "visualizer",
         "img": "img/algorithm_visualiser.png"
     },
     "leibton": {
         "title": "LeibTon",
-        "link": "https://prakashaditya369.github.io",
-        "github-link": "https://github.com/prakashaditya369/prakashaditya369.github.io",
-        "github-name": "prakashaditya369.github.io",
+        "link": "https://leibton.github.io",
+        "github-link": "https://github.com/leibton/leibton.github.io",
+        "github-name": "leibton.github.io",
         "img": "img/leibton.png"
     },
     "randomness": {
         "title": "Let's Explore Randomness",
-        "link": "https://prakashaditya369.github.io/randomness/",
-        "github-link": "https://github.com/prakashaditya369/randomness",
+        "link": "https://leibton.github.io/randomness/",
+        "github-link": "https://github.com/leibton/randomness",
         "github-name": "randomness",
         "img": "img/randomness.png"
-    },
-    "being-iitian": {
-        "title": "Being IITian",
-        "link": "https://beingiitian.herokuapp.com/",
-        "github-link": "https://github.com/prakashaditya369/being-iitian-code",
-        "github-name": "being-iitian-code",
-        "img": "img/beingiitian.png"
     }
 }
 
-const tabs_id = ["project-ekatra","visualizer","leibton","randomness","being-iitian"]
+const tabs_id = ["project-ekatra","visualizer","leibton","randomness"]
 tabs_id.forEach(id => {
     document.getElementById(id).addEventListener("click", function(){
         reset_browser_tab();
