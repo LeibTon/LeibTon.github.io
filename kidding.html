@@ -6,6 +6,19 @@
   <meta name="viewport" content="width=device-width, intial-scale=1.0" />
   <link rel="stylesheet" href="css/research.css" />
   <link rel="icon" href="img/favicon.ico" />
+  <style>
+    #video-container {
+      display: none; /* Initially hidden */
+      margin-top: 20px;
+    }
+
+    video {
+      width: 100%;
+      max-width: 600px;
+      border: 2px solid #333;
+      border-radius: 8px;
+    }
+  </style>
   <title>Simulations | Aditya Prakash</title>
 </head>
 
@@ -40,6 +53,9 @@
       <div class="text-part" style="z-index: 1;text-align: center;">
         <div>I have been looking for the best joke for a long time. I finally found one.</div>
         <div id="question_joke" style = "color: red;cursor: pointer;">Wanna See?</div>
+        <div id="video-container">
+          <video id="camera-feed" autoplay></video>
+        </div>
       </div>
       <div class="title-part" style="position: relative; top: -40px;">
       </div>
@@ -47,12 +63,23 @@
   </div>
 </body>
 <script>
-  function something(){
-    document.getElementById("question_joke").innerHTML = "You will need a mirror buddy."
-    document.getElementById("question_joke").style.color = "inherit"
-    document.getElementById("question_joke").style.cursor = "inherit"
-  }
-document.getElementById("question_joke").addEventListener("click", something)
-</script>
+  const startCameraButton = document.getElementById("question_joke");
+  const videoContainer = document.getElementById("video-container");
+  const cameraFeed = document.getElementById("camera-feed");
 
+  startCameraButton.addEventListener("click", async () => {
+    try {
+      // Request access to the user's camera
+      const stream = await navigator.mediaDevices.getUserMedia({ video: true });
+      // Display the video stream in the <video> element
+      cameraFeed.srcObject = stream;
+      // Show the video container
+      videoContainer.style.display = "block";
+      startCameraButton.style.display = 'none';
+    } catch (error) {
+      console.error("Error accessing camera: ", error);
+      alert("Unable to access camera. Please check your permissions.");
+    }
+  });
+</script>
 </html>
