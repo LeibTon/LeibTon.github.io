@@ -26,42 +26,18 @@ if (floridaHours >= 5 && floridaHours < 12) {
  type = "sleepy";
 }
 
-// Temp
-const url = 'https://projectekatra.onrender.com/api/load';
-
-const data = {
-    timezone: Intl.DateTimeFormat().resolvedOptions().timeZone
-};
-
-console.log("Loading ...")
-console.log(data.timezone);
-fetch(url, {
+fetch('https://projectekatra.onrender.com/api/load/', {
     method: 'POST', // Specify POST method
     headers: {
         'Content-Type': 'application/json' // Set content type to JSON
     },
-    body: JSON.stringify(data) 
+    body: JSON.stringify({timezone: Intl.DateTimeFormat().resolvedOptions().timeZone}) 
 })
-.then(response => {
-    if (!response.ok) {
-        console.log("HTTP Error!")
-    }
-    return response.json(); // Parse the JSON response
-})
-.then(data => {
-    console.log('Loaded'); // Log the response data
-})
-.catch(error => {
-    console.error('Shit'); // Log any errors
-});
-//temp
-
 
   // store image with full address, insta post with post link 
   // and tweet with tweet ID number, the end one
   const sleepy_library = [
     "1662793145455656961",
-    "1663627154184192002",
     "1666670843248750593",
     "img/mew/random/sleepy1.jpg",
     "https://www.instagram.com/p/DCg03KPu9SF",
@@ -78,7 +54,6 @@ fetch(url, {
   ];
 
   const moody_library = [
-    "1666097886231240704",
     "1665630275819253762",
     "img/mew/random/moody1.jpg",
     "1666622526443737089",
@@ -97,6 +72,7 @@ fetch(url, {
     else library = moody_library;
 
     var item = library[Math.floor(Math.random() * library.length)];
+    console.log(item)
 
     if(item.slice(0, 5) == "img/m")
     {
@@ -105,6 +81,8 @@ fetch(url, {
     else if(item.slice(0, 5) == "https")
     {
       document.getElementById("final-cont").innerHTML = `<blockquote class="instagram-media" data-instgrm-permalink="${item}" data-instgrm-version="14"> <a href="${item}"></a></blockquote>`
+      const script = document.getElementById('instagram-embed-script');
+        window.instgrm.Embeds.process();
     }
     else
     {
