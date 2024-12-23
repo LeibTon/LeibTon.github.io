@@ -1,8 +1,8 @@
 window.onload = function () {
-  const totalStickers = 23;
+  const totalStickers = 15;
   const totalLoadingImages = 8;
   const totalSleepyImages = 6;
-  const numStickers = 8;
+  const numStickers = 10;
   const stickerHeight = (stickerWidth = 200);
   const container = document.getElementById("loading-image");
   const containerWidth = container.offsetWidth;
@@ -26,43 +26,70 @@ if (floridaHours >= 5 && floridaHours < 12) {
  type = "sleepy";
 }
 
+// Temp
+const url = 'https://projectekatra.onrender.com/api/load';
+
+const data = {
+    timezone: Intl.DateTimeFormat().resolvedOptions().timeZone
+};
+
+console.log("Loading ...")
+console.log(data.timezone);
+fetch(url, {
+    method: 'POST', // Specify POST method
+    headers: {
+        'Content-Type': 'application/json' // Set content type to JSON
+    },
+    body: JSON.stringify(data) 
+})
+.then(response => {
+    if (!response.ok) {
+        console.log("HTTP Error!")
+    }
+    return response.json(); // Parse the JSON response
+})
+.then(data => {
+    console.log('Loaded'); // Log the response data
+})
+.catch(error => {
+    console.error('Shit'); // Log any errors
+});
+//temp
+
 
   // store image with full address, insta post with post link 
   // and tweet with tweet ID number, the end one
   const sleepy_library = [
     "1662793145455656961",
-    "1664109513115590661",
     "1663627154184192002",
-    "1662126455030181891",
-    "1666648746610786305",
     "1666670843248750593",
     "img/mew/random/sleepy1.jpg",
-    "1658708033910849536",
-
+    "https://www.instagram.com/p/DCg03KPu9SF",
+    "https://www.instagram.com/p/DC4I1DESGrw",
+    "https://www.instagram.com/p/DCtiDSKzNeD",
+    "https://www.instagram.com/p/DCvzuiESmTR",
   ];
 
   const flowers_library = [
     "img/mew/random/flower1.jpg",
     "img/mew/random/flower2.jpg",
     "img/mew/random/flower3.jpg",
-    "img/mew/random/flower4.jpg"
+    "img/mew/random/flower4.jpg",
   ];
 
   const moody_library = [
     "1666097886231240704",
     "1665630275819253762",
-    "1663281447891881984",
     "img/mew/random/moody1.jpg",
     "1666622526443737089",
-    "1661047882391367680",
-    "1660307039095070726",
-    "1659027218650243073",
     "1656984393347645440",
     "https://www.instagram.com/p/CsLLLRjAaXg",
     "https://www.instagram.com/p/CpyH84WsjR5",
-    
-
+    "https://www.instagram.com/p/DDbqpE2Siai",
+    "https://www.instagram.com/p/DCoInb6J_0n",
+    "https://www.instagram.com/p/DCsDYwTJl5i",
   ];
+
 
   function insertProperItem(type){
     if(type == "sleepy") library = sleepy_library;
@@ -77,7 +104,7 @@ if (floridaHours >= 5 && floridaHours < 12) {
     }
     else if(item.slice(0, 5) == "https")
     {
-      document.getElementById("final-cont").innerHTML = `<iframe src="${item}/embed" height="450" frameborder="0" scrolling="no" allowtransparency="true"></iframe>`;
+      document.getElementById("final-cont").innerHTML = `<blockquote class="instagram-media" data-instgrm-permalink="${item}" data-instgrm-version="14"> <a href="${item}"></a></blockquote>`
     }
     else
     {
@@ -175,7 +202,7 @@ if (floridaHours >= 5 && floridaHours < 12) {
       { length: numStickers },
       () => Math.floor(Math.random() * (totalStickers)) + 1
     );
-    return images.map((x) => {return `img/mew/cat-sticker${x}.png`})
+    return images.map((x) => {return `img/mew/santa${x}.png`})
     }
 
   function addStickers() {
@@ -250,7 +277,6 @@ if (floridaHours >= 5 && floridaHours < 12) {
 
         if (xPos >= containerWidth - stickerWidth || xPos <= 0) {
           vx[index] = -vx[index];
-          console.log(true);
         }
         if (yPos >= containerHeight - stickerHeight || yPos <= 0) {
           vy[index] = -vy[index];
